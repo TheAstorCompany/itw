@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]> <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]> <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
+    <head>
+
+    <!-- Basic Page Needs
+  ================================================== -->
+    <meta charset="utf-8">
+    <title>Stores - Astor</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Mobile Specific Metas
+  ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- CSS
+  ================================================== -->
+    <link rel="stylesheet" href="stylesheets/demo_table.css">
+    <link rel="stylesheet" href="stylesheets/base.css">
+    <link rel="stylesheet" href="stylesheets/astor/jquery-ui-1.8.17.custom.css" />
+    <link rel="stylesheet" href="stylesheets/skeleton.css">
+    <link rel="stylesheet" href="stylesheets/layout.css">
+
+    <!-- Favicons
+	================================================== -->
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+
+    <!-- Head Scripts
+	================================================== -->
+    <script src="js/modernizr-2.5.1.js"></script>
+    <script src="js/jquery-1.7.1.js"></script>
+    <script src="js/jquery-ui-1.8.17.custom.min.js"></script>
+    <script src="js/jquery.dataTables.js"></script>
+    <script src='js/jquery.color-RGBa-patch.js'></script>
+    <script src="js/custom.js"></script>
+    <script>
+	$(function() {
+		$('#tabs').tabs();
+		$('#costlist').dataTable( {
+					"bPaginate": false,
+					"bFilter": false
+				} );
+	});
+	</script>
+    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load('visualization', '1', {packages: ['corechart']});
+    </script>
+    <script type="text/javascript">
+      function drawVisualization() {
+        // Some raw data (not necessarily accurate)
+        var countries =
+          ['West', 'South',
+           'East', 'Southeast', 'Midwest'];
+        var months = ['09/2011','10/2011', '11/2011', '12/2011', '01/2012', 'Current'];
+        var productionByCountry = [[200, 365, 135, 357, 239, 236],
+                                   [800, 938, 1120, 1167, 1110, 691],
+                                   [400, 522, 599, 587, 615, 629],
+                                   [1100, 998, 1268, 807, 968, 1026],
+                                   [400, 450, 288, 397, 215, 366]];
+      
+        // Create and populate the data table.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Month');
+        for (var i = 0; i < countries.length; ++i) {
+          data.addColumn('number', countries[i]);
+        }
+        data.addRows(months.length);
+        for (var i = 0; i < months.length; ++i) {
+          data.setCell(i, 0, months[i]);
+        }
+        for (var i = 0; i < countries.length; ++i) {
+          var country = productionByCountry[i];
+          for (var month = 0; month < months.length; ++month) {
+            data.setCell(month, i + 1, country[month]);
+          }
+        }
+        // Create and draw the visualization.
+        var ac = new google.visualization.AreaChart(document.getElementById('visualization'));
+        ac.draw(data, {
+          title : '',
+          isStacked: true,
+          width: 600,
+          height: 300,
+          vAxis: {title: "Tons"},
+          hAxis: {title: "Month"}
+        });
+      }
+      
+
+      google.setOnLoadCallback(drawVisualization);
+
+      function drawVisualization2() {
+        // Create and populate the data table.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Task');
+        data.addColumn('number', 'Hours per Day');
+        data.addRows(5);
+        data.setValue(0, 0, 'Service Negotiation');
+        data.setValue(0, 1, 11);
+        data.setValue(1, 0, 'Additional Fee');
+        data.setValue(1, 1, 2);
+        data.setValue(2, 0, 'Service Change');
+        data.setValue(2, 1, 2);
+        data.setValue(3, 0, 'Equipment');
+        data.setValue(3, 1, 2);
+        data.setValue(4, 0, 'Other');
+        data.setValue(4, 1, 7);
+      
+        // Create and draw the visualization.
+        new google.visualization.PieChart(document.getElementById('savingschart')).
+            draw(data, {title:""});
+      }
+      
+
+      google.setOnLoadCallback(drawVisualization2);
+	  
+	  
+      function drawVisualization3() {
+        // Create and populate the data table.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Task');
+        data.addColumn('number', 'Hours per Day');
+        data.addRows(5);
+        data.setValue(0, 0, 'Pickup');
+        data.setValue(0, 1, 11);
+        data.setValue(1, 0, 'Haul');
+        data.setValue(1, 1, 2);
+        data.setValue(2, 0, 'Disposal');
+        data.setValue(2, 1, 2);
+        data.setValue(3, 0, 'Equipment');
+        data.setValue(3, 1, 2);
+        data.setValue(4, 0, 'Other');
+        data.setValue(4, 1, 7);
+      
+        // Create and draw the visualization.
+        new google.visualization.PieChart(document.getElementById('invoicechart')).
+            draw(data, {title:""});
+      }
+      
+
+      google.setOnLoadCallback(drawVisualization3);
+    </script>
+    </head>
+    <body>
+
+<!-- Primary Page Layout
+	================================================== -->
+
+<article class="container">
+      <div class="row remove-bottom">
+    <header> <a href="index.html"><img src="images/logo.png" width="250" height="112" alt="Astor Home"></a>
+          <div style="float:right;margin-top:10px; text-align:right; font-size:90%;">Welcome Anthony &nbsp;&nbsp; <a href="profile.html">Account</a> &nbsp;&nbsp;&nbsp; <a href="help.html">Help</a> &nbsp;&nbsp;&nbsp; <a href="#">Logout</a><br>
+        Call 800-278-6726 or <a href="requestservice.html">Get Support</a></div>
+        </header>
+  </div>
+      <div class="content">
+    <div class="tallnav-wrap">
+          <ul class="group" id="mainnavbar">
+        <li><a rel="#1C4D25" href="index.html">Company</a></li>
+        <li><a rel="#1C4D25" href="distributioncenters.html">Distribution Centers</a></li>
+        <li class="current_page_item"><a rel="#80C65A" href="stores.html">Stores</a></li>
+        <li><a rel="#1C4D25" href="requestservice.html">Support Center</a></li>
+      </ul>
+          <ul class="group" id="subnavbar">
+        <li><a href="stores.html">Dashboard</a></li>
+        <li><a href="storeswaste.html">Waste</a></li>
+        <li><a href="storesrecycling.html">Recycling</a></li>
+        <li  class="current_subpage_item"><a href="storescost.html">Cost/Savings</a></li>
+        <li><a href="storesservices.html">Services</a></li>
+        <li><a href="storesbrowse.html">List</a></li>
+      </ul>
+        </div>
+    <div class="row">
+          <div class="sixteen columns"> <span style="float:right"><a href="reports_alldcwaste.html" class="button" target="_blank">Printer Friendly</a> <a href="reports_alldcwaste.csv" class="button">Export CSV</a></span>
+        <h1>Stores Cost/Savings</h1>
+         <span style="float:left;padding-right:10px"><label for="from">Start Date</label>
+<input name="from" type="text" id="from" value="09/01/2011" style="width:100px"/></span><span style="float:left;padding-right:10px">
+<label for="to">End Date</label>
+<input name="to" type="text" id="to" value="03/01/2012" style="width:100px"/></span><span style="float:left;padding-right:10px">
+            <label for="for">Display</label>
+            <select name="for" ><option>By Regions</option><option>By District</option>
+          <option>By District (East Region)</option>
+          <option>By District (Southeast Region)</option>
+          <option>By District (Midwest Region)</option>
+          <option>By District (South Region)</option>
+          <option>By District (West Region)</option></select></span><hr>
+      </div>
+        </div>
+    <div class="row">
+          <div class="four columns">
+        <h5>Cost</h5>
+        <div id="invoicechart" style="width: 350px; height: 180px;"></div>
+      </div>
+          <div class="four columns">
+        <h5>Savings</h5>
+        <div id="savingschart" style="width: 350px; height: 180px;"></div>
+      </div>
+          <div class="eight columns omega">
+        <h5>Net Trends</h5>
+        <div id="visualization" style="width: 700px; height: 300px;"></div>
+      </div>
+        </div>
+    <div class="row">
+          <div class="sixteen columns">
+        <table cellpadding="0" cellspacing="0" border="0" class="display" id="costlist" width="100%">
+              <thead>
+            <tr>
+              <th>Region</th>
+              <th>District</th>
+              <th>Location</th>
+              <th>24H</th>
+                  <th>SqFt</th>
+                  <th>Total Tonnage</th>
+                  <th> Waste<br>
+                    Service</th>
+                  <th>Waste <br>
+                    Equipment Fee</th>
+                  <th>Waste<br>
+                    Haul Fee</th>
+                  <th>Waste <br>
+                    Disposal Fee</th>
+                  <th>Recycling Rebate</th>
+                  <th>Other  Fee</th>
+                  <th>Net</th>
+                </tr>
+          </thead>
+              <tbody>
+            <tr class="odd gradeA">
+              <td><a href="regionexample.html#tabs-3">East</a></td>
+              <td><a href="districtexample.html#tabs-3">610018</a></td>
+              <td><a href="storeexample.html#tabs-3">1234</a></td>
+              <td>Y</td>
+                  <td>10,000</td>
+                  <td>1</td>
+                  <td>$100.34</td>
+                  <td>&nbsp;</td>
+                  <td>$100.34</td>
+                  <td>$50.00</td>
+                  <td>$50.00</td>
+                  <td>&nbsp;</td>
+                  <td>$50.00</td>
+                </tr>
+            <tr class="even gradeA">
+              <td><a href="regionexample.html#tabs-3">East</a></td>
+              <td><a href="districtexample.html#tabs-3">610002</a></td>
+              <td><a href="storeexample.html#tabs-3">1234</a></td>
+              <td>Y</td>
+                  <td>10,000</td>
+                  <td>2</td>
+                  <td>$111.06</td>
+                  <td>&nbsp;</td>
+                  <td>$111.06</td>
+                  <td>$50.00</td>
+                  <td>$50.00</td>
+                  <td>&nbsp;</td>
+                  <td>$50.00</td>
+                </tr>
+            <tr class="odd gradeA">
+              <td><a href="regionexample.html#tabs-3">West</a></td>
+              <td><a href="districtexample.html#tabs-3">439210</a></td>
+              <td><a href="storeexample.html#tabs-3">1234</a></td>
+              <td>Y</td>
+                  <td>10,000</td>
+                  <td>1</td>
+                  <td>$100.21</td>
+                  <td>&nbsp;</td>
+                  <td>$100.21</td>
+                  <td>$50.00</td>
+                  <td>$50.00</td>
+                  <td>&nbsp;</td>
+                  <td>$50.00</td>
+                </tr>
+            <tr class="even gradeA">
+              <td class="even gradeB"><a href="regionexample.html#tabs-3">West</a></td>
+              <td class="even gradeB"><a href="districtexample.html#tabs-3">610017</a></td>
+              <td class="even gradeB"><a href="storeexample.html#tabs-3">1234</a></td>
+              <td>Y</td>
+                  <td>10,000</td>
+                  <td>11</td>
+                  <td>$112.24</td>
+                  <td>&nbsp;</td>
+                  <td>$112.24</td>
+                  <td>$50.00</td>
+                  <td>$50.00</td>
+                  <td>&nbsp;</td>
+                  <td>$50.00</td>
+                </tr>
+            <tr class="odd gradeA">
+              <td><a href="regionexample.html#tabs-3">East</a></td>
+              <td><a href="districtexample.html#tabs-3">610009</a></td>
+              <td><a href="storeexample.html#tabs-3">1234</a></td>
+              <td>Y</td>
+                  <td>10,000</td>
+                  <td>1</td>
+                  <td>$113.75</td>
+                  <td>&nbsp;</td>
+                  <td>$113.75</td>
+                  <td>$50.00</td>
+                  <td>$50.00</td>
+                  <td>&nbsp;</td>
+                  <td>$50.00</td>
+                </tr>
+            <tr class="even gradeA">
+              <td><a href="regionexample.html#tabs-3">South</a></td>
+              <td><a href="districtexample.html#tabs-3">610041</a></td>
+              <td><a href="storeexample.html#tabs-3">1234</a></td>
+              <td>Y</td>
+                  <td>10,000</td>
+                  <td>1</td>
+                  <td>$113.55</td>
+                  <td>&nbsp;</td>
+                  <td>$113.55</td>
+                  <td>$50.00</td>
+                  <td>$50.00</td>
+                  <td>&nbsp;</td>
+                  <td>$50.00</td>
+                </tr>
+            <tr class="odd gradeA">
+              <td class="odd gradeX"><a href="regionexample.html#tabs-3">South</a></td>
+              <td class="odd gradeX"><a href="districtexample.html#tabs-3">610001</a></td>
+              <td class="odd gradeX"><a href="storeexample.html#tabs-3">1235</a></td>
+              <td>Y</td>
+                  <td>10,000</td>
+                  <td>1</td>
+                  <td>$300.00</td>
+                  <td>&nbsp;</td>
+                  <td>$300.00</td>
+                  <td>$50.00</td>
+                  <td>$50.00</td>
+                  <td>&nbsp;</td>
+                  <td>$50.00</td>
+                </tr>
+            <tr class="even gradeA">
+              <td><a href="regionexample.html#tabs-3">South</a></td>
+              <td><a href="districtexample.html#tabs-3">610040</a></td>
+              <td><a href="storeexample.html#tabs-3">1234</a></td>
+              <td>Y</td>
+                  <td>10,000</td>
+                  <td>1</td>
+                  <td>$113.73</td>
+                  <td>&nbsp;</td>
+                  <td>$113.73</td>
+                  <td>$50.00</td>
+                  <td>$50.00</td>
+                  <td>&nbsp;</td>
+                  <td>$50.00</td>
+                </tr>
+            <tr class="odd gradeA">
+              <td><a href="regionexample.html#tabs-3">South</a></td>
+              <td><a href="districtexample.html#tabs-3">610007</a></td>
+              <td><a href="storeexample.html#tabs-3">1234</a></td>
+              <td>Y</td>
+                  <td>10,000</td>
+                  <td>1</td>
+                  <td>$109.56</td>
+                  <td>&nbsp;</td>
+                  <td>$109.56</td>
+                  <td>$50.00</td>
+                  <td>$50.00</td>
+                  <td>&nbsp;</td>
+                  <td>$50.00</td>
+                </tr>
+            <tr class="even gradeA">
+              <td><a href="regionexample.html#tabs-3">Southeast</a></td>
+              <td><a href="districtexample.html#tabs-3">610012</a></td>
+              <td class="odd gradeA"><a href="storeexample.html#tabs-3">1234</a></td>
+              <td>Y</td>
+                  <td>10,000</td>
+                  <td>1</td>
+                  <td>$112.06</td>
+                  <td>&nbsp;</td>
+                  <td>$112.06</td>
+                  <td>$50.00</td>
+                  <td>$50.00</td>
+                  <td>&nbsp;</td>
+                  <td>$50.00</td>
+                </tr>
+            <tr class="odd gradeA">
+              <td><a href="regionexample.html#tabs-3">Southeast</a></td>
+              <td><a href="districtexample.html#tabs-3">610008</a></td>
+              <td class="even gradeA"><a href="storeexample.html#tabs-3">1234</a></td>
+              <td>Y</td>
+                  <td>10,000</td>
+                  <td>1</td>
+                  <td>$114.29</td>
+                  <td>&nbsp;</td>
+                  <td>$114.29</td>
+                  <td>$50.00</td>
+                  <td>$50.00</td>
+                  <td>&nbsp;</td>
+                  <td>$50.00</td>
+                </tr>
+            <tr  class="even gradeA">
+              <td><a href="regionexample.html#tabs-3">West</a></td>
+              <td><a href="districtexample.html#tabs-3">123678</a></td>
+              <td class="odd gradeA"><a href="storeexample.html#tabs-3">1234</a></td>
+              <td>Y</td>
+                  <td>10,000</td>
+                  <td>1</td>
+                  <td class="odd gradeA">$100.34</td>
+                  <td class="odd gradeA">&nbsp;</td>
+                  <td class="odd gradeA">$100.34</td>
+                  <td class="odd gradeA">$50.00</td>
+                  <td class="odd gradeA">$50.00</td>
+                  <td class="odd gradeA">&nbsp;</td>
+                  <td class="odd gradeA">$50.00</td>
+                </tr>
+            <tr  class="odd gradeA">
+              <td><a href="regionexample.html#tabs-3">East</a></td>
+              <td><a href="districtexample.html#tabs-3">610004</a></td>
+              <td class="even gradeB"><a href="storeexample.html#tabs-3">1234</a></td>
+              <td>Y</td>
+                  <td>10,000</td>
+                  <td>1</td>
+                  <td class="even gradeA">$111.06</td>
+                  <td class="even gradeA">&nbsp;</td>
+                  <td class="even gradeA">$111.06</td>
+                  <td class="even gradeA">$50.00</td>
+                  <td class="even gradeA">$50.00</td>
+                  <td class="even gradeA">&nbsp;</td>
+                  <td class="even gradeA">$50.00</td>
+                </tr>
+            <tr  class="even gradeA">
+              <td class="odd gradeA"><a href="regionexample.html#tabs-3">East</a></td>
+              <td><a href="districtexample.html#tabs-3">610042</a></td>
+              <td class="odd gradeA"><a href="storeexample.html#tabs-3">1234</a></td>
+              <td>Y</td>
+                  <td>10,000</td>
+                  <td>1</td>
+                  <td class="odd gradeA">$100.21</td>
+                  <td class="odd gradeA">&nbsp;</td>
+                  <td class="odd gradeA">$100.21</td>
+                  <td class="odd gradeA">$50.00</td>
+                  <td class="odd gradeA">$50.00</td>
+                  <td class="odd gradeA">&nbsp;</td>
+                  <td class="odd gradeA">$50.00</td>
+                </tr>
+            <tr  class="odd gradeA">
+              <td class="even gradeA"><a href="regionexample.html#tabs-3">East</a></td>
+              <td><a href="districtexample.html#tabs-3">610011</a></td>
+              <td class="even gradeA"><a href="storeexample.html#tabs-3">1234</a></td>
+              <td>Y</td>
+                  <td>10,000</td>
+                  <td>1</td>
+                  <td class="even gradeA">$112.24</td>
+                  <td class="even gradeA">&nbsp;</td>
+                  <td class="even gradeA">$112.24</td>
+                  <td class="even gradeA">$50.00</td>
+                  <td class="even gradeA">$50.00</td>
+                  <td class="even gradeA">&nbsp;</td>
+                  <td class="even gradeA">$50.00</td>
+                </tr>
+            <tr  class="even gradeA">
+              <td class="odd gradeA"><a href="regionexample.html#tabs-3">West</a></td>
+              <td><a href="districtexample.html#tabs-3">610016</a></td>
+              <td class="odd gradeX"><a href="storeexample.html#tabs-3">1235</a></td>
+              <td>Y</td>
+                  <td>10,000</td>
+                  <td>1</td>
+                  <td class="odd gradeA">$113.75</td>
+                  <td class="odd gradeA">&nbsp;</td>
+                  <td class="odd gradeA">$113.75</td>
+                  <td class="odd gradeA">$50.00</td>
+                  <td class="odd gradeA">$50.00</td>
+                  <td class="odd gradeA">&nbsp;</td>
+                  <td class="odd gradeA">$50.00</td>
+                </tr>
+            <tr  class="odd gradeA">
+              <td class="even gradeB"><a href="regionexample.html#tabs-3">West</a></td>
+              <td><a href="districtexample.html#tabs-3">610024</a></td>
+              <td class="even gradeA"><a href="storeexample.html#tabs-3">1234</a></td>
+              <td>Y</td>
+                  <td>10,000</td>
+                  <td>1</td>
+                  <td class="even gradeA">$113.55</td>
+                  <td class="even gradeA">&nbsp;</td>
+                  <td class="even gradeA">$113.55</td>
+                  <td class="even gradeA">$50.00</td>
+                  <td class="even gradeA">$50.00</td>
+                  <td class="even gradeA">&nbsp;</td>
+                  <td class="even gradeA">$50.00</td>
+                </tr>
+            <tr  class="even gradeA">
+              <td class="odd gradeA"><a href="regionexample.html#tabs-3">East</a></td>
+              <td><a href="districtexample.html#tabs-3">610043</a></td>
+              <td class="odd gradeA"><a href="storeexample.html#tabs-3">1234</a></td>
+              <td>Y</td>
+                  <td>10,000</td>
+                  <td>1</td>
+                  <td class="odd gradeA">$300.00</td>
+                  <td class="odd gradeA">&nbsp;</td>
+                  <td class="odd gradeA">$300.00</td>
+                  <td class="odd gradeA">$50.00</td>
+                  <td class="odd gradeA">$50.00</td>
+                  <td class="odd gradeA">&nbsp;</td>
+                  <td class="odd gradeA">$50.00</td>
+                </tr>
+            <tr  class="odd gradeA">
+              <td class="even gradeA"><a href="regionexample.html#tabs-3">South</a></td>
+              <td><a href="districtexample.html#tabs-3">821710</a></td>
+              <td><a href="storeexample.html#tabs-3">1234</a></td>
+              <td>Y</td>
+                  <td>10,000</td>
+                  <td>1</td>
+                  <td class="even gradeA">$113.73</td>
+                  <td class="even gradeA">&nbsp;</td>
+                  <td class="even gradeA">$113.73</td>
+                  <td class="even gradeA">$50.00</td>
+                  <td class="even gradeA">$50.00</td>
+                  <td class="even gradeA">&nbsp;</td>
+                  <td class="even gradeA">$50.00</td>
+                </tr>
+            <tr  class="even gradeA">
+              <td class="odd gradeX"><a href="regionexample.html#tabs-3">South</a></td>
+              <td><a href="districtexample.html#tabs-3">610010</a></td>
+              <td><a href="storeexample.html#tabs-3">1234</a></td>
+              <td>Y</td>
+                  <td>10,000</td>
+                  <td>1</td>
+                  <td class="odd gradeA">$109.56</td>
+                  <td class="odd gradeA">&nbsp;</td>
+                  <td class="odd gradeA">$109.56</td>
+                  <td class="odd gradeA">$50.00</td>
+                  <td class="odd gradeA">$50.00</td>
+                  <td class="odd gradeA">&nbsp;</td>
+                  <td class="odd gradeA">$50.00</td>
+                </tr>
+            <tr  class="odd gradeA">
+              <td class="even gradeA"><a href="regionexample.html#tabs-3">South</a></td>
+              <td><a href="districtexample.html#tabs-3">610003</a></td>
+              <td><a href="storeexample.html#tabs-3">1234</a></td>
+              <td>Y</td>
+                  <td>10,000</td>
+                  <td>1</td>
+                  <td class="even gradeA">$112.06</td>
+                  <td class="even gradeA">&nbsp;</td>
+                  <td class="even gradeA">$112.06</td>
+                  <td class="even gradeA">$50.00</td>
+                  <td class="even gradeA">$50.00</td>
+                  <td class="even gradeA">&nbsp;</td>
+                  <td class="even gradeA">$50.00</td>
+                </tr>
+            <tr  class="even gradeA">
+              <td class="odd gradeA"><a href="regionexample.html#tabs-3">South</a></td>
+              <td><a href="districtexample.html#tabs-3">610006</a></td>
+              <td class="even gradeB"><a href="storeexample.html#tabs-3">1234</a></td>
+              <td>Y</td>
+                  <td>10,000</td>
+                  <td>1</td>
+                  <td class="odd gradeA">$114.29</td>
+                  <td class="odd gradeA">&nbsp;</td>
+                  <td class="odd gradeA">$114.29</td>
+                  <td class="odd gradeA">$50.00</td>
+                  <td class="odd gradeA">$50.00</td>
+                  <td class="odd gradeA">&nbsp;</td>
+                  <td class="odd gradeA">$50.00</td>
+                </tr>
+            <tr class="odd gradeA">
+              <td class="even gradeA"><a href="regionexample.html#tabs-3">Southeast</a></td>
+              <td><a href="districtexample.html#tabs-3">610018</a></td>
+              <td><a href="storeexample.html#tabs-3">1234</a></td>
+              <td>Y</td>
+                  <td>10,000</td>
+                  <td>1</td>
+                  <td>$100.34</td>
+                  <td>&nbsp;</td>
+                  <td>$100.34</td>
+                  <td>$50.00</td>
+                  <td>$50.00</td>
+                  <td>&nbsp;</td>
+                  <td>$50.00</td>
+                </tr>
+            <tr class="even gradeA">
+              <td class="odd gradeA"><a href="regionexample.html#tabs-3">Southeast</a></td>
+              <td><a href="districtexample.html#tabs-3">610002</a></td>
+              <td><a href="storeexample.html#tabs-3">1234</a></td>
+              <td>Y</td>
+                  <td>10,000</td>
+                  <td>1</td>
+                  <td>$111.06</td>
+                  <td>&nbsp;</td>
+                  <td>$111.06</td>
+                  <td>$50.00</td>
+                  <td>$50.00</td>
+                  <td>&nbsp;</td>
+                  <td>$50.00</td>
+                </tr>
+            <tr class="odd gradeA">
+              <td class="even gradeA"><a href="regionexample.html#tabs-3">West</a></td>
+              <td><a href="districtexample.html#tabs-3">439210</a></td>
+              <td class="odd gradeX"><a href="storeexample.html#tabs-3">1235</a></td>
+              <td>Y</td>
+                  <td>10,000</td>
+                  <td>1</td>
+                  <td>$100.21</td>
+                  <td>&nbsp;</td>
+                  <td>$100.21</td>
+                  <td>$50.00</td>
+                  <td>$50.00</td>
+                  <td>&nbsp;</td>
+                  <td>$50.00</td>
+                </tr>
+            <tr class="even gradeA">
+              <td class="odd gradeA"><a href="regionexample.html#tabs-3">East</a></td>
+              <td class="even gradeB"><a href="districtexample.html#tabs-3">610017</a></td>
+              <td><a href="storeexample.html#tabs-3">1234</a></td>
+              <td>Y</td>
+                  <td>10,000</td>
+                  <td>1</td>
+                  <td>$112.24</td>
+                  <td>&nbsp;</td>
+                  <td>$112.24</td>
+                  <td>$50.00</td>
+                  <td>$50.00</td>
+                  <td>&nbsp;</td>
+                  <td>$50.00</td>
+                </tr>
+            <tr class="odd gradeA">
+              <td><a href="regionexample.html#tabs-3">East</a></td>
+              <td><a href="districtexample.html#tabs-3">610009</a></td>
+              <td><a href="storeexample.html#tabs-3">1234</a></td>
+              <td>N</td>
+                  <td>10,000</td>
+                  <td>1</td>
+                  <td>$100.34</td>
+                  <td>&nbsp;</td>
+                  <td>$100.34</td>
+                  <td>$50.00</td>
+                  <td>$50.00</td>
+                  <td>&nbsp;</td>
+                  <td>$50.00</td>
+                </tr>
+            <tr class="even gradeA">
+              <td><a href="regionexample.html#tabs-3">East</a></td>
+              <td><a href="districtexample.html#tabs-3">610041</a></td>
+              <td class="odd gradeA"><a href="storeexample.html#tabs-3">1234</a></td>
+              <td>N</td>
+                  <td>10,000</td>
+                  <td>1</td>
+                  <td>$111.06</td>
+                  <td>&nbsp;</td>
+                  <td>$111.06</td>
+                  <td>$50.00</td>
+                  <td>$50.00</td>
+                  <td>&nbsp;</td>
+                  <td>$50.00</td>
+                </tr>
+            <tr class="odd gradeA">
+              <td><a href="regionexample.html#tabs-3">West</a></td>
+              <td class="odd gradeX"><a href="districtexample.html#tabs-3">610001</a></td>
+              <td class="even gradeA"><a href="storeexample.html#tabs-3">1234</a></td>
+              <td>N</td>
+                  <td>10,000</td>
+                  <td>1</td>
+                  <td>$100.21</td>
+                  <td>&nbsp;</td>
+                  <td>$100.21</td>
+                  <td>$50.00</td>
+                  <td>$50.00</td>
+                  <td>&nbsp;</td>
+                  <td>$50.00</td>
+                </tr>
+            <tr class="even gradeA">
+              <td class="even gradeB"><a href="regionexample.html#tabs-3">West</a></td>
+              <td><a href="districtexample.html#tabs-3">610040</a></td>
+              <td class="odd gradeA"><a href="storeexample.html#tabs-3">1234</a></td>
+              <td>N</td>
+                  <td>10,000</td>
+                  <td>1</td>
+                  <td>$112.24</td>
+                  <td>&nbsp;</td>
+                  <td>$112.24</td>
+                  <td>$50.00</td>
+                  <td>$50.00</td>
+                  <td>&nbsp;</td>
+                  <td>$50.00</td>
+                </tr>
+            <tr class="odd gradeA">
+              <td><a href="regionexample.html#tabs-3">East</a></td>
+              <td><a href="districtexample.html#tabs-3">610007</a></td>
+              <td class="even gradeB"><a href="storeexample.html#tabs-3">1234</a></td>
+              <td>N</td>
+                  <td>10,000</td>
+                  <td>1</td>
+                  <td>$113.75</td>
+                  <td>&nbsp;</td>
+                  <td>$113.75</td>
+                  <td>$50.00</td>
+                  <td>$50.00</td>
+                  <td>&nbsp;</td>
+                  <td>$50.00</td>
+                </tr>
+            <tr class="even gradeA">
+              <td><a href="regionexample.html#tabs-3">South</a></td>
+              <td><a href="districtexample.html#tabs-3">610012</a></td>
+              <td class="odd gradeA"><a href="storeexample.html#tabs-3">1234</a></td>
+              <td>N</td>
+                  <td>10,000</td>
+                  <td>1</td>
+                  <td>$113.55</td>
+                  <td>&nbsp;</td>
+                  <td>$113.55</td>
+                  <td>$50.00</td>
+                  <td>$50.00</td>
+                  <td>&nbsp;</td>
+                  <td>$50.00</td>
+                </tr>
+            <tr class="odd gradeA">
+              <td class="odd gradeX"><a href="regionexample.html#tabs-3">South</a></td>
+              <td><a href="districtexample.html#tabs-3">610008</a></td>
+              <td class="even gradeA"><a href="storeexample.html#tabs-3">1234</a></td>
+              <td>N</td>
+                  <td>10,000</td>
+                  <td>1</td>
+                  <td>$300.00</td>
+                  <td>&nbsp;</td>
+                  <td>$300.00</td>
+                  <td>$50.00</td>
+                  <td>$50.00</td>
+                  <td>&nbsp;</td>
+                  <td>$50.00</td>
+                </tr>
+            <tr  class="even gradeA">
+              <td><a href="regionexample.html#tabs-3">South</a></td>
+              <td><a href="districtexample.html#tabs-3">284955</a></td>
+              <td class="odd gradeX"><a href="storeexample.html#tabs-3">1235</a></td>
+              <td>N</td>
+                  <td>10,000</td>
+                  <td>1</td>
+                  <td>$113.73</td>
+                  <td>&nbsp;</td>
+                  <td>$113.73</td>
+                  <td>$50.00</td>
+                  <td>$50.00</td>
+                  <td>&nbsp;</td>
+                  <td>$50.00</td>
+                </tr>
+            <tr  class="odd gradeA">
+              <td><a href="regionexample.html#tabs-3">South</a></td>
+              <td><a href="districtexample.html#tabs-3">610004</a></td>
+              <td class="even gradeA"><a href="storeexample.html#tabs-3">1234</a></td>
+              <td>N</td>
+                  <td>10,000</td>
+                  <td>1</td>
+                  <td>$109.56</td>
+                  <td>&nbsp;</td>
+                  <td>$109.56</td>
+                  <td>$50.00</td>
+                  <td>$50.00</td>
+                  <td>&nbsp;</td>
+                  <td>$50.00</td>
+                </tr>
+            <tr  class="even gradeA">
+              <td><a href="regionexample.html#tabs-3">Southeast</a></td>
+              <td><a href="districtexample.html#tabs-3">610042</a></td>
+              <td class="odd gradeA"><a href="storeexample.html#tabs-3">1234</a></td>
+              <td>N</td>
+                  <td>10,000</td>
+                  <td>1</td>
+                  <td>$112.06</td>
+                  <td>&nbsp;</td>
+                  <td>$112.06</td>
+                  <td>$50.00</td>
+                  <td>$50.00</td>
+                  <td>&nbsp;</td>
+                  <td>$50.00</td>
+                </tr>
+            <tr  class="odd gradeA">
+              <td><a href="regionexample.html#tabs-3">Southeast</a></td>
+              <td><a href="districtexample.html#tabs-3">610011</a></td>
+              <td class="even gradeB"><a href="storeexample.html#tabs-3">1234</a></td>
+              <td>N</td>
+                  <td>10,000</td>
+                  <td>1</td>
+                  <td>$114.29</td>
+                  <td>&nbsp;</td>
+                  <td>$114.29</td>
+                  <td>$50.00</td>
+                  <td>$50.00</td>
+                  <td>&nbsp;</td>
+                  <td>$50.00</td>
+                </tr>
+            <tr  class="even gradeA">
+              <td><a href="regionexample.html#tabs-3">West</a></td>
+              <td><a href="districtexample.html#tabs-3">610016</a></td>
+              <td class="odd gradeA"><a href="storeexample.html#tabs-3">1234</a></td>
+              <td>N</td>
+                  <td>10,000</td>
+                  <td>1</td>
+                  <td class="odd gradeA">$113.75</td>
+                  <td class="odd gradeA">&nbsp;</td>
+                  <td class="odd gradeA">$113.75</td>
+                  <td class="odd gradeA">$50.00</td>
+                  <td class="odd gradeA">$50.00</td>
+                  <td class="odd gradeA">&nbsp;</td>
+                  <td class="odd gradeA">$50.00</td>
+                </tr>
+            <tr  class="odd gradeA">
+              <td><a href="regionexample.html#tabs-3">East</a></td>
+              <td><a href="districtexample.html#tabs-3">610024</a></td>
+              <td class="even gradeA"><a href="storeexample.html#tabs-3">1234</a></td>
+              <td>N</td>
+                  <td>10,000</td>
+                  <td>1</td>
+                  <td class="even gradeA">$113.55</td>
+                  <td class="even gradeA">&nbsp;</td>
+                  <td class="even gradeA">$113.55</td>
+                  <td class="even gradeA">$50.00</td>
+                  <td class="even gradeA">$50.00</td>
+                  <td class="even gradeA">&nbsp;</td>
+                  <td class="even gradeA">$50.00</td>
+                </tr>
+            <tr  class="even gradeA">
+              <td><a href="regionexample.html#tabs-3">East</a></td>
+              <td><a href="districtexample.html#tabs-3">610043</a></td>
+              <td class="odd gradeX"><a href="storeexample.html#tabs-3">1235</a></td>
+              <td>N</td>
+                  <td>10,000</td>
+                  <td>1</td>
+                  <td class="odd gradeA">$300.00</td>
+                  <td class="odd gradeA">&nbsp;</td>
+                  <td class="odd gradeA">$300.00</td>
+                  <td class="odd gradeA">$50.00</td>
+                  <td class="odd gradeA">$50.00</td>
+                  <td class="odd gradeA">&nbsp;</td>
+                  <td class="odd gradeA">$50.00</td>
+                </tr>
+            <tr  class="odd gradeA">
+              <td><a href="regionexample.html#tabs-3">West</a></td>
+              <td><a href="districtexample.html#tabs-3">821710</a></td>
+              <td class="even gradeA"><a href="storeexample.html#tabs-3">1234</a></td>
+              <td>N</td>
+                  <td>10,000</td>
+                  <td>1</td>
+                  <td class="even gradeA">$113.73</td>
+                  <td class="even gradeA">&nbsp;</td>
+                  <td class="even gradeA">$113.73</td>
+                  <td class="even gradeA">$50.00</td>
+                  <td class="even gradeA">$50.00</td>
+                  <td class="even gradeA">&nbsp;</td>
+                  <td class="even gradeA">$50.00</td>
+                </tr>
+            <tr  class="even gradeA">
+              <td><a href="regionexample.html#tabs-3">Southeast</a></td>
+              <td><a href="districtexample.html#tabs-3">610010</a></td>
+              <td class="odd gradeA"><a href="storeexample.html#tabs-3">1234</a></td>
+              <td>N</td>
+                  <td>10,000</td>
+                  <td>1</td>
+                  <td class="odd gradeA">$109.56</td>
+                  <td class="odd gradeA">&nbsp;</td>
+                  <td class="odd gradeA">$109.56</td>
+                  <td class="odd gradeA">$50.00</td>
+                  <td class="odd gradeA">$50.00</td>
+                  <td class="odd gradeA">&nbsp;</td>
+                  <td class="odd gradeA">$50.00</td>
+                </tr>
+            <tr  class="odd gradeA">
+              <td><a href="regionexample.html#tabs-3">South</a></td>
+              <td><a href="districtexample.html#tabs-3">610003</a></td>
+              <td><a href="storeexample.html#tabs-3">1234</a></td>
+              <td>N</td>
+                  <td>10,000</td>
+                  <td>1</td>
+                  <td class="even gradeA">$112.06</td>
+                  <td class="even gradeA">&nbsp;</td>
+                  <td class="even gradeA">$112.06</td>
+                  <td class="even gradeA">$50.00</td>
+                  <td class="even gradeA">$50.00</td>
+                  <td class="even gradeA">&nbsp;</td>
+                  <td class="even gradeA">$50.00</td>
+                </tr>
+            <tr  class="even gradeA">
+              <td><a href="regionexample.html#tabs-3">South</a></td>
+              <td><a href="districtexample.html#tabs-3">610006</a></td>
+              <td><a href="storeexample.html#tabs-3">1234</a></td>
+              <td>N</td>
+                  <td>10,000</td>
+                  <td>1</td>
+                  <td class="odd gradeA">$114.29</td>
+                  <td class="odd gradeA">&nbsp;</td>
+                  <td class="odd gradeA">$114.29</td>
+                  <td class="odd gradeA">$50.00</td>
+                  <td class="odd gradeA">$50.00</td>
+                  <td class="odd gradeA">&nbsp;</td>
+                  <td class="odd gradeA">$50.00</td>
+                </tr>
+          </tbody>
+              <tfoot>
+            <tr>
+              <th>5 Regions</th>
+              <th>1000 Districts</th>
+              <th>12345 Locations</th>
+              <th>&nbsp;</th>
+                  <th>30,000 SqFt</th>
+                  <th>1234 Total Tonnage</th>
+                  <th>$123,490 Waste</th>
+                  <th>Waste <br>
+                    Equipment Fee</th>
+                  <th>$123,456 Haul Fee</th>
+                  <th>$234,567 Disposal Fee</th>
+                  <th>$20,000 Rebate</th>
+                  <th>Other Fee</th>
+                  <th>$6709 Total Fee</th>
+                </tr>
+          </tfoot>
+            </table>
+      </div>
+        </div>
+  </div>
+      <footer> &nbsp;&copy; 2012 All rights reserved. The Astor Company. <a href="privacy.html">Privacy</a> & <a href="terms.html">Terms</a></footer>
+    </article>
+<!-- container --> 
+
+<!-- JS
+	================================================== --> 
+<script src="javascripts/tabs.js"></script> 
+
+<!-- End Document
+================================================== -->
+</body>
+</html>

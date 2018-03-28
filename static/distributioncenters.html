@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]> <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]> <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+	<!-- Basic Page Needs
+  ================================================== -->
+	<meta charset="utf-8">
+	<title>Distribution Centers - Astor</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<!-- Mobile Specific Metas
+  ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+  ================================================== -->
+    <link rel="stylesheet" href="stylesheets/demo_table.css">
+	<link rel="stylesheet" href="stylesheets/base.css">
+    <link rel="stylesheet" href="stylesheets/astor/jquery-ui-1.8.17.custom.css" />
+	<link rel="stylesheet" href="stylesheets/skeleton.css">
+	<link rel="stylesheet" href="stylesheets/layout.css">
+
+	<!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+    
+	<!-- Head Scripts
+	================================================== -->
+	<script src="js/modernizr-2.5.1.js"></script>
+    <script src="js/jquery-1.7.1.js"></script>
+    <script src="js/jquery-ui-1.8.17.custom.min.js"></script>
+    <script src="js/jquery.dataTables.js"></script>
+    <script src='js/jquery.color-RGBa-patch.js'></script>
+    <script src="js/custom.js"></script>
+    <script>
+	$(function() {
+		$('#tabs').tabs();
+		$('#dclist').dataTable( {
+					"bPaginate": false,
+					"bFilter": false
+				} );
+	});
+	</script>
+    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+<script type="text/javascript">
+      google.load('visualization', '1', {packages: ['corechart']});
+    </script>
+    <script type="text/javascript">
+      function drawVisualization() {
+        // Some raw data (not necessarily accurate)
+        var countries =
+          ['Aluminum', 'Plastic',
+           'LDPE Film', 'Cardboard', 'Waste'];
+        var months = ['09/2011','10/2011', '11/2011', '12/2011', '01/2012', 'Current'];
+        var productionByCountry = [[200, 365, 135, 357, 239, 236],
+                                   [800, 938, 1120, 1167, 1110, 691],
+                                   [400, 522, 599, 587, 615, 629],
+                                   [1100, 998, 1268, 807, 968, 1026],
+                                   [400, 450, 288, 397, 215, 366]];
+      
+        // Create and populate the data table.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Month');
+        for (var i = 0; i < countries.length; ++i) {
+          data.addColumn('number', countries[i]);
+        }
+        data.addRows(months.length);
+        for (var i = 0; i < months.length; ++i) {
+          data.setCell(i, 0, months[i]);
+        }
+        for (var i = 0; i < countries.length; ++i) {
+          var country = productionByCountry[i];
+          for (var month = 0; month < months.length; ++month) {
+            data.setCell(month, i + 1, country[month]);
+          }
+        }
+        // Create and draw the visualization.
+        var ac = new google.visualization.AreaChart(document.getElementById('visualization'));
+        ac.draw(data, {
+          title : 'Waste/Recycling Production',
+          isStacked: true,
+          width: 600,
+          height: 300,
+          vAxis: {title: "Tons"},
+          hAxis: {title: "Month"}
+        });
+      }
+      
+
+      google.setOnLoadCallback(drawVisualization);
+
+      function drawVisualization2() {
+        // Create and populate the data table.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Task');
+        data.addColumn('number', 'Hours per Day');
+        data.addRows(5);
+        data.setValue(0, 0, 'Pickup');
+        data.setValue(0, 1, 11);
+        data.setValue(1, 0, 'Haul');
+        data.setValue(1, 1, 2);
+        data.setValue(2, 0, 'Disposal');
+        data.setValue(2, 1, 2);
+        data.setValue(3, 0, 'Equipment');
+        data.setValue(3, 1, 2);
+        data.setValue(4, 0, 'Other');
+        data.setValue(4, 1, 7);
+      
+        // Create and draw the visualization.
+        new google.visualization.PieChart(document.getElementById('servicechart')).
+            draw(data, {title:""});
+      }
+      
+
+      google.setOnLoadCallback(drawVisualization2);
+	  
+	  
+      function drawVisualization3() {
+        // Create and populate the data table.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Task');
+        data.addColumn('number', 'Hours per Day');
+        data.addRows(5);
+        data.setValue(0, 0, 'Pickup');
+        data.setValue(0, 1, 11);
+        data.setValue(1, 0, 'Haul');
+        data.setValue(1, 1, 2);
+        data.setValue(2, 0, 'Disposal');
+        data.setValue(2, 1, 2);
+        data.setValue(3, 0, 'Equipment');
+        data.setValue(3, 1, 2);
+        data.setValue(4, 0, 'Other');
+        data.setValue(4, 1, 7);
+      
+        // Create and draw the visualization.
+        new google.visualization.PieChart(document.getElementById('invoicechart')).
+            draw(data, {title:""});
+      }
+      
+
+      google.setOnLoadCallback(drawVisualization3);
+	  
+	        function drawVisualization4() {
+        // Create and populate the data table.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Task');
+        data.addColumn('number', 'Hours per Day');
+        data.addRows(5);
+        data.setValue(0, 0, 'Aluminum');
+        data.setValue(0, 1, 11);
+        data.setValue(1, 0, 'Cardboard');
+        data.setValue(1, 1, 2);
+        data.setValue(2, 0, 'LDPE Film');
+        data.setValue(2, 1, 2);
+        data.setValue(3, 0, 'Plastic');
+        data.setValue(3, 1, 2);
+        data.setValue(4, 0, 'Other');
+        data.setValue(4, 1, 7);
+      
+        // Create and draw the visualization.
+        new google.visualization.PieChart(document.getElementById('recyclingchart')).
+            draw(data, {title:""});
+      }
+      
+
+      google.setOnLoadCallback(drawVisualization4);
+	  
+	  
+      function drawVisualization5() {
+        // Create and populate the data table.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Task');
+        data.addColumn('number', 'Hours per Day');
+        data.addRows(5);
+        data.setValue(0, 0, 'Pickup');
+        data.setValue(0, 1, 11);
+        data.setValue(1, 0, 'Haul');
+        data.setValue(1, 1, 2);
+        data.setValue(2, 0, 'Disposal');
+        data.setValue(2, 1, 2);
+        data.setValue(3, 0, 'Equipment');
+        data.setValue(3, 1, 2);
+        data.setValue(4, 0, 'Other');
+        data.setValue(4, 1, 7);
+      
+        // Create and draw the visualization.
+        new google.visualization.PieChart(document.getElementById('wastechart')).
+            draw(data, {title:""});
+      }
+ google.setOnLoadCallback(drawVisualization5);
+    </script>
+</head>
+<body>
+
+	<!-- Primary Page Layout
+	================================================== -->
+
+	<article class="container">
+    <div class="row remove-bottom">
+		<header>
+        <a href="index.html"><img src="images/logo.png" width="250" height="112" alt="Astor Home"></a><div style="float:right;margin-top:10px; text-align:right; font-size:90%;">Welcome Anthony &nbsp;&nbsp;  
+          <a href="profile.html">Account</a> &nbsp;&nbsp;&nbsp; <a href="help.html">Help</a> &nbsp;&nbsp;&nbsp; <a href="#">Logout</a><br>
+Call 800-278-6726 or <a href="requestservice.html">Get Support</a></div>
+		</header></div>  
+        <div class="content">
+             <div class="tallnav-wrap">   
+<ul class="group" id="mainnavbar">
+            <li><a rel="#1C4D25" href="index.html">Company</a></li>
+            <li class="current_page_item"><a rel="#80C65A" href="distributioncenters.html">Distribution Centers</a></li>
+            <li><a rel="#1C4D25" href="stores.html">Stores</a></li>
+            
+<li><a rel="#1C4D25" href="requestservice.html">Support Center</a></li>    
+        </ul>
+        <ul class="group" id="subnavbar">
+        <li class="current_subpage_item"><a href="distributioncenters.html">Dashboard</a></li>        
+        <li><a href="dcwaste.html">Waste</a></li>
+<li><a href="dcsustainability.html">Recycling</a></li>
+        <li><a href="dccost.html">Cost/Savings</a></li>
+<li><a href="dcservices.html">Services</a></li>
+        <li><a href="dcbrowse.html">List</a></li>
+      </ul>
+    </div><div class="row"><div class="sixteen columns">
+          <h1>DC Dashboard</h1></div></div>
+            <div class="row" style="border-bottom:1px solid #ddd;"><div class="seven columns">
+          <h2>Current Month</h2>
+          <table width="100%" border="0" cellspacing="10" cellpadding="20">
+  <tr style="border-bottom:1px solid #ddd">
+    <td>Waste      <h4>30 tons</h4></td>
+    <td>Recycling      <h4>30 tons</h4></td>
+    <td>Diversion rate
+      <h4>25%</h4></td>
+  </tr>
+  <tr>
+    <td>Cost
+      <h4>$30,000</h4></td>
+    <td>Savings
+      <h4>$6,000</h4></td>
+    <td>Cost per sqft
+      <h4>$30</h4></td>
+  </tr>
+          </table><br>
+ <h2><select name="Period"><option>See Prior Month</option><option>See Prior Quarter</option><option>See Last Six Months</option><option>See Last Year</option></select></h2>
+          <table width="100%" border="0" cellspacing="10" cellpadding="20">
+  <tr style="border-bottom:1px solid #ddd">
+    <td>Waste      <h4>60 tons</h4></td>
+    <td>Recycling      <h4>60 tons</h4></td>
+    <td>Diversion rate
+      <h4>25%</h4></td>
+  </tr>
+  <tr>
+    <td>Cost
+      <h4>$50,000</h4></td>
+    <td>Savings
+      <h4>$7,000</h4></td>
+    <td>Cost per sqft
+      <h4>$30</h4></td>
+  </tr>
+          </table>
+        </div><div class="nine columns omega"><iframe width="100%" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps/ms?msa=0&amp;msid=211802349490040216593.0004b865a5af7a942e3bb&amp;ie=UTF8&amp;t=m&amp;ll=39.232253,-95.273437&amp;spn=40.525964,74.882813&amp;z=3&amp;output=embed"></iframe></div></div>                   
+     <!--div class="row"><div class="sixteen columns">
+       <div id="tabs" style="border:0px;">
+			<ul><li><a href="#tabs-1">Waste Performance</a></li>
+                <li><a href="#tabs-2">Recycling Performance</a></li>
+				<li><a href="#tabs-3">Cost/Savings Performance</a></li>
+				<li><a href="#tabs-4">Services Performance</a></li>
+			</ul>
+          <div id="tabs-1" style="border:2px solid #7ABF53;">
+          <h2>Waste Performance</h2>
+          <label for="performance"></label>
+      <select name="performance" id="performance">
+        <option selected>By Diversion Rate</option>
+        <option>By Total Recycled</option>
+        <option>By Savings</option>
+        <option>By # Service Requests</option>
+      </select>
+          <table width="100%" border="0" cellspacing="10" cellpadding="20">
+            <tr style="border-bottom:1px solid #ddd">
+              <td>Highest Performers
+                <h4><a href="dcexample.html">Orlando</a>, Anderson,  Pendergast</h4></td>
+            </tr>
+            <tr  style="border-bottom:1px solid #ddd">
+              <td>Lowest Performers
+                <h4><a href="dcexample.html">Orlando</a>, Anderson, Pendergast</h4></td>
+            </tr>
+            </table>
+                
+                      <h5>Waste</h5>
+                      <div id="wastechart" style="width: 300px; height: 180px;"></div>
+                    
+                    
+                      <h5>Recycling</h5>
+                      <div id="recyclingchart" style="width: 350px; height: 180px;"></div>
+                    
+          <h2>Trend</h2>
+          <table width="100%" border="0" cellspacing="10" cellpadding="20">
+  <tr>
+    <td colspan="3"   style="border-bottom:1px solid #ddd">Current Month</td>
+  </tr>
+  <tr>
+    <td>Waste
+      <h4>20 tons</h4></td>
+    <td>Recycling
+      <h4>30 tons</h4></td>
+    <td>Diversion rate
+      <h4>45%</h4></td>
+  </tr>
+    <tr>
+      <td colspan="3">&nbsp;</td>
+    </tr>
+    <tr>
+      <td colspan="3"   style="border-bottom:1px solid #ddd">Prior Month</td>
+    </tr>
+    <tr>
+      <td>Waste
+        <h4>40 tons</h4></td>
+      <td>Recycling
+        <h4>20 tons</h4></td>
+      <td>Diversion rate
+        <h4>25%</h4></td>
+    </tr>    
+    <tr>
+      <td colspan="3">&nbsp;</td>
+    </tr>
+      <tr>
+        <td colspan="3"   style="border-bottom:1px solid #ddd">Average</td>
+      </tr>
+      <tr>
+        <td>Waste
+          <h4>50 tons</h4></td>
+        <td>Recycling
+          <h4>30 tons</h4></td>
+        <td>Diversion rate
+          <h4>35%</h4></td>
+      </tr>
+          </table>
+        <div id="visualization" style="width: 600px; height: 300px;"></div>
+                    </div>
+          <div id="tabs-2" style="border:2px solid #7ABF53;"><h2>Recycling Performance</h2>
+          
+           <h2>Performance</h2>
+          <label for="performance"></label>
+      <select name="performance" id="performance">
+        <option>By Diversion Rate</option>
+        <option>By Resources Saved</option>
+        <option>By Materials Recycled</option>
+      </select>
+          <table width="100%" border="0" cellspacing="10" cellpadding="20">
+            <tr style="border-bottom:1px solid #ddd">
+              <td>Highest Performers
+                <h4><a href="dcexample.html">Orlando</a>, Anderson,  Pendergast</h4></td>
+            </tr>
+            <tr  style="border-bottom:1px solid #ddd">
+              <td>Lowest Performers
+                <h4><a href="dcexample.html">Orlando</a>, Anderson, Pendergast</h4></td>
+            </tr>
+          </table>
+          <h2>Trends</h2>
+          <table width="100%" border="0" cellspacing="10" cellpadding="20">
+  <tr>
+    <td colspan="4"   style="border-bottom:1px solid #ddd">Current Month</td>
+  </tr>
+    <tr style="border-bottom:1px solid #ddd">
+    <td>Cardboard
+      <h4>10 tons</h4></td>
+    <td>LDPE Film
+      <h4>10 tons</h4></td>
+    <td>Plastic
+      <h4>10 tons</h4></td>
+    <td>Aluminum
+      <h4>5 tons</h4></td>
+  </tr>
+  <tr>
+    <td>Trees Saved
+      <h4>300</h4></td>
+    <td>Energy Saved
+      <h4>5,000 KWh</h4></td>
+    <td>Landfill Reduced
+      <h4>30 yd3</h4></td>
+    <td>CO2 Reduced
+      <h4>50 tons</h4></td>
+  </tr>
+    <tr>
+      <td colspan="4">&nbsp;</td>
+    </tr>
+    <tr>
+      <td colspan="4"   style="border-bottom:1px solid #ddd">Prior Month</td>
+    </tr>
+       <tr style="border-bottom:1px solid #ddd">
+         <td>Cardboard
+           <h4>10 tons</h4></td>
+         <td>LDPE Film
+           <h4>13 tons</h4></td>
+         <td>Plastic
+           <h4>9 tons</h4></td>
+         <td>Aluminum
+           <h4>5 tons</h4></td>
+       </tr>
+       <tr>
+         <td>Trees Saved
+           <h4>700</h4></td>
+         <td>Energy Saved
+           <h4>10,000 KWh</h4></td>
+         <td>Landfill Reduced
+           <h4>40 yd3</h4></td>
+         <td>CO2 Reduced
+           <h4>50 tons</h4></td>
+       </tr>
+  <tr>
+    <td colspan="4">&nbsp;</td>
+  </tr>
+      <tr>
+        <td colspan="4"   style="border-bottom:1px solid #ddd">Average</td>
+      </tr>
+        <tr style="border-bottom:1px solid #ddd">
+          <td>Cardboard
+            <h4>13 tons</h4></td>
+          <td>LDPE Film
+            <h4>10 tons</h4></td>
+          <td>Plastic
+            <h4>8 tons</h4></td>
+          <td>Aluminum
+            <h4>5 tons</h4></td>
+        </tr>
+        <tr>
+          <td>Trees Saved
+            <h4>650</h4></td>
+          <td>Energy Saved
+            <h4>5,000 KWh</h4></td>
+          <td>Landfill Reduced
+            <h4>40 yd3</h4></td>
+          <td>CO2 Reduced
+            <h4>70 tons</h4></td>
+        </tr>
+          </table>
+               <h5>Materials</h5>
+                      <div id="recyclingchart" style="width: 350px; height: 200px;"></div></div>
+          <div id="tabs-3" style="border:2px solid #7ABF53;"><h2>Cost/Savings Performance</h2>
+           <h2>Performance</h2>
+          <label for="performance"></label>
+      <select name="performance" id="performance">
+        <option>By Cost per Sqft</option>
+        <option>By Total Cost</option>
+        <option>By Savings</option>
+        <option>By # Service Requests</option>
+      </select>
+          <table width="100%" border="0" cellspacing="10" cellpadding="20">
+            <tr style="border-bottom:1px solid #ddd">
+              <td>Highest Performers
+                <h4><a href="dcexample.html">Orlando</a>, Anderson,  Pendergast</h4></td>
+            </tr>
+            <tr  style="border-bottom:1px solid #ddd">
+              <td>Lowest Performers
+                <h4><a href="dcexample.html">Orlando</a>, Anderson, Pendergast</h4></td>
+            </tr>
+          </table>
+                 <h2>Trends</h2>
+          <table width="100%" border="0" cellspacing="10" cellpadding="20">
+  <tr>
+    <td colspan="3"   style="border-bottom:1px solid #ddd">Current Month</td>
+    </tr>
+  <tr>
+    <td>Invoiced
+      <h4>$30,000</h4></td>
+    <td>Savings
+      <h4>$6,000</h4></td>
+    <td>Cost per sqft
+      <h4>$30</h4></td>
+  </tr>
+    <tr>
+      <td colspan="3">&nbsp;</td>
+    </tr>
+    <tr>
+      <td colspan="3"   style="border-bottom:1px solid #ddd">Prior Month</td>
+      </tr>
+    <td>Invoiced
+      <h4>$50,000</h4></td>
+    <td>Savings
+      <h4>$7,000</h4></td>
+    <td>Cost per sqft
+      <h4>$30</h4></td>
+  </tr>    <tr>
+        <td colspan="3">&nbsp;</td>
+      </tr>
+      <tr>
+      <td colspan="3"   style="border-bottom:1px solid #ddd">Average</td>
+      </tr>
+    <td>Invoiced
+      <h4>$50,000</h4></td>
+    <td>Savings
+      <h4>$7,000</h4></td>
+    <td>Cost per sqft
+      <h4>$30</h4></td>
+  </tr>
+          </table>
+        <h5>Cost</h5>
+                      <div id="invoicechart" style="width: 350px; height: 200px;"></div></div>
+          <div id="tabs-4" style="border:2px solid #7ABF53;"><h2>Services Performance</h2><h5>Services</h5>
+                      <div id="servicechart" style="width: 350px; height: 200px;"></div></div>             
+     </div></div></div-->
+        </div>
+        <div class="row">
+      
+      <div class="seven columns">
+          
+          <h5>Latest Activity</h5>
+          <br><p>02/14/12 - Service - <a href="storeexample.html">#1234</a><br>
+                02/14/12 - Request - #120987<br>
+                02/14/12 - Call - #48086</p>
+                 </div>
+          <div class="four columns">
+        <h5>Service Requests</h5>
+        <div id="servicechart" style="width: 350px; height: 200px;"></div>
+      </div>
+          <div class="five columns omega">
+        <h5>Cost</h5>
+        <div id="invoicechart" style="width: 350px; height: 200px;"></div>
+      </div>
+        </div>
+        <footer>
+        &nbsp;&copy; 2012 All rights reserved. The Astor Company. <a href="privacy.html">Privacy</a> & <a href="terms.html">Terms</a></footer>
+
+	</article><!-- container -->
+
+	<!-- JS
+	================================================== -->
+	<script src="javascripts/tabs.js"></script>
+
+<!-- End Document
+================================================== -->
+</body>
+</html>

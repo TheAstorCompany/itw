@@ -1,0 +1,434 @@
+<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed'); ?>
+
+DEBUG - 2016-08-24 16:29:09 --> Config Class Initialized
+DEBUG - 2016-08-24 16:29:09 --> Hooks Class Initialized
+DEBUG - 2016-08-24 16:29:09 --> Utf8 Class Initialized
+DEBUG - 2016-08-24 16:29:09 --> UTF-8 Support Enabled
+DEBUG - 2016-08-24 16:29:09 --> URI Class Initialized
+DEBUG - 2016-08-24 16:29:09 --> Router Class Initialized
+DEBUG - 2016-08-24 16:29:09 --> Output Class Initialized
+DEBUG - 2016-08-24 16:29:09 --> Security Class Initialized
+DEBUG - 2016-08-24 16:29:09 --> Input Class Initialized
+DEBUG - 2016-08-24 16:29:09 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:09 --> Global POST and COOKIE data sanitized
+DEBUG - 2016-08-24 16:29:09 --> Language Class Initialized
+DEBUG - 2016-08-24 16:29:09 --> Loader Class Initialized
+DEBUG - 2016-08-24 16:29:09 --> Config file loaded: application/config/user_defined.php
+DEBUG - 2016-08-24 16:29:09 --> Helper loaded: dump_helper
+DEBUG - 2016-08-24 16:29:09 --> Helper loaded: url_helper
+DEBUG - 2016-08-24 16:29:09 --> Helper loaded: form_helper
+DEBUG - 2016-08-24 16:29:09 --> Controller Class Initialized
+DEBUG - 2016-08-24 16:29:09 --> Session Class Initialized
+DEBUG - 2016-08-24 16:29:09 --> Helper loaded: string_helper
+DEBUG - 2016-08-24 16:29:09 --> Database Driver Class Initialized
+ERROR - 2016-08-24 16:29:09 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/www-data/sonic.astor/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2016-08-24 16:29:09 --> Session routines successfully run
+DEBUG - 2016-08-24 16:29:09 --> Model Class Initialized
+DEBUG - 2016-08-24 16:29:09 --> Model Class Initialized
+DEBUG - 2016-08-24 16:29:09 --> Form Validation Class Initialized
+DEBUG - 2016-08-24 16:29:09 --> File loaded: application/views/admin/waste_invoice/waste_invoice_list.php
+DEBUG - 2016-08-24 16:29:09 --> Final output sent to browser
+DEBUG - 2016-08-24 16:29:09 --> Total execution time: 0.0077
+DEBUG - 2016-08-24 16:29:10 --> Config Class Initialized
+DEBUG - 2016-08-24 16:29:10 --> Hooks Class Initialized
+DEBUG - 2016-08-24 16:29:10 --> Utf8 Class Initialized
+DEBUG - 2016-08-24 16:29:10 --> UTF-8 Support Enabled
+DEBUG - 2016-08-24 16:29:10 --> URI Class Initialized
+DEBUG - 2016-08-24 16:29:10 --> Router Class Initialized
+DEBUG - 2016-08-24 16:29:10 --> Output Class Initialized
+DEBUG - 2016-08-24 16:29:10 --> Security Class Initialized
+DEBUG - 2016-08-24 16:29:10 --> Input Class Initialized
+DEBUG - 2016-08-24 16:29:10 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:10 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:10 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:10 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:10 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:10 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:10 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:10 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:10 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:10 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:10 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:10 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:10 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:10 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:10 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:10 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:10 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:10 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:10 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:10 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:10 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:10 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:10 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:10 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:10 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:10 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:10 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:10 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:10 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:10 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:10 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:10 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:10 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:10 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:10 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:10 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:10 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:10 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:10 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:10 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:10 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:10 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:10 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:10 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:10 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:10 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:10 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:10 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:10 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:10 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:10 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:10 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:10 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:10 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:10 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:10 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:10 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:10 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:10 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:10 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:10 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:10 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:10 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:10 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:10 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:10 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:10 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:10 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:10 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:10 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:10 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:10 --> Global POST and COOKIE data sanitized
+DEBUG - 2016-08-24 16:29:10 --> Language Class Initialized
+DEBUG - 2016-08-24 16:29:10 --> Loader Class Initialized
+DEBUG - 2016-08-24 16:29:10 --> Config file loaded: application/config/user_defined.php
+DEBUG - 2016-08-24 16:29:10 --> Helper loaded: dump_helper
+DEBUG - 2016-08-24 16:29:10 --> Helper loaded: url_helper
+DEBUG - 2016-08-24 16:29:10 --> Helper loaded: form_helper
+DEBUG - 2016-08-24 16:29:10 --> Controller Class Initialized
+DEBUG - 2016-08-24 16:29:10 --> Session Class Initialized
+DEBUG - 2016-08-24 16:29:10 --> Helper loaded: string_helper
+DEBUG - 2016-08-24 16:29:10 --> Database Driver Class Initialized
+ERROR - 2016-08-24 16:29:10 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/www-data/sonic.astor/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2016-08-24 16:29:10 --> Session routines successfully run
+DEBUG - 2016-08-24 16:29:10 --> Model Class Initialized
+DEBUG - 2016-08-24 16:29:10 --> Model Class Initialized
+DEBUG - 2016-08-24 16:29:10 --> Form Validation Class Initialized
+DEBUG - 2016-08-24 16:29:10 --> Model Class Initialized
+DEBUG - 2016-08-24 16:29:10 --> Helper loaded: dates_helper
+DEBUG - 2016-08-24 16:29:10 --> Final output sent to browser
+DEBUG - 2016-08-24 16:29:10 --> Total execution time: 0.0201
+DEBUG - 2016-08-24 16:29:11 --> Config Class Initialized
+DEBUG - 2016-08-24 16:29:11 --> Hooks Class Initialized
+DEBUG - 2016-08-24 16:29:11 --> Utf8 Class Initialized
+DEBUG - 2016-08-24 16:29:11 --> UTF-8 Support Enabled
+DEBUG - 2016-08-24 16:29:11 --> URI Class Initialized
+DEBUG - 2016-08-24 16:29:11 --> Router Class Initialized
+DEBUG - 2016-08-24 16:29:11 --> Output Class Initialized
+DEBUG - 2016-08-24 16:29:11 --> Security Class Initialized
+DEBUG - 2016-08-24 16:29:11 --> Input Class Initialized
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> Global POST and COOKIE data sanitized
+DEBUG - 2016-08-24 16:29:11 --> Language Class Initialized
+DEBUG - 2016-08-24 16:29:11 --> Loader Class Initialized
+DEBUG - 2016-08-24 16:29:11 --> Config file loaded: application/config/user_defined.php
+DEBUG - 2016-08-24 16:29:11 --> Helper loaded: dump_helper
+DEBUG - 2016-08-24 16:29:11 --> Helper loaded: url_helper
+DEBUG - 2016-08-24 16:29:11 --> Helper loaded: form_helper
+DEBUG - 2016-08-24 16:29:11 --> Controller Class Initialized
+DEBUG - 2016-08-24 16:29:11 --> Session Class Initialized
+DEBUG - 2016-08-24 16:29:11 --> Helper loaded: string_helper
+DEBUG - 2016-08-24 16:29:11 --> Database Driver Class Initialized
+ERROR - 2016-08-24 16:29:11 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/www-data/sonic.astor/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2016-08-24 16:29:11 --> Session routines successfully run
+DEBUG - 2016-08-24 16:29:11 --> Model Class Initialized
+DEBUG - 2016-08-24 16:29:11 --> Model Class Initialized
+DEBUG - 2016-08-24 16:29:11 --> Form Validation Class Initialized
+DEBUG - 2016-08-24 16:29:11 --> Model Class Initialized
+DEBUG - 2016-08-24 16:29:11 --> Helper loaded: dates_helper
+DEBUG - 2016-08-24 16:29:11 --> Final output sent to browser
+DEBUG - 2016-08-24 16:29:11 --> Total execution time: 0.0182
+DEBUG - 2016-08-24 16:29:11 --> Config Class Initialized
+DEBUG - 2016-08-24 16:29:11 --> Hooks Class Initialized
+DEBUG - 2016-08-24 16:29:11 --> Utf8 Class Initialized
+DEBUG - 2016-08-24 16:29:11 --> UTF-8 Support Enabled
+DEBUG - 2016-08-24 16:29:11 --> URI Class Initialized
+DEBUG - 2016-08-24 16:29:11 --> Router Class Initialized
+DEBUG - 2016-08-24 16:29:11 --> Output Class Initialized
+DEBUG - 2016-08-24 16:29:11 --> Security Class Initialized
+DEBUG - 2016-08-24 16:29:11 --> Input Class Initialized
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> Global POST and COOKIE data sanitized
+DEBUG - 2016-08-24 16:29:11 --> Language Class Initialized
+DEBUG - 2016-08-24 16:29:11 --> Loader Class Initialized
+DEBUG - 2016-08-24 16:29:11 --> Config file loaded: application/config/user_defined.php
+DEBUG - 2016-08-24 16:29:11 --> Helper loaded: dump_helper
+DEBUG - 2016-08-24 16:29:11 --> Helper loaded: url_helper
+DEBUG - 2016-08-24 16:29:11 --> Helper loaded: form_helper
+DEBUG - 2016-08-24 16:29:11 --> Controller Class Initialized
+DEBUG - 2016-08-24 16:29:11 --> Session Class Initialized
+DEBUG - 2016-08-24 16:29:11 --> Helper loaded: string_helper
+DEBUG - 2016-08-24 16:29:11 --> Database Driver Class Initialized
+ERROR - 2016-08-24 16:29:11 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/www-data/sonic.astor/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2016-08-24 16:29:11 --> Session routines successfully run
+DEBUG - 2016-08-24 16:29:11 --> Model Class Initialized
+DEBUG - 2016-08-24 16:29:11 --> Model Class Initialized
+DEBUG - 2016-08-24 16:29:11 --> Form Validation Class Initialized
+DEBUG - 2016-08-24 16:29:11 --> Model Class Initialized
+DEBUG - 2016-08-24 16:29:11 --> Helper loaded: dates_helper
+DEBUG - 2016-08-24 16:29:11 --> Final output sent to browser
+DEBUG - 2016-08-24 16:29:11 --> Total execution time: 0.0179
+DEBUG - 2016-08-24 16:29:11 --> Config Class Initialized
+DEBUG - 2016-08-24 16:29:11 --> Hooks Class Initialized
+DEBUG - 2016-08-24 16:29:11 --> Utf8 Class Initialized
+DEBUG - 2016-08-24 16:29:11 --> UTF-8 Support Enabled
+DEBUG - 2016-08-24 16:29:11 --> URI Class Initialized
+DEBUG - 2016-08-24 16:29:11 --> Router Class Initialized
+DEBUG - 2016-08-24 16:29:11 --> Output Class Initialized
+DEBUG - 2016-08-24 16:29:11 --> Security Class Initialized
+DEBUG - 2016-08-24 16:29:11 --> Input Class Initialized
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> XSS Filtering completed
+DEBUG - 2016-08-24 16:29:11 --> Global POST and COOKIE data sanitized
+DEBUG - 2016-08-24 16:29:11 --> Language Class Initialized
+DEBUG - 2016-08-24 16:29:11 --> Loader Class Initialized
+DEBUG - 2016-08-24 16:29:11 --> Config file loaded: application/config/user_defined.php
+DEBUG - 2016-08-24 16:29:11 --> Helper loaded: dump_helper
+DEBUG - 2016-08-24 16:29:11 --> Helper loaded: url_helper
+DEBUG - 2016-08-24 16:29:11 --> Helper loaded: form_helper
+DEBUG - 2016-08-24 16:29:11 --> Controller Class Initialized
+DEBUG - 2016-08-24 16:29:11 --> Session Class Initialized
+DEBUG - 2016-08-24 16:29:11 --> Helper loaded: string_helper
+DEBUG - 2016-08-24 16:29:11 --> Database Driver Class Initialized
+ERROR - 2016-08-24 16:29:11 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/www-data/sonic.astor/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2016-08-24 16:29:11 --> Session routines successfully run
+DEBUG - 2016-08-24 16:29:11 --> Model Class Initialized
+DEBUG - 2016-08-24 16:29:11 --> Model Class Initialized
+DEBUG - 2016-08-24 16:29:11 --> Form Validation Class Initialized
+DEBUG - 2016-08-24 16:29:11 --> Model Class Initialized
+DEBUG - 2016-08-24 16:29:11 --> Helper loaded: dates_helper
+DEBUG - 2016-08-24 16:29:11 --> Final output sent to browser
+DEBUG - 2016-08-24 16:29:11 --> Total execution time: 0.0193

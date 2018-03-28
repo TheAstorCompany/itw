@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]> <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]> <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+	<!-- Basic Page Needs
+  ================================================== -->
+	<meta charset="utf-8">
+	<title>Support Center - Astor</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<!-- Mobile Specific Metas
+  ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+  ================================================== -->
+    <link rel="stylesheet" href="stylesheets/demo_table.css">
+	<link rel="stylesheet" href="stylesheets/base.css">
+    <link rel="stylesheet" href="stylesheets/astor/jquery-ui-1.8.17.custom.css" />
+	<link rel="stylesheet" href="stylesheets/skeleton.css">
+	<link rel="stylesheet" href="stylesheets/layout.css">
+
+	<!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+    
+	<!-- Head Scripts
+	================================================== -->
+	<script src="js/modernizr-2.5.1.js"></script>
+    <script src="js/jquery-1.7.1.js"></script>
+    <script src="js/jquery-ui-1.8.17.custom.min.js"></script>
+    <script src="js/jquery.dataTables.js"></script>
+    <script src='js/jquery.color-RGBa-patch.js'></script>
+    <script src="js/custom.js"></script>
+        <script>
+	$(function() {
+		$('#tabs').tabs();
+		$('#vendorslist').dataTable( {
+					"sPaginationType": "full_numbers"
+				} );
+						$('#dclist').dataTable( {
+					"sPaginationType": "full_numbers"
+				} );
+						$('#storeslist').dataTable( {
+					"sPaginationType": "full_numbers"
+				} );
+						$('#userslist').dataTable( {
+					"sPaginationType": "full_numbers"
+				} );
+	});
+	</script>
+    
+</head>
+<body>
+
+	<!-- Primary Page Layout
+	================================================== -->
+
+	<article class="container">
+    <div class="row remove-bottom">
+		<header>
+        <a href="index.html"><img src="images/logo.png" width="250" height="112" alt="Astor Home"></a><div style="float:right;margin-top:10px; text-align:right; font-size:90%;">Welcome Peggy &nbsp;&nbsp;  
+          <a href="profile.html">Account</a> &nbsp;&nbsp;&nbsp; <a href="help.html">Help</a> &nbsp;&nbsp;&nbsp; <a href="#">Logout</a><select name="account"><option selected>Walgreens</option></select></div>
+		</header></div>  
+        <div class="content">
+     <div class="tallnav-wrap">   
+                <ul class="group" id="mainnavbar">
+        <li class="current_page_item"><a rel="#80C65A" href="index.html">Admin</a></li>  
+            <li><a rel="#80C65A" href="index.html">Company</a></li>            <li><a rel="#1C4D25" href="distributioncenters.html">Distribution Centers</a></li>
+            <li><a rel="#1C4D25" href="stores.html">Stores</a></li>
+ 
+            <li><a rel="#1C4D25" href="requestservice.html">Support Center</a></li>
+        </ul>
+        <ul class="group" id="subnavbar">
+        <li><a href="adminindex.html">Admin Home</a></li>
+        <li><a href="adminservice.html">Support History</a></li>
+        <li><a href="adminwaste.html">Waste History</a></li>
+<li><a href="adminrecycling.html">Recycling History</a></li>
+<li class="current_subpage_item"><a href="admincompany.html">Manage Company</a></li>
+        <li><a href="adminreports.html">Reports</a></li>
+      </ul>
+    </div>
+        <div class="row"><div class="sixteen columns">
+          <h1>Manage Company</h1>
+          </div></div>
+        <div class="row"><div class="sixteen columns">
+         <div id="tabs" style="border:0px;">
+			<ul><li><a href="#tabs-1">People</a></li>
+              <li><a href="#tabs-2">Vendors</a></li>
+            	<li><a href="#tabs-3">Distribution Centers</a></li>
+				<li><a href="#tabs-4">Stores</a></li>
+                
+		   </ul>
+            <div id="tabs-1" style="border:2px solid #7ABF53;">
+            <a href="adduser.html" class="button">Add User</a>
+        <table cellpadding="0" cellspacing="0" border="0" class="display" id="userslist" width="100%">
+	<thead>
+		<tr>
+		  <th>Status</th>
+		  <th>Type</th>
+			<th>First Name</th>
+			<th>Last Name</th>
+			<th>Title</th>
+			<th>Email</th>
+			<th>Phone</th>
+			<th>City</th>
+            <th>State</th>
+            <th>Last Updated</th>
+		</tr>
+	</thead>
+	<tbody>
+  <tr class="odd gradeB">
+    <td>Active</td>
+    <td>Admin</td>
+    <td><a href="adduser.html">Kevin</a></td>
+    <td><a href="adduser.html">Flood</a></td>
+    <td>&nbsp;</td>
+    <td>kflood@aol.com</td>
+    <td>102-123-4567</td>
+    <td>Bronx</td>
+    <td>NY</td>
+    <td>01/01/2012</td>
+    </tr>
+  <tr class="even gradeB">
+    <td>Active</td>
+    <td>Admin</td>
+    <td><a href="adduser.html">Peggy</a></td>
+    <td><a href="adduser.html"></a></td>
+    <td>&nbsp;</td>
+    <td>peggy@astorrecycling.com</td>
+    <td>102-123-4567</td>
+    <td>Long Island City</td>
+    <td>NY</td>
+    <td>01/02/2012</td>
+    </tr>
+  <tr class="odd gradeB">
+    <td>Active</td>
+    <td>Admin</td>
+    <td><a href="adduser.html">Sue</a></td>
+    <td><a href="adduser.html"></a></td>
+    <td>&nbsp;</td>
+    <td>sue@astorrecycling.com</td>
+    <td>102-123-4567</td>
+    <td>New York (Manhattan)</td>
+    <td>NY</td>
+    <td>01/03/2012</td>
+  </tr>
+  <tr class="odd gradeA">
+    <td>Active</td>
+    <td>User</td>
+    <td><a href="adduser.html">Anthony</a></td>
+    <td><a href="adduser.html">Jones</a></td>
+    <td>Vice President</td>
+    <td>1212@walgreens.com</td>
+    <td>112-123-4567</td>
+    <td>Forest Hills</td>
+    <td>NY</td>
+    <td>01/01/2012</td>
+  </tr>
+  <tr class="even gradeA">
+    <td>Active</td>
+    <td>User</td>
+    <td><a href="adduser.html">Tom</a></td>
+    <td><a href="adduser.html">Lane</a></td>
+    <td>District Manager</td>
+    <td>1212@walgreens.com</td>
+    <td>112-123-4567</td>
+    <td>Flushing</td>
+    <td>NY</td>
+    <td>01/01/2012</td>
+    </tr>
+  <tr class="odd gradeX">
+    <td>Inactive</td>
+    <td>User</td>
+    <td><a href="adduser.html">Dana</a></td>
+    <td><a href="adduser.html">Johnson</a></td>
+    <td>Accounting Manager</td>
+    <td>1212@walgreens.com</td>
+    <td>112-123-4567</td>
+    <td>Staten Island</td>
+    <td>NY</td>
+    <td>01/01/2012</td>
+    </tr>
+  <tr class="even gradeX">
+    <td>Inactive</td>
+    <td>User</td>
+    <td>Richard</td>
+    <td>Blake</td>
+    <td>President</td>
+    <td>1412@walgreens.com</td>
+    <td>132-123-4567</td>
+    <td>Elmhurst</td>
+    <td>NY</td>
+    <td>01/01/2012</td>
+    </tr>
+  <tr class="odd gradeA">
+    <td>Active</td>
+    <td>User</td>
+    <td>Nancy</td>
+    <td>Davis</td>
+    <td>Manager</td>
+    <td>1512@walgreens.com</td>
+    <td>142-123-4567</td>
+    <td>New City</td>
+    <td>NY</td>
+    <td>02/01/2012</td>
+    </tr>
+  <tr class="even gradeA">
+    <td >Active</td>
+    <td >User</td>
+    <td>Harold</td>
+    <td>Yun</td>
+    <td>Manager</td>
+    <td>1512@walgreens.com</td>
+    <td>142-123-4567</td>
+    <td>Brooklyn</td>
+    <td>NY</td>
+    <td>02/01/2012</td>
+    </tr>
+  <tr class="odd gradeA">
+    <td >Active</td>
+    <td >User</td>
+    <td>Clark</td>
+    <td>Kent</td>
+    <td>Analyst</td>
+    <td>1512@walgreens.com</td>
+    <td>142-123-4567</td>
+    <td>Queen Village</td>
+    <td>NY</td>
+    <td>02/01/2012</td>
+  </tr>
+  </tbody>
+	<tfoot>
+		<tr>
+<th>Status</th>
+		  <th>Type</th>
+			<th>First Name</th>
+			<th>Last Name</th>
+			<th>Title</th>
+			<th>Email</th>
+			<th>Phone</th>
+			<th>City</th>
+            <th>State</th>
+            <th>Last Updated</th>
+			  </tr>
+	</tfoot>
+</table></div>
+          <div id="tabs-2" style="border:2px solid #7ABF53;">
+          <a href="addvendor.html" class="button">Add Vendor</a>
+        <table cellpadding="0" cellspacing="0" border="0" class="display" id="vendorslist" width="100%">
+	<thead>
+		<tr>
+		  <th>Status</th>
+			<th>Vendor#</th>
+			<th>Vendor Name</th>
+			<th>Address</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Zip</th>
+			<th>Last Updated</th>
+		</tr>
+	</thead>
+	<tbody>
+  <tr class="odd gradeA">
+    <td>Active</td>
+    <td>1013</td>
+    <td><a href="addvendor.html">A Hauler</a></td>
+    <td>5564 Broadway</td>
+    <td>Bronx</td>
+    <td>NY</td>
+    <td>10463</td>
+    <td>01/01/2012</td>
+    </tr>
+  <tr class="even gradeA">
+    <td>Active</td>
+    <td>1180</td>
+    <td><a href="addvendor.html">B Hauler</a></td>
+    <td>3355 Crescent St # 67</td>
+    <td>Long Island City</td>
+    <td>NY</td>
+    <td>11106</td>
+    <td>01/02/2012</td>
+    </tr>
+  <tr class="odd gradeA">
+    <td>Active</td>
+    <td>1214</td>
+    <td><a href="addvendor.html">C Hauler</a></td>
+    <td>1328 2nd Ave</td>
+    <td>New York (Manhattan)</td>
+    <td>NY</td>
+    <td>10021</td>
+    <td>01/03/2012</td>
+    </tr>
+  <tr class="even gradeA">
+    <td>Active</td>
+    <td>1427</td>
+    <td><a href="addvendor.html">D Hauler</a></td>
+    <td>532 Neptune</td>
+    <td>Brooklyn</td>
+    <td>NY</td>
+    <td>11224</td>
+    <td>01/04/2012</td>
+    </tr>
+  <tr class="odd gradeA">
+    <td>Active</td>
+    <td>1487</td>
+    <td><a href="addvendor.html">E Hauler</a></td>
+    <td>104-25-31 Queens Blvd</td>
+    <td>Forest Hills</td>
+    <td>NY</td>
+    <td>11375</td>
+    <td>01/01/2012</td>
+    </tr>
+  <tr class="even gradeA">
+    <td>Active</td>
+    <td>1572</td>
+    <td><a href="addvendor.html">F Hauler</a></td>
+    <td>44-15 Kissena Blvd</td>
+    <td>Flushing</td>
+    <td>NY</td>
+    <td>11355</td>
+    <td>01/01/2012</td>
+    </tr>
+  <tr class="odd gradeX">
+    <td>Inactive</td>
+    <td>1598</td>
+    <td><a href="addvendor.html">G Hauler</a></td>
+    <td>1579 Forest Ave</td>
+    <td>Staten Island</td>
+    <td>NY</td>
+    <td>10302</td>
+    <td>01/01/2012</td>
+    </tr>
+  <tr class="even gradeX">
+    <td>Inactive</td>
+    <td>1616</td>
+    <td><a href="addvendor.html">H Recycling</a></td>
+    <td>8277 Broadway</td>
+    <td>Elmhurst</td>
+    <td>NY</td>
+    <td>11373</td>
+    <td>01/01/2012</td>
+    </tr>
+  <tr class="odd gradeA">
+    <td>Active</td>
+    <td>1874</td>
+    <td><a href="addvendor.html">I Recyling</a></td>
+    <td>180 North Main Street</td>
+    <td>New City</td>
+    <td>NY</td>
+    <td>10956</td>
+    <td>02/01/2012</td>
+    </tr>
+  <tr class="even gradeA">
+    <td>Active</td>
+    <td >1918</td>
+    <td>J Recycling</td>
+    <td>755 BROADWAY</td>
+    <td>Brooklyn</td>
+    <td>NY</td>
+    <td>11206</td>
+    <td>02/01/2012</td>
+    </tr>
+  <tr class="odd gradeA">
+    <td>Active</td>
+    <td >2055</td>
+    <td>K Recycling</td>
+    <td>10962 Francis Lewis Blvd</td>
+    <td>Queen Village</td>
+    <td>NY</td>
+    <td>11429</td>
+    <td>02/01/2012</td>
+    </tr>
+  <tr  class="even gradeA">
+    <td>Active</td>
+    <td >2077</td>
+    <td>L Recyling</td>
+    <td>316 Broadway</td>
+    <td>Kingston</td>
+    <td>NY</td>
+    <td>12401</td>
+    <td>02/01/2012</td>
+    </tr>
+  <tr  class="odd gradeA">
+    <td >Active</td>
+    <td >2122</td>
+    <td>M Recyling</td>
+    <td>1230 Nepperhan Ave</td>
+    <td>Yonkers</td>
+    <td>NY</td>
+    <td>10703</td>
+    <td>02/02/2012</td>
+  </tr>
+  </tbody>
+	<tfoot>
+		<tr>
+		  <th>Status</th>
+			<th>Vendor#</th>
+			<th>Vendor Name</th>
+			<th>Address</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Zip</th>
+			<th>Last Updated</td>
+			  </tr>
+	</tfoot>
+</table></div>
+          <div id="tabs-3" style="border:2px solid #7ABF53;">
+          <a href="adddc.html" class="button">Add DC</a>
+        <table cellpadding="0" cellspacing="0" border="0" class="display" id="dclist" width="100%">
+	<thead>
+		<tr>
+		  <th >Status</th>
+			<th >District#</th>
+            <th>District Name</th>
+            <th>Address</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Zip</th>
+			<th>Waste</th>
+			<th>Recycling</th>
+			<th>Diversion</th>
+			<th>Cost/Sqft</th>
+			<th>Last Updated</th>
+		</tr>
+	</thead>
+	<tbody>
+  <tr class="odd gradeA">
+    <td>Active</td>
+    <td><a href="adddc.html">610018</a></td>
+    <td><a href="adddc.html">Anderson </a></td>
+    <td>101 Alliance Parkway </td>
+    <td>Williamston </td>
+    <td>SC</td>
+    <td>29697</td>
+    <td>12</td>
+    <td>10</td>
+    <td>99%</td>
+    <td>$10</td>
+    <td>01/01/2012</td>
+  </tr>
+  <tr class="even gradeA">
+    <td>Active</td>
+    <td><a href="adddc.html">610002</a></td>
+    <td><a href="adddc.html">Berkley </a></td>
+    <td>5300 St. Charles Rd.</td>
+    <td>Berkley </td>
+    <td>Il</td>
+    <td>60169</td>
+    <td>12</td>
+    <td>12</td>
+    <td>95%</td>
+    <td>$10</td>
+    <td>01/02/2012</td>
+  </tr>
+  <tr class="odd gradeA">
+    <td>Active</td>
+    <td><a href="adddc.html">439210</a></td>
+    <td><a href="adddc.html">Bolingbrook</a></td>
+    <td>575 Crossroad Pkwy</td>
+    <td>Bolingbrook</td>
+    <td>IL</td>
+    <td></td>
+    <td>12</td>
+    <td>11</td>
+    <td>75%</td>
+    <td>$12</td>
+    <td>01/03/2012</td>
+  </tr>
+  <tr class="even gradeA">
+    <td>Active</td>
+    <td><a href="adddc.html">610017</a></td>
+    <td><a href="adddc.html">Connecticut </a></td>
+    <td>80 International Drive</td>
+    <td>Windsor </td>
+    <td>CT</td>
+    <td>06095</td>
+    <td>12</td>
+    <td>11</td>
+    <td>70%</td>
+    <td>$12</td>
+    <td>01/04/2012</td>
+  </tr>
+  <tr class="odd gradeA">
+    <td>Active</td>
+    <td><a href="adddc.html">610009</a></td>
+    <td><a href="adddc.html">Flagstaff </a></td>
+    <td>2400 N. Walgreen St.</td>
+    <td>Flagstaff</td>
+    <td>AZ</td>
+    <td>86004</td>
+    <td>12</td>
+    <td>11</td>
+    <td>60%</td>
+    <td>$20</td>
+    <td>01/01/2012</td>
+  </tr>
+  <tr class="even gradeA">
+    <td>Active</td>
+    <td><a href="adddc.html">610041</a></td>
+    <td><a href="adddc.html">Houston</a></td>
+    <td>1805 Greens Road</td>
+    <td>Houston </td>
+    <td>TX</td>
+    <td>77032</td>
+    <td>12</td>
+    <td>11</td>
+    <td>65%</td>
+    <td>$20</td>
+    <td>01/01/2012</td>
+  </tr>
+  <tr class="odd gradeX">
+    <td>Inactive</td>
+    <td><a href="adddc.html">610001</a></td>
+    <td><a href="adddc.html">Jupiter</a></td>
+    <td>15998 Walgreens Dr.</td>
+    <td>Jupiter </td>
+    <td>FL</td>
+    <td>33458</td>
+    <td>12</td>
+    <td>11</td>
+    <td>45%</td>
+    <td>$30</td>
+    <td>01/01/2012</td>
+  </tr>
+  <tr class="even gradeX">
+    <td>Inactive</td>
+    <td><a href="adddc.html">610040</a></td>
+    <td><a href="adddc.html">Kutztown</a></td>
+    <td>9750 Commerce Cir.</td>
+    <td>Kutztown</td>
+    <td>PA</td>
+    <td></td>
+    <td>14</td>
+    <td>13</td>
+    <td>40%</td>
+    <td>$30</td>
+    <td>01/01/2012</td>
+  </tr>
+  <tr class="odd gradeA">
+    <td>Active</td>
+    <td><a href="adddc.html">610007</a></td>
+    <td><a href="adddc.html">Lehigh</a></td>
+    <td>125 N Commerce Way</td>
+    <td>Bethlehem </td>
+    <td>PA</td>
+    <td>18017</td>
+    <td>15</td>
+    <td>14</td>
+    <td>85%</td>
+    <td>$9</td>
+    <td>02/01/2012</td>
+  </tr>
+  <tr class="even gradeA">
+    <td>Active</td>
+    <td><a href="adddc.html">610012</a></td>
+    <td><a href="adddc.html">Moreno Valley </a></td>
+    <td>17500 Paris Blvd</td>
+    <td>Moreno Valley </td>
+    <td>CA</td>
+    <td>92551</td>
+    <td>15</td>
+    <td>14</td>
+    <td>80%</td>
+    <td>-$5</td>
+    <td>02/01/2012</td>
+  </tr>
+  <tr class="odd gradeA">
+    <td>Acive</td>
+    <td><a href="adddc.html">610008</a></td>
+    <td><a href="adddc.html">Mt Vernon </a></td>
+    <td>5100 Lake Terrace NE</td>
+    <td>Mt Vernon </td>
+    <td>IL</td>
+    <td>62864</td>
+    <td>12</td>
+    <td>10</td>
+    <td>92%</td>
+    <td>$3</td>
+    <td>02/01/2012</td>
+  </tr>
+  <tr  class="even gradeA">
+    <td>Active</td>
+    <td><a href="adddc.html"></a></td>
+    <td><a href="adddc.html">Nazareth </a></td>
+    <td>3850 Prologis Parkway</td>
+    <td>Easton</td>
+    <td>PA</td>
+    <td>18045</td>
+    <td>12</td>
+    <td>12</td>
+    <td>80%</td>
+    <td>$0</td>
+    <td>02/01/2012</td>
+  </tr>
+  <tr  class="odd gradeA">
+    <td>Active</td>
+    <td><a href="adddc.html">610004</a></td>
+    <td><a href="adddc.html">Orlando </a></td>
+    <td>2455 Premier Row</td>
+    <td>Orlando </td>
+    <td>FL</td>
+    <td>32809</td>
+    <td class="odd gradeB">12</td>
+    <td class="odd gradeB">11</td>
+    <td>81%</td>
+    <td>$9</td>
+    <td>02/02/2012</td>
+  </tr>
+  <tr  class="even gradeA">
+    <td>Active</td>
+    <td><a href="adddc.html">610042</a></td>
+    <td><a href="adddc.html">Pendergrass</a></td>
+    <td>350 Raco Parkway</td>
+    <td>Pendergrass </td>
+    <td>GA</td>
+    <td>30567</td>
+    <td class="even gradeB">12</td>
+    <td class="even gradeB">11</td>
+    <td>87%</td>
+    <td>$10</td>
+    <td>02/02/2012</td>
+  </tr>
+  <tr class="odd gradeA">
+    <td>Active</td>
+    <td><a href="adddc.html">610011</a></td>
+    <td><a href="adddc.html">Perrysburg</a></td>
+    <td>28727 Oregon Road</td>
+    <td>Perrysburg</td>
+    <td>OH</td>
+    <td>43551</td>
+    <td class="odd gradeU">12</td>
+    <td class="odd gradeU">11</td>
+    <td>89%</td>
+    <td>$10</td>
+    <td>02/10/2012</td>
+  </tr>
+  <tr  class="even gradeA">
+    <td>Active</td>
+    <td><a href="adddc.html">610016</a></td>
+    <td><a href="adddc.html">Portage</a></td>
+    <td>6525 Daniel Burnham Dr. Ste A</td>
+    <td>Portage </td>
+    <td>IN</td>
+    <td>46368</td>
+    <td class="even gradeU">12</td>
+    <td class="even gradeU">11</td>
+    <td>93%</td>
+    <td>-$5</td>
+    <td>01/15/2012</td>
+  </tr>
+  <tr  class="odd gradeA">
+    <td>Active</td>
+    <td><a href="adddc.html">610024</a></td>
+    <td><a href="adddc.html">Puerto Rico </a></td>
+    <td>Sabana Garden Industrial Park</td>
+    <td>Carolina</td>
+    <td>PR</td>
+    <td>00983</td>
+    <td class="odd gradeX">12</td>
+    <td class="odd gradeX">11</td>
+    <td>84%</td>
+    <td>$7</td>
+    <td>01/01/2012</td>
+  </tr>
+  <tr  class="even gradeA">
+    <td>Active</td>
+    <td><a href="adddc.html">610043</a></td>
+    <td><a href="adddc.html">Rogers</a></td>
+    <td>13201 Wilfred Lane, N</td>
+    <td>Rogers</td>
+    <td>MN</td>
+    <td></td>
+    <td class="even gradeX">14</td>
+    <td class="even gradeX">13</td>
+    <td>81%</td>
+    <td>$7</td>
+    <td>01/20/2012</td>
+  </tr>
+  <tr  class="odd gradeA">
+    <td>Active</td>
+    <td><a href="adddc.html">821710</a></td>
+    <td><a href="adddc.html">Tempe </a></td>
+    <td>8350 River Parkway</td>
+    <td>Tempe </td>
+    <td>AZ</td>
+    <td>85284</td>
+    <td>15</td>
+    <td>14</td>
+    <td>90%</td>
+    <td>$8</td>
+    <td>01/30/2012</td>
+  </tr>
+  <tr  class="even gradeA">
+    <td>Active</td>
+    <td><a href="adddc.html">610010</a></td>
+    <td><a href="adddc.html">Waxahachie</a></td>
+    <td>710 Ovilla Road</td>
+    <td>Waxahachie </td>
+    <td>TX</td>
+    <td>75167</td>
+    <td>15</td>
+    <td>14</td>
+    <td>90%</td>
+    <td>$9</td>
+    <td>01/01/2012</td>
+  </tr>
+  <tr  class="odd gradeA">
+    <td>Active</td>
+    <td><a href="adddc.html">610003</a></td>
+    <td><a href="adddc.html">Windsor</a></td>
+    <td>440 Highway 19</td>
+    <td>Windsor </td>
+    <td>WI</td>
+    <td>53598</td>
+    <td>13</td>
+    <td>11</td>
+    <td>90%</td>
+    <td>$10</td>
+    <td>01/01/2012</td>
+  </tr>
+  <tr  class="even gradeA">
+    <td>Active</td>
+    <td><a href="adddc.html">610006</a></td>
+    <td><a href="adddc.html">Woodlands</a></td>
+    <td>2370 E Main St </td>
+    <td>Woodland </td>
+    <td>CA</td>
+    <td>95776</td>
+    <td>13</td>
+    <td>11</td>
+    <td>96%</td>
+    <td>$2</td>
+    <td>01/01/2012</td>
+  </tr>
+	</tbody>
+	<tfoot>
+		<tr>
+		  <th>Status</th>
+			<th>Location#</th>
+            <th>Open Date</th>
+            <th>Address</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Zip</th>
+			<th>Waste</th>
+			<th>Recycling</th>
+			<th>Diversion</th>
+			<th>Cost/sqft</th>
+			<th>Last Updated</th>
+		</tr>
+	</tfoot>
+</table><br style="clear:both;"></div>
+          <div id="tabs-4" style="border:2px solid #7ABF53;">
+          <a href="addstore.html" class="button">Add Store</a>
+        <table cellpadding="0" cellspacing="0" border="0" class="display" id="storeslist" width="100%">
+	<thead>
+		<tr>
+		  <th>Status</th>
+			<th>District#</th>
+			<th>Location#</th>
+			<th>Address</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Zip</th>
+			<th>24-Hour</th>
+            <th>Waste</th>
+			<th>Recycling</th>
+			<th>Diversion</th>
+			<th>Cost/Sqft</th>
+			<th>Last Updated</th>
+		</tr>
+	</thead>
+	<tbody>
+  <tr class="odd gradeA">
+    <td>Active</td>
+    <td><a href="addstore.html">1013</a></td>
+    <td><a href="addstore.html">105</a></td>
+    <td>5564 Broadway</td>
+    <td>Bronx</td>
+    <td>NY</td>
+    <td>10463</td>
+    <td>Y</td>
+    <td>12</td>
+    <td>10</td>
+    <td>99%</td>
+    <td>$10</td>
+    <td>01/01/2012</td>
+    </tr>
+  <tr class="even gradeA">
+    <td>Active</td>
+    <td><a href="addstore.html">1180</a></td>
+    <td><a href="addstore.html">326</a></td>
+    <td>3355 Crescent St # 67</td>
+    <td>Long Island City</td>
+    <td>NY</td>
+    <td>11106</td>
+    <td>N</td>
+    <td>12</td>
+    <td>12</td>
+    <td>95%</td>
+    <td>$10</td>
+    <td>01/02/2012</td>
+    </tr>
+  <tr class="odd gradeA">
+    <td>Active</td>
+    <td><a href="addstore.html">1214</a></td>
+    <td><a href="addstore.html">105</a></td>
+    <td>1328 2nd Ave</td>
+    <td>New York (Manhattan)</td>
+    <td>NY</td>
+    <td>10021</td>
+    <td>Y</td>
+    <td>12</td>
+    <td>11</td>
+    <td>75%</td>
+    <td>$12</td>
+    <td>01/03/2012</td>
+    </tr>
+  <tr class="even gradeA">
+    <td>Active</td>
+    <td><a href="addstore.html">1427</a></td>
+    <td><a href="addstore.html">212</a></td>
+    <td>532 Neptune</td>
+    <td>Brooklyn</td>
+    <td>NY</td>
+    <td>11224</td>
+    <td>N</td>
+    <td>12</td>
+    <td>11</td>
+    <td>70%</td>
+    <td>$12</td>
+    <td>01/04/2012</td>
+    </tr>
+  <tr class="odd gradeA">
+    <td>Active</td>
+    <td><a href="addstore.html">1487</a></td>
+    <td><a href="addstore.html">212</a></td>
+    <td>104-25-31 Queens Blvd</td>
+    <td>Forest Hills</td>
+    <td>NY</td>
+    <td>11375</td>
+    <td>Y</td>
+    <td>12</td>
+    <td>11</td>
+    <td>60%</td>
+    <td>$20</td>
+    <td>01/01/2012</td>
+    </tr>
+  <tr class="even gradeA">
+    <td>Active</td>
+    <td><a href="addstore.html">1572</a></td>
+    <td><a href="addstore.html">326</a></td>
+    <td>44-15 Kissena Blvd</td>
+    <td>Flushing</td>
+    <td>NY</td>
+    <td>11355</td>
+    <td>N</td>
+    <td>12</td>
+    <td>11</td>
+    <td>65%</td>
+    <td>$20</td>
+    <td>01/01/2012</td>
+    </tr>
+  <tr class="odd gradeX">
+    <td>Inactive</td>
+    <td><a href="addstore.html">1598</a></td>
+    <td><a href="addstore.html">212</a></td>
+    <td>1579 Forest Ave</td>
+    <td>Staten Island</td>
+    <td>NY</td>
+    <td>10302</td>
+    <td>N</td>
+    <td>12</td>
+    <td>11</td>
+    <td>45%</td>
+    <td>$30</td>
+    <td>01/01/2012</td>
+    </tr>
+  <tr class="even gradeX">
+    <td>Inactive</td>
+    <td><a href="addstore.html">1616</a></td>
+    <td><a href="addstore.html">326</a></td>
+    <td>8277 Broadway</td>
+    <td>Elmhurst</td>
+    <td>NY</td>
+    <td>11373</td>
+    <td>N</td>
+    <td>14</td>
+    <td>13</td>
+    <td>40%</td>
+    <td>$30</td>
+    <td>01/01/2012</td>
+    </tr>
+  <tr class="odd gradeA">
+    <td>Active</td>
+    <td><a href="addstore.html">1874</a></td>
+    <td><a href="addstore.html">263</a></td>
+    <td>180 North Main Street</td>
+    <td>New City</td>
+    <td>NY</td>
+    <td>10956</td>
+    <td>N</td>
+    <td>15</td>
+    <td>14</td>
+    <td>85%</td>
+    <td>$10</td>
+    <td>02/01/2012</td>
+    </tr>
+  <tr class="even gradeA">
+    <td >Active</td>
+    <td ><a href="addstore.html">1918</a></td>
+    <td><a href="addstore.html">212</a></td>
+    <td>755 BROADWAY</td>
+    <td>Brooklyn</td>
+    <td>NY</td>
+    <td>11206</td>
+    <td>N</td>
+    <td>15</td>
+    <td>14</td>
+    <td>80%</td>
+    <td>$10</td>
+    <td>02/01/2012</td>
+    </tr>
+  <tr class="odd gradeA">
+    <td >Active</td>
+    <td ><a href="addstore.html">2055</a></td>
+    <td><a href="addstore.html">105</a></td>
+    <td>10962 Francis Lewis Blvd</td>
+    <td>Queen Village</td>
+    <td>NY</td>
+    <td>11429</td>
+    <td>Y</td>
+    <td>15</td>
+    <td>14</td>
+    <td>92%</td>
+    <td>$10</td>
+    <td>02/01/2012</td>
+    </tr>
+  <tr  class="even gradeA">
+    <td >Active</td>
+    <td ><a href="addstore.html">2077</a></td>
+    <td><a href="addstore.html">263</a></td>
+    <td>316 Broadway</td>
+    <td>Kingston</td>
+    <td>NY</td>
+    <td>12401</td>
+    <td>N</td>
+    <td>15</td>
+    <td>14</td>
+    <td>80%</td>
+    <td>$10</td>
+    <td>02/01/2012</td>
+    </tr>
+  <tr  class="odd gradeA">
+    <td >Active</td>
+    <td ><a href="addstore.html">2122</a></td>
+    <td><a href="addstore.html">105</a></td>
+    <td>1230 Nepperhan Ave</td>
+    <td>Yonkers</td>
+    <td>NY</td>
+    <td>10703</td>
+    <td>Y</td>
+    <td>15</td>
+    <td>14</td>
+    <td>81%</td>
+    <td>$10</td>
+    <td>02/02/2012</td>
+    </tr>
+  <tr  class="even gradeA">
+    <td >Active</td>
+    <td ><a href="addstore.html">2180</a></td>
+    <td><a href="addstore.html">263</a></td>
+    <td>625 Dutchess Turnpike #1</td>
+    <td>Poughkeepsie</td>
+    <td>NY</td>
+    <td>12603</td>
+    <td>N</td>
+    <td>15</td>
+    <td>14</td>
+    <td>87%</td>
+    <td>$10</td>
+    <td>02/02/2012</td>
+    </tr>
+  <tr class="odd gradeA">
+    <td >Active</td>
+    <td >2216</td>
+    <td>291</td>
+    <td>655-2 Montauk Hwy</td>
+    <td>East Patchogue</td>
+    <td>NY</td>
+    <td>11772</td>
+    <td>N</td>
+    <td>10</td>
+    <td>14</td>
+    <td>89%</td>
+    <td>$10</td>
+    <td>02/10/2012</td>
+    </tr>
+  <tr  class="even gradeA">
+    <td >Active</td>
+    <td >2257</td>
+    <td>212</td>
+    <td>1973 Forest Avenue</td>
+    <td>Staten Island</td>
+    <td>NY</td>
+    <td>10303</td>
+    <td>N</td>
+    <td>10</td>
+    <td>14</td>
+    <td>93%</td>
+    <td>$10</td>
+    <td>01/15/2012</td>
+    </tr>
+  <tr  class="odd gradeA">
+    <td >Active</td>
+    <td >2626</td>
+    <td>291</td>
+    <td>93 FOREST AVE</td>
+    <td>Glen Cove</td>
+    <td>NY</td>
+    <td>11542</td>
+    <td>N</td>
+    <td>9</td>
+    <td>8</td>
+    <td>84%</td>
+    <td>$10</td>
+    <td>01/01/2012</td>
+    </tr>
+  <tr  class="even gradeA">
+    <td >Active</td>
+    <td >2630</td>
+    <td>291</td>
+    <td>555 Larkfield Rd</td>
+    <td>East Northport</td>
+    <td>NY</td>
+    <td>11731</td>
+    <td>N</td>
+    <td>9</td>
+    <td>8</td>
+    <td>81%</td>
+    <td>$10</td>
+    <td>01/20/2012</td>
+    </tr>
+  <tr  class="odd gradeA">
+    <td >Active</td>
+    <td >2650</td>
+    <td>212</td>
+    <td>5716 Avenue U</td>
+    <td>Brooklyn</td>
+    <td>NY</td>
+    <td>11234</td>
+    <td>Y</td>
+    <td>9</td>
+    <td>8</td>
+    <td>96%</td>
+    <td>$10</td>
+    <td>01/30/2012</td>
+    </tr>
+	</tbody>
+	<tfoot>
+		<tr>
+		  <th>&nbsp;</th>
+			<th>Store#</th>
+			<th>District#</th>
+			<th>Address</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Zip</th>
+			<th>24-Hour</th>
+            <th>Waste</th>
+			<th>Recycling</td>
+			<th>Diversion</th>
+			<th>Cost/Sqft            
+			<th>Last Updated</td>
+			  </tr>
+	</tfoot>
+</table></div>
+          
+</div></div>
+        
+        <footer>
+        &nbsp;&copy; 2012 All rights reserved. The Astor Company. <a href="privacy.html">Privacy</a> & <a href="terms.html">Terms</a></footer>
+
+	</article><!-- container -->
+
+	<!-- JS
+	================================================== -->
+	<script src="js/tabs.js"></script>
+
+<!-- End Document
+================================================== -->
+</body>
+</html>

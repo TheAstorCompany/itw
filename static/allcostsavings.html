@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]> <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]> <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
+    <head>
+
+    <!-- Basic Page Needs
+  ================================================== -->
+    <meta charset="utf-8">
+    <title>Home - Astor</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Mobile Specific Metas
+  ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- CSS
+  ================================================== -->
+    <link rel="stylesheet" href="stylesheets/demo_table.css">
+    <link rel="stylesheet" href="stylesheets/base.css">
+    <link rel="stylesheet" href="stylesheets/skeleton.css">
+    <link rel="stylesheet" href="stylesheets/layout.css">
+
+    <!-- Favicons
+	================================================== -->
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700' rel='stylesheet' type='text/css'>
+
+    <!-- Head Scripts
+	================================================== -->
+    <script src="js/modernizr-2.5.1.js"></script>
+    <script src="js/jquery-1.7.1.js"></script>
+    <script src="js/jquery-ui-1.8.17.custom.min.js"></script>
+    <script src="js/jquery.dataTables.js"></script>
+    <script src='js/jquery.color-RGBa-patch.js'></script>
+    <script src="js/custom.js"></script>
+    <script>
+	$(function() {
+		$('#costlist').dataTable( {
+			"bPaginate": false,
+					"bFilter": false
+				} );
+	});
+	</script>
+    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load('visualization', '1', {packages: ['corechart']});
+    </script>
+    <script type="text/javascript">
+      function drawVisualization() {
+        // Some raw data (not necessarily accurate)
+        var countries =
+          ['Distribution Centers', 'Stores (New England)',
+           'Stores (Southwest)', 'Stores (South)', 'Stores (West)'];
+        var months = ['09/2011','10/2011', '11/2011', '12/2011', '01/2012', 'Current'];
+        var productionByCountry = [[200, 365, 135, 357, 239, 236],
+                                   [800, 938, 1120, 1167, 1110, 691],
+                                   [400, 522, 599, 587, 615, 629],
+                                   [1100, 998, 1268, 807, 968, 1026],
+                                   [400, 450, 288, 397, 215, 366]];
+      
+        // Create and populate the data table.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Month');
+        for (var i = 0; i < countries.length; ++i) {
+          data.addColumn('number', countries[i]);
+        }
+        data.addRows(months.length);
+        for (var i = 0; i < months.length; ++i) {
+          data.setCell(i, 0, months[i]);
+        }
+        for (var i = 0; i < countries.length; ++i) {
+          var country = productionByCountry[i];
+          for (var month = 0; month < months.length; ++month) {
+            data.setCell(month, i + 1, country[month]);
+          }
+        }
+        // Create and draw the visualization.
+        var ac = new google.visualization.AreaChart(document.getElementById('visualization'));
+        ac.draw(data, {
+          title : '',
+          isStacked: true,
+          width: 600,
+          height: 300,
+          vAxis: {title: "Net Cost"},
+          hAxis: {title: "Month"}
+        });
+      }
+      
+
+      google.setOnLoadCallback(drawVisualization);
+
+      function drawVisualization2() {
+        // Create and populate the data table.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Task');
+        data.addColumn('number', 'Hours per Day');
+        data.addRows(5);
+        data.setValue(0, 0, 'Recycling Rebates');
+        data.setValue(0, 1, 11);
+        data.setValue(1, 0, 'Service Negotiation');
+        data.setValue(1, 1, 2);
+        data.setValue(2, 0, 'Service Change');
+        data.setValue(2, 1, 2);
+        data.setValue(3, 0, 'Equipment');
+        data.setValue(3, 1, 2);
+        data.setValue(4, 0, 'Other');
+        data.setValue(4, 1, 7);
+      
+        // Create and draw the visualization.
+        new google.visualization.PieChart(document.getElementById('savingschart')).
+            draw(data, {title:""});
+      }
+      
+
+      google.setOnLoadCallback(drawVisualization2);
+	  
+	  
+      function drawVisualization3() {
+        // Create and populate the data table.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Task');
+        data.addColumn('number', 'Hours per Day');
+        data.addRows(5);
+        data.setValue(0, 0, 'Pickup');
+        data.setValue(0, 1, 11);
+        data.setValue(1, 0, 'Haul');
+        data.setValue(1, 1, 2);
+        data.setValue(2, 0, 'Disposal');
+        data.setValue(2, 1, 2);
+        data.setValue(3, 0, 'Equipment');
+        data.setValue(3, 1, 2);
+        data.setValue(4, 0, 'Other');
+        data.setValue(4, 1, 7);
+      
+        // Create and draw the visualization.
+        new google.visualization.PieChart(document.getElementById('invoicechart')).
+            draw(data, {title:""});
+      }
+      
+
+      google.setOnLoadCallback(drawVisualization3);
+    </script>
+    </head>
+    <body>
+
+<!-- Primary Page Layout
+	================================================== -->
+
+<article class="container">
+      <div class="row remove-bottom">
+    <header> <a href="index.html"><img src="images/logo.png" width="250" height="112" alt="Astor Home"></a>
+          <div style="float:right;margin-top:10px; text-align:right; font-size:90%;">Welcome Anthony &nbsp;&nbsp; <a href="profile.html">Account</a> &nbsp;&nbsp;&nbsp; <a href="help.html">Help</a> &nbsp;&nbsp;&nbsp; <a href="#">Logout</a><br>
+        Call 800-278-6726 or <a href="requestservice.html">Get Support</a></div>
+        </header>
+  </div>
+      <div class="tallnav-wrap">
+    <ul class="group" id="mainnavbar">
+          <li class="current_page_item"><a rel="#80C65A" href="index.html">Company</a></li>
+          <li><a rel="#1C4D25" href="distributioncenters.html">Distribution Centers</a></li>
+          <li><a rel="#1C4D25" href="stores.html">Stores</a></li>
+          
+          <li><a rel="#1C4D25" href="requestservice.html">Support Center</a></li>
+        </ul>
+    <ul class="group" id="subnavbar">
+          <li><a href="index.html">Dashboard</a></li>
+          <li><a href="allwaste.html">Waste</a></li>
+          <li><a href="allrecycling.html">Recycling</a></li>
+          <li  class="current_subpage_item"><a href="allcostsavings.html">Cost/Savings</a></li>
+          <li><a href="allservices.html">Services</a></li>
+       
+    </ul>
+  </div>
+      <div class="content">
+    <div class="row">
+          <div class="sixteen columns"> <span style="float:right"><a href="reports_alldcwaste.html" class="button" target="_blank">Printer Friendly</a> <a href="reports_alldcwaste.csv" class="button">Export CSV</a></span>
+        <h1>Cost/Savings Report</h1>
+        <span style="float:left;padding-right:10px"><label for="from">Start Date</label>
+<input name="from" type="text" id="from" value="09/01/2011" style="width:100px"/></span><span style="float:left;padding-right:10px">
+<label for="to">End Date</label>
+<input name="to" type="text" id="to" value="03/01/2012" style="width:100px"/></span><label for="for">Show for</label>
+           <select name="for"><option>All DCs and Store Regions</option>
+          <option>Only DCs</option>
+          <option>Only Store Regions</option></select><hr>
+      </div>
+        </div>
+    <div class="row">
+          <div class="four columns">
+        <h5>Cost</h5>
+        <div id="invoicechart" style="width: 350px; height: 200px;"></div>
+      </div>
+          <div class="four columns">
+        <h5>Savings</h5>
+        <div id="savingschart" style="width: 350px; height: 200px;"></div>
+      </div>
+          <div class="seven columns">
+        <h5>Net Trends</h5>
+        <div id="visualization" style="width: 400px; height: 200px;"><br>
+            </div>
+      </div>
+        </div>
+    <div class="row">
+          <div class="sixteen columns">
+        <div><br>
+              <br>
+              <br>
+              <!--To style tr, use class="odd even gradeA gradeB gradeC gradeU gradeX"-->
+              <table cellpadding="0" cellspacing="0" border="0" class="display" id="costlist" width="100%">
+            <thead>
+                  <tr>
+                <th>Type</th>
+                <th>Name</th>
+                <th>SqFt</th>
+                <th>Total Tonnage</th>
+                <th> Waste<br>
+                  Service</th>
+                <th>Waste <br>
+                  Equipment Fee</th>
+                <th>Waste<br>
+                  Haul Fee</th>
+                <th>Waste <br>
+                  Disposal Fee</th>
+                <th>Recycling Rebate</th>
+                <th>Other  Fee</th>
+                <th>Net</th>
+                </tr>
+                </thead>
+            <tbody>
+                  <tr class="odd gradeA">
+                <td>DC</td>
+                <td><a href="dcexample.html#tabs-3">Anderson </a></td>
+                <td>10,000</td>
+                <td>1</td>
+                <td>$100.34</td>
+                <td>$50.00</td>
+                <td>$100.34</td>
+                <td>$50.00</td>
+                <td>$50.00</td>
+                <td>&nbsp;</td>
+                <td>$50.00</td>
+                </tr>
+                  <tr class="even gradeA">
+                <td>DC</td>
+                <td><a href="dcexample.html#tabs-3">Berkley </a></td>
+                <td>10,000</td>
+                <td>2</td>
+                <td>$111.06</td>
+                <td>$50.00</td>
+                <td>$111.06</td>
+                <td>$50.00</td>
+                <td>$50.00</td>
+                <td>&nbsp;</td>
+                <td>$50.00</td>
+                </tr>
+                  <tr class="odd gradeA">
+                <td>DC</td>
+                <td><a href="dcexample.html#tabs-3">Bolingbrook</a></td>
+                <td>10,000</td>
+                <td>1</td>
+                <td>$100.21</td>
+                <td>$50.00</td>
+                <td>$100.21</td>
+                <td>$50.00</td>
+                <td>$50.00</td>
+                <td>&nbsp;</td>
+                <td>$50.00</td>
+                </tr>
+                  <tr class="even gradeA">
+                <td class="even gradeB">DC</td>
+                <td class="even gradeB"><a href="dcexample.html#tabs-3">Connecticut </a></td>
+                <td>10,000</td>
+                <td>11</td>
+                <td>$112.24</td>
+                <td>$50.00</td>
+                <td>$112.24</td>
+                <td>$50.00</td>
+                <td>$50.00</td>
+                <td>&nbsp;</td>
+                <td>$50.00</td>
+                </tr>
+                  <tr class="odd gradeA">
+                    <td>DC</td>
+                <td><a href="dcexample.html#tabs-3">Flagstaff </a></td>
+                <td>10,000</td>
+                <td>1</td>
+                <td>$113.75</td>
+                <td>$50.00</td>
+                <td>$113.75</td>
+                <td>$50.00</td>
+                <td>$50.00</td>
+                <td>&nbsp;</td>
+                <td>$50.00</td>
+                </tr>
+                  <tr class="even gradeA">
+                    <td>DC</td>
+                <td><a href="dcexample.html#tabs-3">Houston</a></td>
+                <td>10,000</td>
+                <td>1</td>
+                <td>$113.55</td>
+                <td>$50.00</td>
+                <td>$113.55</td>
+                <td>$50.00</td>
+                <td>$50.00</td>
+                <td>&nbsp;</td>
+                <td>$50.00</td>
+                </tr>
+                  <tr class="odd gradeA">
+                    <td>DC</td>
+                <td class="odd gradeX"><a href="dcexample.html#tabs-3">Jupiter</a></td>
+                <td>10,000</td>
+                <td>1</td>
+                <td>$300.00</td>
+                <td>$50.00</td>
+                <td>$300.00</td>
+                <td>$50.00</td>
+                <td>$50.00</td>
+                <td>&nbsp;</td>
+                <td>$50.00</td>
+                </tr>
+                  <tr class="even gradeA">
+                    <td class="even gradeB">DC</td>
+                <td><a href="dcexample.html#tabs-3">Kutztown</a></td>
+                <td>10,000</td>
+                <td>1</td>
+                <td>$113.73</td>
+                <td>$50.00</td>
+                <td>$113.73</td>
+                <td>$50.00</td>
+                <td>$50.00</td>
+                <td>&nbsp;</td>
+                <td>$50.00</td>
+                </tr>
+                  <tr class="odd gradeA">
+                    <td>DC</td>
+                <td><a href="dcexample.html#tabs-3">Lehigh</a></td>
+                <td>10,000</td>
+                <td>1</td>
+                <td>$109.56</td>
+                <td>$50.00</td>
+                <td>$109.56</td>
+                <td class="even gradeA">$50.00</td>
+                <td class="even gradeA">$50.00</td>
+                <td class="even gradeA">&nbsp;</td>
+                <td class="even gradeA">$50.00</td>
+                </tr>
+                  <tr class="even gradeA">
+                    <td>DC</td>
+                <td><a href="dcexample.html#tabs-3">Moreno Valley </a></td>
+                <td>10,000</td>
+                <td>1</td>
+                <td>$112.06</td>
+                <td>$50.00</td>
+                <td>$112.06</td>
+                <td class="odd gradeA">$50.00</td>
+                <td class="odd gradeA">$50.00</td>
+                <td class="odd gradeA">&nbsp;</td>
+                <td class="odd gradeA">$50.00</td>
+                </tr>
+                  <tr class="odd gradeA">
+                    <td>DC</td>
+                <td><a href="dcexample.html#tabs-3">Mt Vernon </a></td>
+                <td>10,000</td>
+                <td>1</td>
+                <td>$114.29</td>
+                <td>$50.00</td>
+                <td>$114.29</td>
+                <td class="even gradeA">$50.00</td>
+                <td class="even gradeA">$50.00</td>
+                <td class="even gradeA">&nbsp;</td>
+                <td class="even gradeA">$50.00</td>
+                </tr>
+                  <tr  class="even gradeA">
+                    <td class="even gradeB">DC</td>
+                <td><a href="dcexample.html#tabs-3">Nazareth </a></td>
+                <td>10,000</td>
+                <td>1</td>
+                <td class="odd gradeA">$100.34</td>
+                <td class="odd gradeA">$50.00</td>
+                <td class="odd gradeA">$100.34</td>
+                <td class="odd gradeA">$50.00</td>
+                <td class="odd gradeA">$50.00</td>
+                <td class="odd gradeA">&nbsp;</td>
+                <td class="odd gradeA">$50.00</td>
+                </tr>
+                  <tr  class="odd gradeA">
+                    <td>DC</td>
+                <td><a href="dcexample.html#tabs-3">Orlando </a></td>
+                <td>10,000</td>
+                <td>1</td>
+                <td class="even gradeA">$111.06</td>
+                <td class="even gradeA">$50.00</td>
+                <td class="even gradeA">$111.06</td>
+                <td class="even gradeA">$50.00</td>
+                <td class="even gradeA">$50.00</td>
+                <td class="even gradeA">&nbsp;</td>
+                <td class="even gradeA">$50.00</td>
+                </tr>
+                  <tr  class="even gradeA">
+                    <td>DC</td>
+                <td><a href="dcexample.html#tabs-3">Pendergrass</a></td>
+                <td>10,000</td>
+                <td>1</td>
+                <td class="odd gradeA">$100.21</td>
+                <td class="odd gradeA">$50.00</td>
+                <td class="odd gradeA">$100.21</td>
+                <td class="odd gradeA">$50.00</td>
+                <td class="odd gradeA">$50.00</td>
+                <td class="odd gradeA">&nbsp;</td>
+                <td class="odd gradeA">$50.00</td>
+                </tr>
+                  <tr  class="odd gradeA">
+                    <td>DC</td>
+                <td><a href="dcexample.html#tabs-3">Perrysburg</a></td>
+                <td>10,000</td>
+                <td>1</td>
+                <td class="even gradeA">$112.24</td>
+                <td class="even gradeA">$50.00</td>
+                <td class="even gradeA">$112.24</td>
+                <td class="even gradeA">$50.00</td>
+                <td class="even gradeA">$50.00</td>
+                <td class="even gradeA">&nbsp;</td>
+                <td class="even gradeA">$50.00</td>
+                </tr>
+                  <tr  class="even gradeA">
+                    <td class="even gradeB">DC</td>
+                <td><a href="dcexample.html#tabs-3">Portage</a></td>
+                <td>10,000</td>
+                <td>1</td>
+                <td class="odd gradeA">$113.75</td>
+                <td class="odd gradeA">$50.00</td>
+                <td class="odd gradeA">$113.75</td>
+                <td class="odd gradeA">$50.00</td>
+                <td class="odd gradeA">$50.00</td>
+                <td class="odd gradeA">&nbsp;</td>
+                <td class="odd gradeA">$50.00</td>
+                </tr>
+                  <tr  class="odd gradeA">
+                    <td>DC</td>
+                <td><a href="dcexample.html#tabs-3">Puerto Rico </a></td>
+                <td>10,000</td>
+                <td>1</td>
+                <td class="even gradeA">$113.55</td>
+                <td class="even gradeA">$50.00</td>
+                <td class="even gradeA">$113.55</td>
+                <td class="even gradeA">$50.00</td>
+                <td class="even gradeA">$50.00</td>
+                <td class="even gradeA">&nbsp;</td>
+                <td class="even gradeA">$50.00</td>
+                </tr>
+                  <tr  class="even gradeA">
+                    <td>DC</td>
+                <td><a href="dcexample.html#tabs-3">Rogers</a></td>
+                <td>10,000</td>
+                <td>1</td>
+                <td class="odd gradeA">$300.00</td>
+                <td class="odd gradeA">$50.00</td>
+                <td class="odd gradeA">$300.00</td>
+                <td class="odd gradeA">$50.00</td>
+                <td class="odd gradeA">$50.00</td>
+                <td class="odd gradeA">&nbsp;</td>
+                <td class="odd gradeA">$50.00</td>
+                </tr>
+                  <tr  class="odd gradeA">
+                    <td>DC</td>
+                <td><a href="dcexample.html#tabs-3">Tempe </a></td>
+                <td>10,000</td>
+                <td>1</td>
+                <td class="even gradeA">$113.73</td>
+                <td class="even gradeA">$50.00</td>
+                <td class="even gradeA">$113.73</td>
+                <td class="even gradeA">$50.00</td>
+                <td class="even gradeA">$50.00</td>
+                <td class="even gradeA">&nbsp;</td>
+                <td class="even gradeA">$50.00</td>
+                </tr>
+                  <tr  class="even gradeA">
+                    <td class="even gradeB">DC</td>
+                <td><a href="dcexample.html#tabs-3">Waxahachie</a></td>
+                <td>10,000</td>
+                <td>1</td>
+                <td class="odd gradeA">$109.56</td>
+                <td class="odd gradeA">$50.00</td>
+                <td class="odd gradeA">$109.56</td>
+                <td>$50.00</td>
+                <td>$50.00</td>
+                <td>&nbsp;</td>
+                <td>$50.00</td>
+                </tr>
+                  <tr  class="odd gradeA">
+                <td>DC</td>
+                <td><a href="dcexample.html#tabs-3">Windsor</a></td>
+                <td>10,000</td>
+                <td>1</td>
+                <td class="even gradeA">$112.06</td>
+                <td class="even gradeA">$50.00</td>
+                <td class="even gradeA">$112.06</td>
+                <td>$50.00</td>
+                <td>$50.00</td>
+                <td>&nbsp;</td>
+                <td>$50.00</td>
+                </tr>
+                  <tr  class="even gradeA">
+                <td>DC</td>
+                <td><a href="dcexample.html#tabs-3">Woodlands</a></td>
+                <td>10,000</td>
+                <td>1</td>
+                <td class="odd gradeA">$114.29</td>
+                <td class="odd gradeA">$50.00</td>
+                <td class="odd gradeA">$114.29</td>
+                <td>$50.00</td>
+                <td>$50.00</td>
+                <td>&nbsp;</td>
+                <td>$50.00</td>
+                </tr>
+                  <tr  class="even gradeA">
+                    <td>Region</td>
+                    <td class="odd gradeA"><a href="regionexample.html">East</a></td>
+                    <td>10,000</td>
+                    <td class="odd gradeA">1</td>
+                    <td>$113.55</td>
+                    <td>$50.00</td>
+                    <td>$113.55</td>
+                    <td>$50.00</td>
+                    <td>$50.00</td>
+                    <td>&nbsp;</td>
+                    <td>$50.00</td>
+                  </tr>
+                  <tr  class="odd gradeA">
+                    <td>Region</td>
+                    <td><a href="regionexample.html">West</a></td>
+                    <td class="odd gradeA">10,000</td>
+                    <td>1</td>
+                    <td class="odd gradeA">$300.00</td>
+                    <td class="odd gradeA">$50.00</td>
+                    <td class="odd gradeA">$300.00</td>
+                    <td class="odd gradeA">$50.00</td>
+                    <td class="odd gradeA">$50.00</td>
+                    <td class="odd gradeA">&nbsp;</td>
+                    <td class="odd gradeA">$50.00</td>
+                  </tr>
+                  <tr  class="even gradeA">
+                    <td>Region</td>
+                    <td class="odd gradeA"><a href="regionexample.html">South</a></td>
+                    <td>10,000</td>
+                    <td class="odd gradeA">1</td>
+                    <td>$113.73</td>
+                    <td>$50.00</td>
+                    <td>$113.73</td>
+                    <td>$50.00</td>
+                    <td>$50.00</td>
+                    <td>&nbsp;</td>
+                    <td>$50.00</td>
+                  </tr>
+                  <tr  class="odd gradeA">
+                    <td>Region</td>
+                    <td class="even gradeB"><a href="regionexample.html">Midwest</a></td>
+                    <td class="odd gradeA">10,000</td>
+                    <td>1</td>
+                    <td class="odd gradeA">$109.56</td>
+                    <td class="odd gradeA">$50.00</td>
+                    <td class="odd gradeA">$109.56</td>
+                    <td>$50.00</td>
+                    <td>$50.00</td>
+                    <td>&nbsp;</td>
+                    <td>$50.00</td>
+                  </tr>
+                  <tr  class="even gradeA">
+                    <td>Region</td>
+                    <td class="odd gradeA"><a href="regionexample.html">East</a></td>
+                    <td>10,000</td>
+                    <td class="odd gradeA">1</td>
+                    <td>$112.06</td>
+                    <td>$50.00</td>
+                    <td>$112.06</td>
+                    <td class="odd gradeA">$50.00</td>
+                    <td class="odd gradeA">$50.00</td>
+                    <td class="odd gradeA">&nbsp;</td>
+                    <td class="odd gradeA">$50.00</td>
+                  </tr>
+                  <tr  class="odd gradeA">
+                    <td>Region</td>
+                    <td><a href="regionexample.html">Southeast</a></td>
+                    <td class="odd gradeA">10,000</td>
+                    <td>1</td>
+                    <td class="odd gradeA">$114.29</td>
+                    <td class="odd gradeA">$50.00</td>
+                    <td class="odd gradeA">$114.29</td>
+                    <td>$50.00</td>
+                    <td>$50.00</td>
+                    <td>&nbsp;</td>
+                    <td>$50.00</td>
+                  </tr>
+                </tbody>
+            <tfoot>
+                  <tr>
+                <th>&nbsp;</th>
+                <th>100,000 Locations</th>
+                <th>300,000 SqFt</th>
+                <th>100 Total Tonnage</th>
+                <th>$123,490 Service Fee</th>
+                <th>(Sum)<br>
+                  Equipment Fee</th>
+                <th>$123,456 Haul Fee</th>
+                <th>$234,567 Disposal Fee</th>
+                <th>$20,000 Rebate</th>
+                <th>(Sum)<br>
+                  Other Fee</th>
+                <th>$6709 Net</th>
+                </tr>
+                </tfoot>
+          </table>
+            </div>
+      </div>
+        </div>
+  </div>
+      <footer> &nbsp;&copy; 2012 All rights reserved. The Astor Company. <a href="privacy.html">Privacy</a> & <a href="terms.html">Terms</a></footer>
+    </article>
+<!-- container --> 
+
+<!-- JS
+	================================================== --> 
+<script src="js/tabs.js"></script> 
+
+<!-- End Document
+================================================== -->
+</body>
+</html>

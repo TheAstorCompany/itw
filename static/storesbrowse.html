@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]> <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]> <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+	<!-- Basic Page Needs
+  ================================================== -->
+	<meta charset="utf-8">
+	<title>Stores - Astor</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<!-- Mobile Specific Metas
+  ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+  ================================================== -->
+    <link rel="stylesheet" href="stylesheets/demo_table.css">
+	<link rel="stylesheet" href="stylesheets/base.css">
+    <link rel="stylesheet" href="stylesheets/astor/jquery-ui-1.8.17.custom.css" />
+	<link rel="stylesheet" href="stylesheets/skeleton.css">
+	<link rel="stylesheet" href="stylesheets/layout.css">
+
+	<!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+    
+	<!-- Head Scripts
+	================================================== -->
+	<script src="js/modernizr-2.5.1.js"></script>
+    <script src="js/jquery-1.7.1.js"></script>
+    <script src="js/jquery-ui-1.8.17.custom.min.js"></script>
+    <script src="js/jquery.dataTables.js"></script>
+    <script src='js/jquery.color-RGBa-patch.js'></script>
+    <script src="js/custom.js"></script>
+    <script>
+	$(function() {
+		$('#tabs').tabs();
+		$('#storeslist').dataTable( {
+					"sPaginationType": "full_numbers",
+					"iDisplayLength": 25,
+					 "oLanguage": {
+      "sLengthMenu": 'Display <select>'+
+        '<option value="25">25</option>'+
+        '<option value="50">50</option>'+
+        '<option value="100">100</option>'+
+        '<option value="-1">All</option>'+
+        '</select> records'
+    }
+				} );
+	});
+	</script>
+</head>
+<body>
+
+	<!-- Primary Page Layout
+	================================================== -->
+
+	<article class="container">
+    <div class="row remove-bottom">
+		<header>
+        <a href="index.html"><img src="images/logo.png" width="250" height="112" alt="Astor Home"></a><div style="float:right;margin-top:10px; text-align:right; font-size:90%;">Welcome Anthony &nbsp;&nbsp;  
+          <a href="profile.html">Account</a> &nbsp;&nbsp;&nbsp; <a href="help.html">Help</a> &nbsp;&nbsp;&nbsp; <a href="#">Logout</a><br>
+Call 800-278-6726 or <a href="requestservice.html">Get Support</a></div>
+		</header></div>  
+        <div class="content">
+             <div class="tallnav-wrap">   
+        <ul class="group" id="mainnavbar">
+            <li><a rel="#1C4D25" href="index.html">Company</a></li>
+             <li><a rel="#1C4D25" href="distributioncenters.html">Distribution Centers</a></li>
+            <li class="current_page_item"><a rel="#80C65A" href="stores.html">Stores</a></li>
+            
+<li><a rel="#1C4D25" href="requestservice.html">Support Center</a></li>   
+        </ul>
+        <ul class="group" id="subnavbar">       <li><a href="stores.html">Dashboard</a></li>
+        <li><a href="storeswaste.html">Waste</a></li>
+<li><a href="storesrecycling.html">Recycling</a></li>
+        <li><a href="storescost.html">Cost/Savings</a></li>
+		<li><a href="storesservices.html">Services</a></li>
+        <li class="current_subpage_item"><a href="storesbrowse.html">List</a></li>
+      </ul>
+    </div>
+       <div class="row"><div class="sixteen columns"><h1>Store List</h1><div>
+       <!--To style tr, use class="odd even gradeA gradeB gradeC gradeU gradeX"-->
+       <table cellpadding="0" cellspacing="0" border="0" class="display" id="storeslist" width="100%">
+	<thead>
+		<tr>
+		  <th>Region</th>
+		  <th>District</th>
+			<th>Location</th>
+			<th>Address</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Zip</th>
+			<th>24H</th>
+            <th>SqFt</th>
+            <th>Diversion</th>
+			<th>Cost/Sqft</th>
+			<th>Last Updated</th>
+		</tr>
+	</thead>
+	<tbody>
+  <tr class="odd gradeA">
+    <td><a href="regionexample.html">East</a></td>
+    <td><a href="districtexample.html">105</a></td>
+    <td><a href="storeexample.html">1013</a></td>
+    <td>5564 Broadway</td>
+    <td>Bronx</td>
+    <td>NY</td>
+    <td>10463</td>
+    <td>Y</td>
+    <td>12</td>
+    <td>99%</td>
+    <td>$10</td>
+    <td>01/01/2012</td>
+    </tr>
+  <tr class="even gradeA">
+    <td><a href="regionexample.html">East</a></td>
+    <td><a href="districtexample.html">326</a></td>
+    <td><a href="storeexample.html">1180</a></td>
+    <td>3355 Crescent St # 67</td>
+    <td>Long Island City</td>
+    <td>NY</td>
+    <td>11106</td>
+    <td>N</td>
+    <td>12</td>
+    <td>95%</td>
+    <td>$10</td>
+    <td>01/02/2012</td>
+    </tr>
+  <tr class="odd gradeB">
+    <td><a href="regionexample.html">East</a></td>
+    <td><a href="districtexample.html">105</a></td>
+    <td><a href="storeexample.html">1214</a></td>
+    <td>1328 2nd Ave</td>
+    <td>New York (Manhattan)</td>
+    <td>NY</td>
+    <td>10021</td>
+    <td>Y</td>
+    <td>12</td>
+    <td>75%</td>
+    <td>$12</td>
+    <td>01/03/2012</td>
+    </tr>
+  <tr class="even gradeB">
+    <td><a href="regionexample.html">East</a></td>
+    <td><a href="districtexample.html">212</a></td>
+    <td><a href="storeexample.html">1427</a></td>
+    <td>532 Neptune</td>
+    <td>Brooklyn</td>
+    <td>NY</td>
+    <td>11224</td>
+    <td>N</td>
+    <td>12</td>
+    <td>70%</td>
+    <td>$12</td>
+    <td>01/04/2012</td>
+    </tr>
+  <tr class="odd gradeU">
+    <td><a href="regionexample.html">East</a></td>
+    <td><a href="districtexample.html">212</a></td>
+    <td><a href="storeexample.html">1487</a></td>
+    <td>104-25-31 Queens Blvd</td>
+    <td>Forest Hills</td>
+    <td>NY</td>
+    <td>11375</td>
+    <td>Y</td>
+    <td>12</td>
+    <td>60%</td>
+    <td>$20</td>
+    <td>01/01/2012</td>
+    </tr>
+  <tr class="even gradeU">
+    <td><a href="regionexample.html">East</a></td>
+    <td><a href="districtexample.html">326</a></td>
+    <td><a href="storeexample.html">1572</a></td>
+    <td>44-15 Kissena Blvd</td>
+    <td>Flushing</td>
+    <td>NY</td>
+    <td>11355</td>
+    <td>N</td>
+    <td>12</td>
+    <td>65%</td>
+    <td>$20</td>
+    <td>01/01/2012</td>
+    </tr>
+  <tr class="odd gradeX">
+    <td><a href="regionexample.html">East</a></td>
+    <td><a href="districtexample.html">212</a></td>
+    <td><a href="storeexample.html">1598</a></td>
+    <td>1579 Forest Ave</td>
+    <td>Staten Island</td>
+    <td>NY</td>
+    <td>10302</td>
+    <td>N</td>
+    <td>12</td>
+    <td>45%</td>
+    <td>$30</td>
+    <td>01/01/2012</td>
+    </tr>
+  <tr class="even gradeX">
+    <td><a href="regionexample.html">East</a></td>
+    <td><a href="districtexample.html">326</a></td>
+    <td><a href="storeexample.html">1616</a></td>
+    <td>8277 Broadway</td>
+    <td>Elmhurst</td>
+    <td>NY</td>
+    <td>11373</td>
+    <td>N</td>
+    <td>14</td>
+    <td>40%</td>
+    <td>$30</td>
+    <td>01/01/2012</td>
+    </tr>
+  <tr class="odd gradeA">
+    <td><a href="regionexample.html">East</a></td>
+    <td><a href="districtexample.html">263</a></td>
+    <td><a href="storeexample.html">1874</a></td>
+    <td>180 North Main Street</td>
+    <td>New City</td>
+    <td>NY</td>
+    <td>10956</td>
+    <td>N</td>
+    <td>15</td>
+    <td>85%</td>
+    <td>$10</td>
+    <td>02/01/2012</td>
+    </tr>
+  <tr class="even gradeA">
+    <td ><a href="regionexample.html">East</a></td>
+    <td><a href="districtexample.html">212</a></td>
+    <td ><a href="storeexample.html">1918</a></td>
+    <td>755 BROADWAY</td>
+    <td>Brooklyn</td>
+    <td>NY</td>
+    <td>11206</td>
+    <td>N</td>
+    <td>15</td>
+    <td>80%</td>
+    <td>$10</td>
+    <td>02/01/2012</td>
+    </tr>
+  <tr class="odd gradeA">
+    <td ><a href="regionexample.html">East</a></td>
+    <td><a href="districtexample.html">105</a></td>
+    <td ><a href="storeexample.html">2055</a></td>
+    <td>10962 Francis Lewis Blvd</td>
+    <td>Queen Village</td>
+    <td>NY</td>
+    <td>11429</td>
+    <td>Y</td>
+    <td>15</td>
+    <td>92%</td>
+    <td>$10</td>
+    <td>02/01/2012</td>
+    </tr>
+  <tr  class="even gradeA">
+    <td ><a href="regionexample.html">East</a></td>
+    <td><a href="districtexample.html">263</a></td>
+    <td ><a href="storeexample.html">2077</a></td>
+    <td>316 Broadway</td>
+    <td>Kingston</td>
+    <td>NY</td>
+    <td>12401</td>
+    <td>N</td>
+    <td>15</td>
+    <td>80%</td>
+    <td>$10</td>
+    <td>02/01/2012</td>
+    </tr>
+  <tr  class="odd gradeA">
+    <td ><a href="regionexample.html">East</a></td>
+    <td><a href="districtexample.html">105</a></td>
+    <td ><a href="storeexample.html">2122</a></td>
+    <td>1230 Nepperhan Ave</td>
+    <td>Yonkers</td>
+    <td>NY</td>
+    <td>10703</td>
+    <td>Y</td>
+    <td>15</td>
+    <td>81%</td>
+    <td>$10</td>
+    <td>02/02/2012</td>
+    </tr>
+  <tr  class="even gradeA">
+    <td ><a href="regionexample.html">East</a></td>
+    <td><a href="districtexample.html">263</a></td>
+    <td ><a href="storeexample.html">2180</a></td>
+    <td>625 Dutchess Turnpike #1</td>
+    <td>Poughkeepsie</td>
+    <td>NY</td>
+    <td>12603</td>
+    <td>N</td>
+    <td>15</td>
+    <td>87%</td>
+    <td>$10</td>
+    <td>02/02/2012</td>
+    </tr>
+  <tr class="odd gradeA">
+    <td ><a href="regionexample.html">East</a></td>
+    <td><a href="districtexample.html">291</a></td>
+    <td ><a href="storeexample.html">2216</a></td>
+    <td>655-2 Montauk Hwy</td>
+    <td>East Patchogue</td>
+    <td>NY</td>
+    <td>11772</td>
+    <td>N</td>
+    <td>10</td>
+    <td>89%</td>
+    <td>$10</td>
+    <td>02/10/2012</td>
+    </tr>
+  <tr  class="even gradeA">
+    <td ><a href="regionexample.html">East</a></td>
+    <td><a href="districtexample.html">212</a></td>
+    <td ><a href="storeexample.html">2257</a></td>
+    <td>1973 Forest Avenue</td>
+    <td>Staten Island</td>
+    <td>NY</td>
+    <td>10303</td>
+    <td>N</td>
+    <td>10</td>
+    <td>93%</td>
+    <td>$10</td>
+    <td>01/15/2012</td>
+    </tr>
+  <tr  class="odd gradeA">
+    <td ><a href="regionexample.html">East</a></td>
+    <td><a href="districtexample.html">291</a></td>
+    <td ><a href="storeexample.html">2626</a></td>
+    <td>93 FOREST AVE</td>
+    <td>Glen Cove</td>
+    <td>NY</td>
+    <td>11542</td>
+    <td>N</td>
+    <td>9</td>
+    <td>84%</td>
+    <td>$10</td>
+    <td>01/01/2012</td>
+    </tr>
+  <tr  class="even gradeA">
+    <td ><a href="regionexample.html">East</a></td>
+    <td><a href="districtexample.html">291</a></td>
+    <td ><a href="storeexample.html">2630</a></td>
+    <td>555 Larkfield Rd</td>
+    <td>East Northport</td>
+    <td>NY</td>
+    <td>11731</td>
+    <td>N</td>
+    <td>9</td>
+    <td>81%</td>
+    <td>$10</td>
+    <td>01/20/2012</td>
+    </tr>
+  <tr  class="odd gradeA">
+    <td ><a href="regionexample.html">East</a></td>
+    <td><a href="districtexample.html">212</a></td>
+    <td ><a href="storeexample.html">2650</a></td>
+    <td>5716 Avenue U</td>
+    <td>Brooklyn</td>
+    <td>NY</td>
+    <td>11234</td>
+    <td>Y</td>
+    <td>9</td>
+    <td>96%</td>
+    <td>$10</td>
+    <td>01/30/2012</td>
+    </tr>
+	</tbody>
+	<tfoot>
+		<tr>
+		  <th>Region</th>
+		  <th>District#</th>
+			<th>Store#</th>
+			<th>Address</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Zip</th>
+			<th>24-Hour</th>
+            <th>SqFt</th>
+            <th>Diversion</th>
+			<th>Cost/Sqft</th>
+			<th>Last Updated</th>
+			  </tr>
+	</tfoot>
+</table></div></div></div> </div>
+        
+        <footer>
+        &nbsp;&copy; 2012 All rights reserved. The Astor Company. <a href="privacy.html">Privacy</a> & <a href="terms.html">Terms</a></footer>
+
+	</article><!-- container -->
+
+	<!-- JS
+	================================================== -->
+	<script src="javascripts/tabs.js"></script>
+
+<!-- End Document
+================================================== -->
+</body>
+</html>

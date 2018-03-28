@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]> <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]> <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+	<!-- Basic Page Needs
+  ================================================== -->
+	<meta charset="utf-8">
+	<title>DCs - Astor</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<!-- Mobile Specific Metas
+  ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+  ================================================== -->
+    <link rel="stylesheet" href="stylesheets/demo_table.css">
+	<link rel="stylesheet" href="stylesheets/base.css">
+    <link rel="stylesheet" href="stylesheets/astor/jquery-ui-1.8.17.custom.css" />
+	<link rel="stylesheet" href="stylesheets/skeleton.css">
+	<link rel="stylesheet" href="stylesheets/layout.css">
+
+	<!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+    
+	<!-- Head Scripts
+	================================================== -->
+	<script src="js/modernizr-2.5.1.js"></script>
+    <script src="js/jquery-1.7.1.js"></script>
+    <script src="js/jquery-ui-1.8.17.custom.min.js"></script>
+    <script src="js/jquery.dataTables.js"></script>
+    <script src='js/jquery.color-RGBa-patch.js'></script>
+    <script src="js/custom.js"></script>
+    <script>
+	$(function() {
+		$('#tabs').tabs();
+		$('#dclist').dataTable( {
+					"bPaginate": false,
+					"bFilter": false
+				} );
+	});
+	</script>
+</head>
+<body>
+
+	<!-- Primary Page Layout
+	================================================== -->
+
+	<article class="container">
+    <div class="row remove-bottom">
+		<header>
+        <a href="index.html"><img src="images/logo.png" width="250" height="112" alt="Astor Home"></a><div style="float:right;margin-top:10px; text-align:right; font-size:90%;">Welcome Anthony &nbsp;&nbsp;  
+          <a href="profile.html">Account</a> &nbsp;&nbsp;&nbsp; <a href="help.html">Help</a> &nbsp;&nbsp;&nbsp; <a href="#">Logout</a><br>
+Call 800-278-6726 or <a href="requestservice.html">Get Support</a></div>
+		</header></div>  
+        <div class="content">
+             <div class="tallnav-wrap">   
+<ul class="group" id="mainnavbar">
+            <li><a rel="#1C4D25" href="index.html">Company</a></li>
+            <li class="current_page_item"><a rel="#80C65A" href="distributioncenters.html">Distribution Centers</a></li>
+            <li><a rel="#1C4D25" href="stores.html">Stores</a></li>
+            
+<li><a rel="#1C4D25" href="requestservice.html">Support Center</a></li>    
+        </ul>
+        <ul class="group" id="subnavbar">
+        <li><a href="distributioncenters.html">Dashboard</a></li>        <li><a href="dcwaste.html">Waste</a></li>
+<li><a href="dcsustainability.html">Recycling</a></li>
+        <li><a href="dccost.html">Cost/Savings</a></li>
+<li><a href="dcservices.html">Services</a></li>
+         <li  class="current_subpage_item"><a href="dcbrowse.html">List</a></li>
+      </ul>
+    </div>
+       <div class="row"><div class="sixteen columns">
+           <h1>DC List</h1><div>
+       <!--To style tr, use class="odd even gradeA gradeB gradeC gradeU gradeX"-->
+       <table cellpadding="0" cellspacing="0" border="0" class="display" id="dclist" width="100%">
+	<thead>
+		<tr>
+			<th>Location</th>
+            <th>Address</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Zip</th>
+            <th>SqFt</th>
+			<th>Diversion</th>
+			<th>Cost/Sqft</th>
+			<th>Last Updated</th>
+		</tr>
+	</thead>
+	<tbody>
+  <tr class="odd gradeA">
+    <td><a href="dcexample.html">Anderson </a></td>
+    <td>101 Alliance Parkway </td>
+    <td>Williamston </td>
+    <td>SC</td>
+    <td>29697</td>
+    <td>10000</td>
+    <td>99%</td>
+    <td>$10</td>
+    <td>01/01/2012</td>
+  </tr>
+  <tr class="even gradeA">
+    <td><a href="dcexample.html">Berkley </a></td>
+    <td>5300 St. Charles Rd.</td>
+    <td>Berkley </td>
+    <td>Il</td>
+    <td>60169</td>
+    <td>10000</td>
+    <td>95%</td>
+    <td>$10</td>
+    <td>01/02/2012</td>
+  </tr>
+  <tr class="odd gradeB">
+    <td><a href="dcexample.html">Bolingbrook</a></td>
+    <td>575 Crossroad Pkwy</td>
+    <td>Bolingbrook</td>
+    <td>IL</td>
+    <td></td>
+    <td>10000</td>
+    <td>75%</td>
+    <td>$12</td>
+    <td>01/03/2012</td>
+  </tr>
+  <tr class="even gradeB">
+    <td><a href="dcexample.html">Connecticut </a></td>
+    <td>80 International Drive</td>
+    <td>Windsor </td>
+    <td>CT</td>
+    <td>06095</td>
+    <td>10000</td>
+    <td>70%</td>
+    <td>$12</td>
+    <td>01/04/2012</td>
+  </tr>
+  <tr class="odd gradeU">
+    <td><a href="dcexample.html">Flagstaff </a></td>
+    <td>2400 N. Walgreen St.</td>
+    <td>Flagstaff</td>
+    <td>AZ</td>
+    <td>86004</td>
+    <td>10000</td>
+    <td>60%</td>
+    <td>$20</td>
+    <td>01/01/2012</td>
+  </tr>
+  <tr class="even gradeU">
+    <td><a href="dcexample.html">Houston</a></td>
+    <td>1805 Greens Road</td>
+    <td>Houston </td>
+    <td>TX</td>
+    <td>77032</td>
+    <td>10000</td>
+    <td>65%</td>
+    <td>$20</td>
+    <td>01/01/2012</td>
+  </tr>
+  <tr class="odd gradeX">
+    <td><a href="dcexample.html">Jupiter</a></td>
+    <td>15998 Walgreens Dr.</td>
+    <td>Jupiter </td>
+    <td>FL</td>
+    <td>33458</td>
+    <td>10000</td>
+    <td>45%</td>
+    <td>$30</td>
+    <td>01/01/2012</td>
+  </tr>
+  <tr class="even gradeX">
+    <td><a href="dcexample.html">Kutztown</a></td>
+    <td>9750 Commerce Cir.</td>
+    <td>Kutztown</td>
+    <td>PA</td>
+    <td></td>
+    <td>10000</td>
+    <td>40%</td>
+    <td>$30</td>
+    <td>01/01/2012</td>
+  </tr>
+  <tr class="odd gradeA">
+    <td><a href="dcexample.html">Lehigh</a></td>
+    <td>125 N Commerce Way</td>
+    <td>Bethlehem </td>
+    <td>PA</td>
+    <td>18017</td>
+    <td>10000</td>
+    <td>85%</td>
+    <td>$9</td>
+    <td>02/01/2012</td>
+  </tr>
+  <tr class="even gradeA">
+    <td><a href="dcexample.html">Moreno Valley </a></td>
+    <td>17500 Paris Blvd</td>
+    <td>Moreno Valley </td>
+    <td>CA</td>
+    <td>92551</td>
+    <td class="odd gradeA">10000</td>
+    <td>80%</td>
+    <td>-$5</td>
+    <td>02/01/2012</td>
+  </tr>
+  <tr class="odd gradeA">
+    <td><a href="dcexample.html">Mt Vernon </a></td>
+    <td>5100 Lake Terrace NE</td>
+    <td>Mt Vernon </td>
+    <td>IL</td>
+    <td>62864</td>
+    <td class="even gradeA">10000</td>
+    <td>92%</td>
+    <td>$3</td>
+    <td>02/01/2012</td>
+  </tr>
+  <tr  class="even gradeA">
+    <td><a href="dcexample.html">Nazareth </a></td>
+    <td>3850 Prologis Parkway</td>
+    <td>Easton</td>
+    <td>PA</td>
+    <td>18045</td>
+    <td class="odd gradeB">10000</td>
+    <td>80%</td>
+    <td>$0</td>
+    <td>02/01/2012</td>
+  </tr>
+  <tr  class="odd gradeA">
+    <td><a href="dcexample.html">Orlando </a></td>
+    <td>2455 Premier Row</td>
+    <td>Orlando </td>
+    <td>FL</td>
+    <td>32809</td>
+    <td class="even gradeB">10000</td>
+    <td>81%</td>
+    <td>$9</td>
+    <td>02/02/2012</td>
+  </tr>
+  <tr  class="even gradeA">
+    <td><a href="dcexample.html">Pendergrass</a></td>
+    <td>350 Raco Parkway</td>
+    <td>Pendergrass </td>
+    <td>GA</td>
+    <td>30567</td>
+    <td class="odd gradeU">10000</td>
+    <td>87%</td>
+    <td>$10</td>
+    <td>02/02/2012</td>
+  </tr>
+  <tr class="odd gradeA">
+    <td><a href="dcexample.html">Perrysburg</a></td>
+    <td>28727 Oregon Road</td>
+    <td>Perrysburg</td>
+    <td>OH</td>
+    <td>43551</td>
+    <td class="even gradeU">10000</td>
+    <td>89%</td>
+    <td>$10</td>
+    <td>02/10/2012</td>
+  </tr>
+  <tr  class="even gradeA">
+    <td><a href="dcexample.html">Portage</a></td>
+    <td>6525 Daniel Burnham Dr. Ste A</td>
+    <td>Portage </td>
+    <td>IN</td>
+    <td>46368</td>
+    <td class="odd gradeX">10000</td>
+    <td>93%</td>
+    <td>-$5</td>
+    <td>01/15/2012</td>
+  </tr>
+  <tr  class="odd gradeA">
+    <td><a href="dcexample.html">Puerto Rico </a></td>
+    <td>Sabana Garden Industrial Park</td>
+    <td>Carolina</td>
+    <td>PR</td>
+    <td>00983</td>
+    <td class="even gradeX">10000</td>
+    <td>84%</td>
+    <td>$7</td>
+    <td>01/01/2012</td>
+  </tr>
+  <tr  class="even gradeA">
+    <td><a href="dcexample.html">Rogers</a></td>
+    <td>13201 Wilfred Lane, N</td>
+    <td>Rogers</td>
+    <td>MN</td>
+    <td></td>
+    <td class="odd gradeA">10000</td>
+    <td>81%</td>
+    <td>$7</td>
+    <td>01/20/2012</td>
+  </tr>
+  <tr  class="odd gradeA">
+    <td><a href="dcexample.html">Tempe </a></td>
+    <td>8350 River Parkway</td>
+    <td>Tempe </td>
+    <td>AZ</td>
+    <td>85284</td>
+    <td>10000</td>
+    <td>90%</td>
+    <td>$8</td>
+    <td>01/30/2012</td>
+  </tr>
+  <tr  class="even gradeA">
+    <td><a href="dcexample.html">Waxahachie</a></td>
+    <td>710 Ovilla Road</td>
+    <td>Waxahachie </td>
+    <td>TX</td>
+    <td>75167</td>
+    <td>10000</td>
+    <td>90%</td>
+    <td>$9</td>
+    <td>01/01/2012</td>
+  </tr>
+  <tr  class="odd gradeA">
+    <td><a href="dcexample.html">Windsor</a></td>
+    <td>440 Highway 19</td>
+    <td>Windsor </td>
+    <td>WI</td>
+    <td>53598</td>
+    <td>10000</td>
+    <td>90%</td>
+    <td>$10</td>
+    <td>01/01/2012</td>
+  </tr>
+  <tr  class="even gradeA">
+    <td><a href="dcexample.html">Woodlands</a></td>
+    <td>2370 E Main St </td>
+    <td>Woodland </td>
+    <td>CA</td>
+    <td>95776</td>
+    <td>10000</td>
+    <td>96%</td>
+    <td>$2</td>
+    <td>01/01/2012</td>
+  </tr>
+	</tbody>
+	<tfoot>
+		<tr>
+			<th>Location</th>
+            <th>Address</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Zip</th>
+            <th>&nbsp;</th>
+			<th>Diversion</th>
+			<th>Cost/sqft</th>
+			<th>Last Updated</th>
+		</tr>
+	</tfoot>
+</table></div></div></div> </div>
+        
+        <footer>
+        &nbsp;&copy; 2012 All rights reserved. The Astor Company. <a href="privacy.html">Privacy</a> & <a href="terms.html">Terms</a></footer>
+
+	</article><!-- container -->
+
+	<!-- JS
+	================================================== -->
+	<script src="javascripts/tabs.js"></script>
+
+<!-- End Document
+================================================== -->
+</body>
+</html>

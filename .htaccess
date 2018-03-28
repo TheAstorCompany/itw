@@ -1,0 +1,10 @@
+php_flag display_errors on
+php_value error_reporting E_ALL
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} -s [OR]
+RewriteCond %{REQUEST_FILENAME} -l [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^.*$ - [NC,L] # Item exists so don't rewrite
+
+RewriteRule ^.*$ index.php [NC,L] # Send off as-is to index.php

@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]> <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]> <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
+    <head>
+
+    <!-- Basic Page Needs
+  ================================================== -->
+    <meta charset="utf-8">
+    <title>Home - Astor</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Mobile Specific Metas
+  ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- CSS
+  ================================================== -->
+    <link rel="stylesheet" href="stylesheets/demo_table.css">
+    <link rel="stylesheet" href="stylesheets/base.css">
+    <link rel="stylesheet" href="stylesheets/astor/jquery-ui-1.8.17.custom.css" />
+    <link rel="stylesheet" href="stylesheets/skeleton.css">
+    <link rel="stylesheet" href="stylesheets/layout.css">
+
+    <!-- Favicons
+	================================================== -->
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700' rel='stylesheet' type='text/css'>
+
+    <!-- Head Scripts
+	================================================== -->
+    <script src="js/modernizr-2.5.1.js"></script>
+    <script src="js/jquery-1.7.1.js"></script>
+    <script src="js/jquery-ui-1.8.17.custom.min.js"></script>
+    <script src="js/jquery.dataTables.js"></script>
+    <script src='js/jquery.color-RGBa-patch.js'></script>
+    <script src="js/custom.js"></script>
+    <script>
+	$(function() {
+		$('#tabs').tabs();
+	});
+	</script>
+    </head>
+    <body>
+
+<!-- Primary Page Layout
+	================================================== -->
+
+<article class="container">
+<div class="row remove-bottom">
+      <header> <a href="index.html"><img src="images/logo.png" width="250" height="112" alt="Astor Home"></a>
+    <div style="float:right;margin-top:10px; text-align:right; font-size:90%;">Welcome Peggy &nbsp;&nbsp; <a href="profile.html">Account</a> &nbsp;&nbsp;&nbsp; <a href="help.html">Help</a> &nbsp;&nbsp;&nbsp; <a href="#">Logout</a>
+          <select name="account">
+        <option selected>Walgreens</option>
+      </select>
+        </div>
+  </header>
+    </div>
+<div class="tallnav-wrap">
+      <ul class="group" id="mainnavbar">
+    <li class="current_page_item"><a rel="#80C65A" href="index.html">Admin</a></li>
+    <li><a rel="#80C65A" href="index.html">Company</a></li>
+    <li><a rel="#1C4D25" href="distributioncenters.html">Distribution Centers</a></li>
+    <li><a rel="#1C4D25" href="stores.html">Stores</a></li>
+    <li><a rel="#1C4D25" href="requestservice.html">Support Center</a></li>
+  </ul>
+      <ul class="group" id="subnavbar">
+    <li class="current_subpage_item"><a href="adminindex.html">Admin Home</a></li>
+    <li><a href="adminservice.html">Support History</a></li>
+    <li><a href="adminwaste.html">Waste History</a></li>
+    <li><a href="adminrecycling.html">Recycling History</a></li>
+    <li><a href="admincompany.html">Manage Company</a></li>
+    <li><a href="adminreports.html">Reports</a></li>
+  </ul>
+    </div>
+<div class="content">
+<div class="row remove-bottom">
+      <div class="sixteen columns">
+    <h1>Admin Home</h1>
+  </div>
+    </div>
+<div class="row">
+      <div class="sixteen columns">
+    <div id="tabs" style="border:0px;">
+          <ul>
+        <li><a href="#tabs-1">Enter Support Request</a></li>
+        <li><a href="#tabs-2">Enter Hauler Invoice</a></li>
+        <li><a href="#tabs-3">Enter Recycling Purchase Order</a></li>
+        <li><a href="#tabs-4">Enter Recycling Charges</a></li>
+      </ul>
+          <div id="tabs-1" style="border-top:2px solid #7ABF53;padding-left:0px;padding-right:0px;">
+        <div class="sixteen columns alpha">
+              <h5 class="dataentry">General Info</h5>
+              <fieldset class="dataentry">
+            <label for="location">Location Name or ID*</label>
+            <input name="location" type="text" value="Ander...">
+            <label for="fname">First Name</label>
+            <input name="fname" type="text">
+            <label for="lname">Last Name</label>
+            <input name="lname" type="text">
+            <label for="phone">Phone</label>
+            <input name="phone" type="text">
+            <label for="email">Email</label>
+            <input name="email" type="text">
+            <label for="location">PO #</label>
+            <input name="location" type="text" value="WO1234">
+            <label for="location">CBRE #</label>
+            <input name="location" type="text" value="WO1234">
+          </fieldset>
+              <hr>
+              <h5 class="dataentry">Description</h5>
+              <fieldset class="dataentry">
+            <div class="dataentry"><strong>Tasks</strong>
+                  <ol>
+                <li><strong>Pickup</strong> for <strong>Waste</strong> &nbsp;&nbsp;&#8226;&nbsp;&nbsp; <strong>1</strong> - <strong>Compactor 40yd</strong>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Delete</a><br>
+                      Service<strong> 05/18/12, </strong>Delivery <strong>05/21/12, </strong>Removal <strong>05/24/12</strong>, Description for the entry goes here</li>
+                <li><strong>Pickup</strong> for <strong>Waste</strong> &nbsp;&nbsp;&#8226;&nbsp;&nbsp; <strong>1</strong> - <strong>Compactor 40yd</strong> &nbsp;&nbsp;<a href="#">Delete</a><br>
+                      Removal <strong>05/24/12</strong>, Description for the entry goes here</li>
+                <li><strong>Relamping </strong>for<strong> Recycling</strong>&nbsp; <a href="#">Delete</a><br>
+                      Removal <strong>05/24/12</strong>, 10ft lamps </li>
+                <li><strong> Setup New Service</strong> for <strong>Waste</strong> &nbsp;&nbsp;&#8226;&nbsp;&nbsp; <strong>1</strong> - <strong>Compactor 40yd</strong>&nbsp;&nbsp; <a href="#">Delete</a><br>
+                      Delivery <strong>05/24/12</strong>, David called about a temporary service for construction waste</li>
+              </ol>
+                </div>
+            <span style='float:left;padding-right:10px'>
+                <label for="type">Purpose*</label>
+                <select name="type" id="type">
+              <option selected>-</option>
+              <option>Pickup</option>
+              <option>Haul</option>
+              <option>Relamping</option>
+              <option>Setup New Service</option>
+              <option>Support Call</option>
+              <option>Other</option>
+            </select>
+                </span> <strong>&nbsp;For*</strong>
+            <input name="category" type="radio" value="waste">
+            <strong>Waste</strong>
+            <input name="category" type="radio" value="recycling">
+            <strong>Recycling</strong><br style="clear:both;">
+            <label for="type">QTY</label>
+            <input name="qty" type="text" style="width:25px">
+            <label for="type">Container</label>
+            <select name="type" id="type">
+                  <option selected>-</option>
+                  <option>8 opentop</option>
+                  <option>16 open top</option>
+                  <option>4 compactor</option>
+                  <option>etc</option>
+                </select>
+            <label for="date1">Service Date</label>
+            <input name="date1" type="text" style="width:100px">
+            <label for="date1">Delivery Date</label>
+            <input name="date1" type="text" style="width:100px">
+            <label for="date2">Removal Date</label>
+            <input name="date2" type="text" style="width:100px">
+            <label for="message">Description</label>
+            <textarea name="message" style="width:45%;"></textarea>
+            <button>Add</button>
+          </fieldset>
+              <hr>
+              <h5  style="color:#7ABF53;float:left;width:200px;">Astor Only</h5>
+              <fieldset class="dataentry">
+            <label for="type">Complete?</label>
+            <select name="type" id="type">
+                  <option selected>No</option>
+                  <option>Yes</option>
+                </select>
+            <label for="type">Last Updated</label>
+            <input name="date" type="text" style="width:140px">
+            <label for="message">Internal Notes</label>
+            <textarea name="message" style="width:45%"></textarea>
+          </fieldset>
+              <hr>
+              <button style="background:#13602E; color:#fff; margin-left:200px;">Save Request</button>
+              <button style="background:#777777; color:#fff">Cancel</button>
+            </div>
+      </div>
+          <div id="tabs-2" style="border-top:2px solid #7ABF53;padding-left:0px;padding-right:0px">
+        <div class="sixteen columns alpha">
+              <h5 class="dataentry">General Info</h5>
+              <fieldset class="dataentry">
+            <label for='location'>Location Name or ID*</label>
+            <input name="location" type="text" value="Ander...">
+            <label for='location'>Vendor*</label>
+            <input name="location" type="text" value="AU1234">
+            <label for='location3'>Invoice #*</label>
+            <input name="location3" type="text" value="123456" style="width:100px">
+            <label for='location3'>Invoice Date*</label>
+            <input name="location3" type="text" value="02/02/12" style="width:100px">
+            <!--label for="location">CBRE #</label>
+            <input name="location" type="text" value="WO1234"-->
+          </fieldset>
+              <hr>
+              <h5 class="dataentry">Description</h5>
+              <fieldset class="dataentry">
+            <div class="dataentry"> <strong>Services</strong>
+                  <ol>
+                <li><strong>Waste - $200.00&nbsp;&nbsp;&#8226;&nbsp;&nbsp;</strong>1 - Compactor 40yd     •  Scheduled Weekly  &nbsp;&nbsp; <a href="#">Delete</a></li>
+                <li><strong>Recycling - $34.50&nbsp;&nbsp;&#8226;&nbsp;&nbsp;</strong>1 - Compactor 40yd     •  Scheduled Biweekly  &nbsp;&nbsp; <a href="#">Delete</a></li>
+                <li><strong>Recycling - $50.00&nbsp;&nbsp;&#8226;&nbsp;&nbsp;</strong>05/1/12, 1 - Compactor 8yd     •  Extra  &nbsp;&nbsp; <a href="#">Delete</a>&nbsp;&nbsp;</li>
+              </ol>
+                  <strong>Fees</strong>
+                  <ol>
+                <li><strong>Recycling&nbsp;&nbsp;-&nbsp;&nbsp;<strong>$50</strong></strong> &nbsp;&nbsp; <a href="#">Delete</a></li>
+                <li><strong>Repair &nbsp;-&nbsp;&nbsp;<strong>$50</strong></strong> &nbsp;&nbsp; <a href="#">Delete</a></li>
+                <li>Enviromental - $90 (Waived)  &nbsp;&nbsp; <a href="#">Delete</a></li>
+              </ol>
+                  <h6 class="highlight">Total $384.50 </h6>
+                </div>
+            <br>
+            <h6 class="dataentry">Service</h6>
+            <label for='location18'><em>Scheduled Services</em></label>
+            <div class="minibutton">
+                  <input name="service1" type="button" value="Add Scheduled Services from Location &amp; Vendor" style="width:300px">
+                </div>
+            <label for='location18'>Date</label>
+            <input name="location18" type="text" style="width:100px">
+            <span style="float:left">
+                <label for='waste2'>Service*</label>
+                <select name="waste2" size="1" id="waste2" style="width:150px">
+              <option selected>-</option>
+              <option>Temporary</option>
+              <option>Extra</option>
+            </select>
+                </span>&nbsp; <strong>For*</strong>
+            <input name="category" type="radio" value="waste">
+            <strong>Waste</strong>
+            <input name="category" type="radio" value="recycling">
+            <strong>Recycling</strong><br>
+            <br>
+            <label for="type">Container*</label>
+            <select name="type" id="type">
+                  <option selected>-</option>
+                  <option>8 opentop</option>
+                  <option>16 open top</option>
+                  <option>4 compactor</option>
+                  <option>Compactor 8yd</option>
+                  <option>etc</option>
+                </select>
+            <label for='waste'>Material</label>
+            <select name="waste6" size="1" id="waste" style="width:150px">
+                  <option selected>-</option>
+                  <option>Mixed Solid Waste</option>
+                  <option>Construction & Debris</option>
+                  <option>Hazardous</option>
+                  <option>Special - Expired Products</option>
+                  <option>Other</option>
+                </select>
+            <label for='location7'>Quantity</label>
+            <input name="location7" type="text" style="width:100px;">
+            <label for='type2'>Unit</label>
+            <select name="type2" id="type2" style="width:100px">
+                  <option selected>-</option>
+                  <option>Tons</option>
+                  <option>Lbs</option>
+                  <option>Bales</option>
+                  <option>Bulbs</option>
+                  <option>Boxes</option>
+                  <option>Units</option>
+                </select>
+            <label for='location7'>Rate*</label>
+            <input name="location2" type="text" style="width:100px;" value="$34.50">
+            <button>Add</button>
+            <h6 class="dataentry">Fee</h6>
+            <label for='waste3'>Fee Type</label>
+            <select name="waste" size="1" id="waste3" style="width:150px">
+                  <option selected>-</option>
+                  <option>Recycling</option>
+                  <option>Cardboard</option>
+                  <option>Commingle</option>
+                  <option>Rental</option>
+                  <option>Enviromental</option>
+                  <option>Fuel</option>
+                  <option>State Tax</option>
+                  <option>County Tax</option>
+                  <option>Other</option>
+                  <option>Repair</option>
+                </select>
+            <label for='location7'>Fee</label>
+            <input name="location19" type="text" style="width:100px;">
+            <label for='location7'>Waived/Saved</label>
+            <input name="location19" type="checkbox" ><br />
+            <button>Add</button>
+          </fieldset>
+              <hr>
+              <h5  style="color:#7ABF53;float:left;width:200px;">Astor Only</h5>
+              <fieldset class="dataentry">
+            <label for="type">Complete?</label>
+            <select name="type" id="type">
+                  <option selected>No</option>
+                  <option>Yes</option>
+                </select>
+            </span>
+            <label for="type">Date Sent</label>
+            <input name="date" type="text" style="width:140px">
+            <label for="message">Internal Notes</label>
+            <textarea name="message" style="width:45%"></textarea>
+          </fieldset>
+              <hr>
+              <button style="margin-left:200px;background:#13602E; color:#fff">Save</button>
+              <button style="background:#777; color:#fff">Cancel</button>
+            </div>
+      </div>
+          <div id="tabs-3" style="border-top:2px solid #7ABF53;padding-left:0px;padding-right:0px">
+        <div class="sixteen columns alpha">
+              <h5 class="dataentry">General Info</h5>
+              <fieldset class="dataentry">
+            <label for='location'>Location Name or ID*</label>
+            <input name="location" type="text" value="Ander...">
+            <label for='location'>Vendor*</label>
+            <input name="location" type="text" value="Sonoco">
+            <label for='location2'>Trailer #</label>
+            <input name="location2" type="text" style="width:100px;" value="1234">
+            <label for='location2'>Release #</label>
+            <input name="location2" type="text" style="width:100px;" value="444444">
+            <label for='location2'>Bill Of Lading #</label>
+            <input name="location2" type="text" style="width:100px;">
+            <label for='location22'>CBRE #</label>
+            <input name="location22" type="text" style="width:100px;">
+            <label for='location18'>Date</label>
+            <input name="location18" type="text" style="width:100px" value="5/22/12">
+<hr>            <label for='waste'>Material</label>
+            <select name="waste6" size="1" id="waste" style="width:150px">
+                  <option selected>-</option>
+                  <option>Cardboard</option>
+                  <option>Glass</option>
+                  <option>Aluminum</option>
+                  <option>Metal</option>
+                  <option>Plastic</option>
+                  <option>Paper</option>
+                  <option>Wood</option>
+                  <option>Film</option>
+                  <option>Commingle</option>
+                  <option>Single Stream</option>
+                </select>
+                <label for='type2'>Unit</label>
+            <select name="type2" id="type2" style="width:100px">
+                  <option selected>-</option>
+                  <option>Tons</option>
+                  <option>Lbs</option>
+                  <option>Bales</option>
+                  <option>Bulbs</option>
+                  <option>Boxes</option>
+                  <option>Units</option>
+                </select>
+                <button>Add Material</button>
+          </fieldset><hr>
+          <button style="margin-left:200px;background:#13602E; color:#fff">Save</button>
+              <button style="background:#777; color:#fff">Cancel</button>
+           <hr>
+              <h5 class="dataentry">Invoice to Vendor </h5>
+              <fieldset class="dataentry">
+            
+            <div class="dataentry"><strong>Materials</strong>
+              <ol>
+                <li> Cardboard - $4,400.00&nbsp;&nbsp;&#8226;&nbsp;<strong>&nbsp;40 Tons</strong> @ <strong>$110</strong>&nbsp; <a href="#">Delete</a></li>
+                <li> Plastic - $4,400.00&nbsp;&nbsp;&#8226;&nbsp;&nbsp;<strong>40 Tons</strong> @ <strong>$110</strong>&nbsp; <a href="#">Delete</a></li>
+              </ol>
+                  <strong>Fees</strong>
+                  <ol>
+                <li><strong>Recycling&nbsp;&nbsp;-&nbsp;&nbsp;$100</strong> &nbsp;<em>&nbsp;</em><a href="#">Delete</a></li>
+                <li><strong>Repair &nbsp;-&nbsp;&nbsp;$100</strong> &nbsp;&nbsp; <a href="#">Delete</a> &nbsp;&nbsp;</li>
+                <li>Enviromental - $90 (Waived)  &nbsp;&nbsp; <a href="#">Delete</a></li>
+              </ol>
+                  <h6 class="highlight">Total $4,200.00 </h6>
+                </div>
+            <br>
+            <label for='location2'>Release/Invoice  #</label>
+            <input name="location4" type="text" style="width:100px;" value="44444">
+            <label for='location18'>Invoice  Date</label>
+            <input name="location18" type="text" style="width:100px">
+            
+            
+            <h6 class="dataentry">Material</h6>
+            <label for='waste'>Materials</label>
+            <select name="waste6" size="1" id="waste" style="width:300px">
+              <option>Cardboard</option>
+              <option>Plastic</option>
+            </select>
+            <label for='location7'>Quantity</label>
+            <input name="location7" type="text" style="width:100px;">
+            
+            <label for='location7'>Market Price Per Unit</label>
+            <input name="location2" type="text" style="width:100px;">
+            <button>Add</button>
+            
+            
+            <h6 class="dataentry"> Fee</h6>
+            <label for='waste2'>Fee Type</label>
+            <select name="waste5" size="1" id="waste2" style="width:150px">
+                  <option selected>-</option>
+                  <option>Freight Charge</option>
+                  <option>Fuel Charge</option>
+                  <option>Stop Charge</option>
+                  <option>Tax</option>
+                  <option>Other</option>
+                  <option>Repair</option>
+                </select>
+            <label for='location7'>Fee</label>
+            <input name="location19" type="text" style="width:100px;">
+            <label for='location7'>Waived/Saved</label>
+            <input name="location19" type="checkbox" ><br />
+            <button>Add</button>
+          </fieldset>
+              <hr>
+              <h5 class="dataentry">Purchase Order <br>
+            to Company</h5>
+              <fieldset class="dataentry">
+            
+            <div class="dataentry"><strong>Material</strong>
+              <ol>
+                <li>Cardboard - $4000&nbsp;&nbsp;&#8226;&nbsp;&nbsp;40 Tons @ <strong>$100&nbsp;&nbsp;</strong>&nbsp;&nbsp; <a href="#">Delete</a></li>
+                <li>Plastic - $4000&nbsp;&nbsp;&#8226;&nbsp;&nbsp;40 Tons @ <strong>$100&nbsp;&nbsp;</strong>&nbsp;&nbsp; <a href="#">Delete</a></li>
+              </ol>
+                  <strong>Fees</strong>
+                  <ol>
+                <li>Recycling&nbsp;&nbsp;-&nbsp;&nbsp;$100</li>
+                <li>Repair &nbsp;-&nbsp;&nbsp;$100</li>
+                <li>Enviromental - $90 (Waived)</li>
+              </ol>
+                  <h6 class="highlight">Total $3,800.00 </h6>
+                </div>
+            <br>
+            <label for='location4'>Release/PO #</label>
+            <input name="location4" type="text" style="width:100px;" value="444444">
+            <label for='location18'>PO Date</label>
+            <input name="location18" type="text" style="width:100px" value="5/22/12">
+            
+            <h6 class="dataentry">Material</h6>
+            <label for='waste'>Material</label>
+            <select name="waste3" size="1" id="waste4" style="width:300px">
+              <option>Cardboard</option>
+              <option>Plastic</option>
+            </select>
+            <label for='location4'>Market Price Per Unit</label>
+            <input name="location5" type="text" style="width:100px;">
+            <button>Add</button>
+            
+            
+            </fieldset>
+
+             
+              <hr>
+              
+              
+              <h5 class="dataentry">Astor Only</h5>
+              <fieldset class="dataentry">
+            <label for="type">Complete?</label>
+            <select name="type" id="type">
+                  <option selected>No</option>
+                  <option>Yes</option>
+                </select>
+            <label for="type">Date Sent</label>
+            <input name="date" type="text" style="width:140px" value="5/22/12">
+            <label for="message">Internal Notes</label>
+            <textarea name="message" style="width:45%"></textarea>
+          </fieldset>
+              <hr>
+              <button style="margin-left:200px;background:#13602E; color:#fff">Save</button>
+              <button style="background:#777; color:#fff">Cancel</button>
+            </div>
+      </div>
+          <div id="tabs-4" style="border-top:2px solid #7ABF53;padding-left:0px;padding-right:0px">
+        <div class="sixteen columns alpha">
+              <h5 class="dataentry">General Info</h5>
+              <fieldset class="dataentry">
+            <label for='location'>Location Name or ID*</label>
+            <input name="location" type="text" value="Ander...">
+            <label for='location'>Vendor*</label>
+            <input name="location" type="text" value="AU1234">
+            <label for='location'>Invoice #*</label>
+            <input name="location" type="text" value="AU1234">
+            <label for='location3'>Invoice Date*</label>
+            <input name="location3" type="text" value="02/02/12" style="width:100px">
+            
+          </fieldset>
+              <hr>
+              <h5 class="dataentry">Description</h5>
+              <fieldset class="dataentry">
+            <div class="dataentry"><strong>Charges</strong>
+                  <ol>
+                <li><strong>Recycling Lot - $200.00&nbsp;&nbsp;&#8226;&nbsp;&nbsp;40 Tons</strong><strong>&nbsp;&nbsp;-&nbsp;</strong><strong>&nbsp;&nbsp;</strong>Release1234&nbsp;&nbsp; <a href="#">Delete</a><br>
+                  05/01/12</li>
+                <li><strong>Lamps 8ft - $34.50</strong><strong>&nbsp;&nbsp;&#8226;&nbsp;&nbsp;12 Boxes</strong><strong>&nbsp;&nbsp;&#8226;&nbsp;&nbsp;</strong><a href="#">Delete</a><br>
+                </li>
+                <li><strong>Hazardous - $50.00&nbsp;&nbsp;&#8226;&nbsp;&nbsp;10 Bulbs&nbsp;&nbsp;-&nbsp;&nbsp;</strong>Release1234<strong>&nbsp;&nbsp;</strong>CBRE1234&nbsp;&nbsp; <a href="#">Delete</a>&nbsp;&nbsp;<br>
+                  05/01/12, There is a extra description here
+                      of why this is hazardous</li>
+              </ol>
+                  <strong>Fees</strong>
+                  <ol>
+                <li><strong>Enviromental&nbsp;&nbsp;-&nbsp;&nbsp;<strong>$50.00</strong></strong> &nbsp;&nbsp; <a href="#">Delete</a></li>
+                <li><strong>Repair &nbsp;-&nbsp;&nbsp;<strong>$50</strong></strong>.00 &nbsp;&nbsp; <a href="#">Delete</a></li>
+                <li>Enviromental - $90 (Waived)  &nbsp;&nbsp; <a href="#">Delete</a></li>
+              </ol>
+                  <h6 class="highlight">Total $384.50 </h6>
+                </div>
+            <br>
+            <h6 class="dataentry">Charge</h6>
+            <label for='location18'>Date</label>
+            <input name="location18" type="text" style="width:100px">
+            
+            <label for='waste'>Material*</label>
+            <select name="waste6" size="1" id="waste" style="width:150px">
+                  <option selected>-</option>
+                  <option>Recycling Lot</option>
+                  <option>Lamps - 8ft</option>
+                  <option>Lamps - 4ft</option>
+                  <option>Lamps - HID</option>
+                  <option>Electronics</option>
+                  <option>Hazardous</option>
+                </select>
+            <label for='location7'>Quantity*</label>
+            <input name="location7" type="text" style="width:100px;">
+            <label for='type2'>Unit*</label>
+            <select name="type2" id="type2" style="width:100px">
+                  <option selected>-</option>
+                  <option>Tons</option>
+                  <option>Lbs</option>
+                  <option>Bales</option>
+                  <option>Bulbs</option>
+                  <option>Boxes</option>
+                  <option>Units</option>
+                </select>
+            <label for='location7'>Price Per Unit*</label>
+            <input name="location2" type="text" style="width:100px;">
+            <label for='location7'>Description</label>
+            <input name="location7" type="text" style="width:100px;">
+            <label for='location2'>Release #</label>
+            <input name="location4" type="text" style="width:100px;">
+            <label for='location'>CBRE #</label>
+            <input name="location" type="text" value="AU1234" style="width:100px;">
+            <button>Add</button>
+            <h6 class="dataentry"> Fee</h6>
+            <label for='waste2'>Fee Type</label>
+            <select name="waste5" size="1" id="waste2" style="width:150px">
+                  <option selected>-</option>
+                  <option>Freight Charge</option>
+                  <option>Fuel Charge</option>
+                  <option>Stop Charge</option>
+                  <option>Tax</option>
+                  <option>Other</option>
+                  <option>Repair</option>
+                </select>
+            <label for='location7'>Fee</label>
+            <input name="location19" type="text" style="width:100px;">
+            <label for='location7'>Waived/Saved</label>
+            <input name="location19" type="checkbox" ><br />
+            <button>Add</button>
+          </fieldset>
+              <hr>
+              <h5 class="dataentry">Astor Only</h5>
+              <fieldset class="dataentry">
+            <label for="type">Complete?</label>
+            <select name="type" id="type">
+                  <option selected>No</option>
+                  <option>Yes</option>
+                </select>
+            </span>
+            <label for="type">Date Sent</label>
+            <input name="date" type="text" style="width:140px">
+            <label for="message">Internal Notes</label>
+            <textarea name="message" style="width:45%"></textarea>
+          </fieldset>
+              <hr>
+              <button style="margin-left:200px;background:#13602E; color:#fff">Save</button>
+              <button style="background:#777; color:#fff">Cancel</button>
+            </div>
+      </div>
+        </div>
+  </div>
+    </div>
+<footer> &nbsp;&copy; 2012 All rights reserved. The Astor Company. <a href="privacy.html">Privacy</a> & <a href="terms.html">Terms</a></footer>
+</article>
+<!-- container --> 
+
+<!-- JS
+	================================================== --> 
+<script src="js/tabs.js"></script> 
+
+<!-- End Document
+================================================== -->
+</body>
+</html>

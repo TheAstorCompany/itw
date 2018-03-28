@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]> <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]> <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+	<!-- Basic Page Needs
+  ================================================== -->
+	<meta charset="utf-8">
+	<title>Home - Astor</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<!-- Mobile Specific Metas
+  ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+  ================================================== -->
+    <link rel="stylesheet" href="stylesheets/demo_table.css">
+	<link rel="stylesheet" href="stylesheets/base.css">
+    <link rel="stylesheet" href="stylesheets/astor/jquery-ui-1.8.17.custom.css" />
+	<link rel="stylesheet" href="stylesheets/skeleton.css">
+	<link rel="stylesheet" href="stylesheets/layout.css">
+
+	<!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="images/favicon.ico">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700' rel='stylesheet' type='text/css'>
+    
+	<!-- Head Scripts
+	================================================== -->
+	<script src="js/modernizr-2.5.1.js"></script>
+    <script src="js/jquery-1.7.1.js"></script>
+    <script src="js/jquery-ui-1.8.17.custom.min.js"></script>
+    <script src="js/jquery.dataTables.js"></script>
+    <script src='js/jquery.color-RGBa-patch.js'></script>
+    <script src="js/custom.js"></script>
+    <script>
+	$(function() {
+		$('#tabs').tabs();
+	});
+	</script>
+</head>
+<body>
+
+	<!-- Primary Page Layout
+	================================================== -->
+
+	<article class="container">
+    <div class="row remove-bottom">
+		<header>
+        <a href="index.html"><img src="images/logo.png" width="250" height="112" alt="Astor Home"></a><div style="float:right;margin-top:10px; text-align:right; font-size:90%;">Welcome Peggy &nbsp;&nbsp; 
+          <a href="profile.html">Account</a> &nbsp;&nbsp;&nbsp; <a href="help.html">Help</a> &nbsp;&nbsp;&nbsp; <a href="#">Logout</a><select name="account"><option selected>Walgreens</option></select></div>
+		</header></div>  
+     <div class="tallnav-wrap">   
+        <ul class="group" id="mainnavbar">
+        <li class="current_page_item"><a rel="#80C65A" href="index.html">Admin</a></li>  
+            <li><a rel="#80C65A" href="index.html">Company</a></li>            <li><a rel="#1C4D25" href="distributioncenters.html">Distribution Centers</a></li>
+            <li><a rel="#1C4D25" href="stores.html">Stores</a></li>
+ 
+            <li><a rel="#1C4D25" href="requestservice.html">Support Center</a></li>
+        </ul>
+        <ul class="group" id="subnavbar">
+        <li><a href="adminindex.html">Admin Home</a></li>
+        <li><a href="adminservice.html">Support History</a></li>
+                <li  class="current_subpage_item"><a href="adminwaste.html">Waste History</a></li>
+<li><a href="adminrecycling.html">Recycling History</a></li>
+<li><a href="admincompany.html">Manage Company</a></li>
+        <li><a href="adminreports.html">Reports</a></li>
+      </ul>
+    </div>
+           <div class="content">
+           <div class="row"><div class="sixteen columns"><a href="javascript:javascript:history.go(-1)" class="button"><- Go back</a>
+           <h1>Recycling Invoice #1234</h1></div></div>
+           
+          <div class="row">
+            <div class="four columns alpha" style="width:200px; padding-right:30px;">                
+           <h5  style="color:#7ABF53">Vendor</h5>
+           <input name="location" type="text" value="AU1234"> 
+       <h6>#1234 - ABC Hauler</h6>123 Street<br>Las Vegas, NV  76543
+       <br><br>
+       <h5  style="color:#7ABF53">Location </h5>
+           <input name="location" type="text" value="Ander..."> 
+           <h6>Anderson</h6>123 Street<br>Las Vegas, NV  76543
+           
+           </div>
+<div class="nine columns">
+<h5 style="color:#7ABF53">Recycling Services</h5>
+      <table border="0" cellspacing="10" cellpadding="10" width="90%">
+  <tr>
+    <td>Cardboard Price
+      <input name="location" type="text" value="$12.00" style="width:100px;"></td>
+    <td>Aluminum Price
+      <input name="location" type="text" value="$13.00" style="width:100px;"></td>
+    <td>Film Price
+      <input name="location" type="text" value="" style="width:100px;"></td>
+    <td>Plastic Price
+      <input name="location" type="text" value="$1234.45" style="width:100px"></td>
+    <td>Paper Price
+      <input name="location" type="text" value="$1234.45" style="width:100px"></td>
+  </tr>
+    <tr>
+      <td>Cardboard (Tons)
+        <input name="location" type="text" style="width:100px;" value="5"></td>
+      <td>Aluminum (Tons)
+        <input name="location" type="text" value="5" style="width:100px;"></td>
+      <td>Film(Tons)
+        <input name="location" type="text" value="1" style="width:100px;"></td>
+      <td>Plastic(Tons)
+        <input name="location" type="text" value="" style="width:100px;"></td>
+      <td>Paper(Tons)
+        <input name="location" type="text" value="" style="width:100px;"></td>
+    </tr>
+   </table>
+<h6>&nbsp;</h6>
+<h5 style="color:#7ABF53">Additional Fees</h5>
+   <table border="0" cellspacing="10" cellpadding="10" width="72%">
+   <tr>
+    <td>Freight Charge Back
+      <input name="location" type="text" value="" style="width:100px"></td>
+    <td>Tax<input name="location" type="text" value="" style="width:100px;"></td>
+    <td>Other<input name="location" type="text" value="" style="width:100px;"></td>
+  </tr>
+</table>     
+         </div><div class="three columns omega"><div style="background:#efefef;padding:10px">
+             <h5  style="color:#7ABF53">Admin Info</h5>
+         Total Rebate: $145.09<br><br>
+             <label for="type">Monthly Period</label>
+         <select name="type" id="type">
+           <option selected>Yes</option>
+           <option>No</option>
+         </select>
+         <hr>
+         <label for="type">Sent?</label>
+         <select name="type" id="type">
+           <option selected>Yes</option>
+           <option>No</option>
+         </select>
+   
+         <span style="float:left">
+		 <label for="type">Date Sent</label>
+		 <input name="date" type="text" style="width:140px"></span>
+         <br class="clear">
+         <label for="message">Internal Notes</label>
+         <textarea name="message" style="width:100%"></textarea></div></div>
+         
+          
+        </div>
+        
+        <footer>
+        &nbsp;&copy; 2012 All rights reserved. The Astor Company. <a href="privacy.html">Privacy</a> & <a href="terms.html">Terms</a></footer>
+
+	</article><!-- container -->
+
+	<!-- JS
+	================================================== -->
+	<script src="js/tabs.js"></script>
+
+<!-- End Document
+================================================== -->
+</body>
+</html>

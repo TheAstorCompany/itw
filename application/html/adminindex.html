@@ -1,0 +1,529 @@
+<article class="container">
+      <div class="row remove-bottom">
+    <header> <a href="index.html"><img src="images/logo.png" width="250" height="112" alt="Astor Home"></a>
+          <div style="float:right;margin-top:10px; text-align:right; font-size:90%;">Welcome Peggy &nbsp;&nbsp; <a href="profile.html">Account</a> &nbsp;&nbsp;&nbsp; <a href="help.html">Help</a> &nbsp;&nbsp;&nbsp; <a href="#">Logout</a>
+        <select name="account">
+              <option selected>Walgreens</option>
+            </select>
+      </div>
+        </header>
+  </div>
+      <div class="tallnav-wrap">
+    <ul class="group" id="mainnavbar">
+          <li class="current_page_item"><a rel="#80C65A" href="index.html">Admin</a></li>
+          <li><a rel="#80C65A" href="index.html">Company</a></li>
+          <li><a rel="#1C4D25" href="distributioncenters.html">Distribution Centers</a></li>
+          <li><a rel="#1C4D25" href="stores.html">Stores</a></li>
+          <li><a rel="#1C4D25" href="requestservice.html">Support Center</a></li>
+        </ul>
+    <ul class="group" id="subnavbar">
+          <li class="current_subpage_item"><a href="adminindex.html">Admin Home</a></li>
+          <li><a href="adminservice.html">Support History</a></li>
+          <li><a href="adminwaste.html">Waste History</a></li>
+          <li><a href="adminrecycling.html">Recycling History</a></li>
+          <li><a href="admincompany.html">Manage Company</a></li>
+          <li><a href="adminreports.html">Reports</a></li>
+        </ul>
+  </div>
+      <div class="content">
+    <div class="row remove-bottom">
+          <div class="sixteen columns">
+        <h1>Admin Home</h1>
+      </div>
+        </div>
+    <div class="row">
+          <div class="sixteen columns">
+        <div id="tabs" style="border:0px;">
+              <ul>
+            <li><a href="#tabs-1">Enter Support Request</a></li>
+            <li><a href="#tabs-2">Enter Waste Invoice</a></li>
+            <li><a href="#tabs-3">Enter Recycling Purchase Order</a></li>
+            <li><a href="#tabs-4">Enter Recycling Charges</a></li>
+          </ul>
+              <div id="tabs-1" style="border-top:2px solid #7ABF53;padding-left:0px;padding-right:0px;">
+            <div class="five columns alpha" style="width:200px; padding-right:30px;margin-bottom:20px">
+                  <h5 style="color:#7ABF53">Contact Info</h5>
+                  <label for="fname">First Name</label>
+                  <input name="fname" type="text">
+                  <label for="lname">Last Name</label>
+                  <input name="lname" type="text">
+                  <label for="email">Email</label>
+                  <input name="email" type="text">
+                  <label for="phone">Phone</label>
+                  <input name="phone" type="text">
+                </div>
+            
+            <div class="eight columns"><h5  style="color:#7ABF53">Request Info</h5>
+                  <span style='float:left;padding-right:10px'><label for="location">Location Name or ID</label>
+                  <input name="location" type="text" value="Ander..."></span>
+                 <br>
+              <h6>Anderson, 
+                  Las Vegas, NV  76543</h6><br><br>
+                  
+                                    <span style='float:left;padding-right:10px'><label for="type">Purpose</label>
+                  <select name="type" id="type">
+                <option selected>Pickup</option>
+                <option>Haul</option>
+                <option>Relamping</option>
+                <option>Setup New Service</option>
+                <option>Other</option>
+              </select></span><br><span style='float:left;padding-right:10px'><input name="category" type="radio" value="waste">
+                  <strong>for Waste</strong>
+                  <input name="category" type="radio" value="recycling">
+                  <strong>for Recycling</strong></span><br style="clear:both;">
+                  <span style="float:left; padding-right:10px">
+              <label for="type">QTY</label>
+              <input name="qty" type="text" style="width:25px">
+              </span><span style="float:left; padding-right:10px"><label for="type">Container</label>
+                  <select name="type" id="type">
+                <option selected>8 opentop</option>
+                <option>16 open top</option>
+                <option>4 compactor</option>
+                <option>etc</option>
+              </select></span>
+                  <span style="float:left;  padding-right:10px">
+              <label for="type">Delivery Date</label>
+              <input name="date" type="text" style="width:100px">
+              </span> <span style="float:left">
+              <label for="type">(Removal Date)</label>
+              <input name="date" type="text" style="width:100px">
+              </span><br style="clear:both;">
+                  <label for="message">Description</label>
+                  <textarea name="message" style="width:95%"></textarea>
+                </div>
+            <div class="four columns omega" style="background:#efefef; padding:10px">
+                  <h5  style="color:#7ABF53">Admin Info</h5>
+                  <label for="type">Resolved</label>
+                  <select name="type" id="type">
+                <option selected>Yes</option>
+                <option>No</option>
+              </select>
+                  <span style="float:left">
+              <label for="type">Last Updated</label>
+              <input name="date" type="text" style="width:140px">
+              </span> <br class="clear">
+                  <label for="message">Internal Notes</label>
+                  <textarea name="message" style="width:95%"></textarea>
+                  <button style="background:#13602E; color:#fff">Save Request</button>
+                </div>
+          </div>
+              <div id="tabs-2" style="border-top:2px solid #7ABF53;padding-left:0px;padding-right:0px">
+              
+            <div class="five columns alpha"><h5  style="color:#7ABF53">General Info</h5><label for='location3'>Invoice Date</label>
+                    <input name="location3" type="text" value="02/02/12" style="width:100px"><label for='location'>Vendor</label><input name="location" type="text" value="AU1234"><label for='location'>Location</label>
+                  <input name="location" type="text" value="Ander...">
+                    <h5 style="color:#7ABF53">Description</h5>
+                  1. $200.12 02/12/12 - County Waste / 8yd compactor / 3xW (MoWeFr) (<a href="#">Delete</a>)<br>
+                  2. $123.00 02/12/12 - County Waste / 8yd compactor / 3xW weekly (MoWeFr) (<a href="#">Delete</a>)<br>
+                  3. $1234.00 02/12/12 - TEMP County Waste / 8yd compactor / 3xW (MMoWeFr) (<a href="#">Delete</a>) <br>
+                  <br>
+              <h5 style="color:#7ABF53">Additional Fee</h5>
+                  1. $200.00 Enviromental (<a href="#">Delete</a>) <br><br>
+                Total: $145.09<br><br><button style="background:#13602E; color:#fff">Save</button><button style="background:#13602E; color:#fff">Save & New</button>
+                </div><div class="nine columns omega">
+                  <h5  style="color:#7ABF53">Add Service</h5>
+                  <table border="0" cellspacing="10" cellpadding="10" width="100%">
+                <tr>
+                <td><label for='location18'>Date</label>
+                    <input name="location18" type="text" style="width:100px"></td>
+                  <td><label for='waste2'>Service Type</label>
+                    <select name="waste2" size="1" id="waste2" style="width:150px">
+                      <option></option>
+                      <option>Normal</option>
+                      <option>Temporary</option>
+                      <option>Extra</option>
+                  </select></td>
+                  <td colspan="2"><br>
+                    <select name="waste3" size="1" id="waste3">
+                      <option selected>Select an Existing Service</option>
+                      <option>County Waste, 8yd compactor, 3xWeek (MoWeFr)</option>
+                      <option>County Waste, 8yd compactor, 3xWeek (MoWeFr)</option>
+                      <option>County Waste, 8yd compactor, 3xWeek (MoWeFr)</option>
+                  </select></td>
+                  
+                  <td><br><button>Add</button></td>
+                    </tr>
+                <tr>
+                  
+                      <td><label for='waste'>Material</label>
+                        <select name="waste6" size="1" id="waste" style="width:150px">
+                          <option selected>Mixed Solid Waste</option>
+                          <option>Construction & Debris</option>
+                          <option>Hazardous</option>
+                          <option>Special - Expired Products</option>
+                          <option>Other</option>
+                      </select></td>
+                      
+                      <td><label for='location7'>Quantity</label>
+                    <input name="location7" type="text" style="width:100px;"></td>
+                      <td><label for='type2'>Unit</label>
+                    <select name="type2" id="type2" style="width:100px">
+                          <option selected>Tons</option>
+                          <option>Lbs</option>
+                          <option>Bales</option>
+                          <option>Bulbs</option>
+                          <option>Boxes</option>
+                          <option>Units</option>
+                        </select></td><td><label for='location7'>Trash Fee</label>
+                          <input name="location2" type="text" style="width:100px;"></td>
+                      <td></td>
+                    </tr>
+                </table>
+                  <hr>
+                <h5  style="color:#7ABF53">Add Fee</h5>
+                  <table border="0" cellpadding="10" cellspacing="10" width='60%'>
+                    <tr>
+                      <td><label for='waste2'>Fee Type</label>
+                        <select name="waste5" size="1" id="waste2" style="width:150px">
+                          
+                          <option selected>Recycling</option>
+                          <option>Cardboard</option>
+                          <option>Commingle</option>
+                          <option>Rental</option>
+                          <option>Enviromental</option>
+                          <option>Fuel</option>
+                          <option>State Tax</option>
+                          <option>County Tax</option>
+                          <option>Other</option>
+                          <option>Repair</option>
+                      </select></td>
+                      <td><label for='location7'>Fee</label>
+                      <input name="location19" type="text" style="width:100px;"></td>
+                      <td><br><button>Add</button></td>
+                    </tr>
+                </table>
+                  <div style="padding:10px;background:#efefef">
+                <h5  style="color:#7ABF53">Admin Info</h5>
+               <span style="float:left;padding-right:10px">
+                    <label for="type">Sent?</label>
+                <select name="type" id="type">
+                      <option selected>No</option>
+                      <option>Yes</option>
+                </select>
+                </span> 
+                <label for="type">Date Sent</label>
+                    <input name="date" type="text" style="width:140px">
+                
+                <label for="message">Internal Notes</label>
+                <textarea name="message" style="width:95%"></textarea>
+                
+              </div>
+                </div>
+          </div>
+              <div id="tabs-3" style="border-top:2px solid #7ABF53;padding-left:0px;padding-right:0px">
+              
+            <div class="five columns alpha"><h5  style="color:#7ABF53">General Info</h5><label for='location'>Vendor</label><input name="location" type="text" value="AU1234"><label for='location'>Location</label>
+                  <input name="location" type="text" value="Ander...">
+                   <label for='location18'>PO Date</label>
+                    <input name="location18" type="text" style="width:100px">
+                    <label for='location2'>PO #</label>
+                  <input name="location4" type="text" style="width:100px;">
+                  <label for='location2'>Trailer #</label>
+                  <input name="location4" type="text" style="width:100px;">
+                    <h5 style="color:#7ABF53">PO Description</h5>
+                  1. Cardboard $1000 (<a href="#">Delete</a>)<br>
+                  <br>
+              <h5 style="color:#7ABF53">Fee</h5>
+                  1. $200.00 Enviromental (<a href="#">Delete</a>) <br><br>
+                Total: $145.09<br><br><button style="background:#13602E; color:#fff">Save</button><button style="background:#13602E; color:#fff">Save & New</button>
+                </div><div class="nine columns omega">
+                  <h5  style="color:#7ABF53">Material Info</h5>
+                  <table border="0" cellspacing="10" cellpadding="10" width="100%">
+                   <tr>
+                  
+                      <td><label for='waste'>Material</label>
+                        <select name="waste6" size="1" id="waste" style="width:150px">
+                          <option>Cardboard</option>
+                          <option>Glass</option>
+                          <option>Aluminum</option>
+                          <option>Metal</option>
+                          <option>Plastic</option>
+                          <option>Paper</option>
+                          <option>Wood</option>
+                          <option>Film</option>
+                          <option>Commingle</option>
+                          <option>Single Stream</option></select></td>
+                      
+                      <td><label for='location7'>Quantity</label>
+                    <input name="location7" type="text" style="width:100px;"></td>
+                      <td><label for='type2'>Unit</label>
+                    <select name="type2" id="type2" style="width:100px">
+                          <option selected>Tons</option>
+                          <option>Lbs</option>
+                          <option>Bales</option>
+                          <option>Bulbs</option>
+                          <option>Boxes</option>
+                          <option>Units</option>
+                        </select></td><td><label for='location7'>Price Per Unit</label>
+                          <input name="location2" type="text" style="width:100px;"></td>
+                      <td><br><button>Add</button></td>
+                    </tr>
+                </table>
+                <h5  style="color:#7ABF53"> Fee</h5>
+                  <table border="0" cellpadding="10" cellspacing="10" width='60%'>
+                    <tr>
+                      <td><label for='waste2'>Fee Type</label>
+                        <select name="waste5" size="1" id="waste2" style="width:150px">
+                          <option>Freight Charge</option>
+                          <option>Fuel Charge</option>
+                          <option>Stop Charge</option>
+                          <option>Tax</option>
+                          <option>Other</option>
+                          <option>Repair</option>
+                        </select></td>
+                      <td><label for='location7'>Fee</label>
+                      <input name="location19" type="text" style="width:100px;"></td>
+                      <td><br><button>Add</button></td>
+                    </tr>
+                </table>
+                  <hr>
+                  <h5  style="color:#7ABF53"> Invoice Info</h5>
+                  <table border="0" cellspacing="10" cellpadding="10" width="100%">
+                <tr>
+                <td><label for='location18'>Invoice  Date</label>
+                    <input name="location18" type="text" style="width:100px"></td>
+                  <td><label for='location2'>Invoice  #</label>
+                  <input name="location4" type="text" style="width:100px;"></td>
+                  <td colspan="2"><label for='location4'>Price Per Ton</label>
+                  <input name="location5" type="text" style="width:100px;"></td>
+                  
+                  <td><br><button>Add</button></td>
+                    </tr>
+                </table>
+                
+                
+                  <div style="padding:10px;background:#efefef">
+                <h5  style="color:#7ABF53">Admin Info</h5>
+               <span style="float:left;padding-right:10px">
+                    <label for="type">Sent?</label>
+                <select name="type" id="type">
+                      <option selected>No</option>
+                      <option>Yes</option>
+                </select>
+                </span> 
+                <label for="type">Date Sent</label>
+                    <input name="date" type="text" style="width:140px">
+                
+                <label for="message">Internal Notes</label>
+                <textarea name="message" style="width:95%"></textarea>
+                
+              </div>
+                </div>
+          </div>
+          <div id="tabs-4" style="border-top:2px solid #7ABF53;padding-left:0px;padding-right:0px">
+              
+            <div class="five columns alpha"><h5  style="color:#7ABF53">General Info</h5><label for='location3'>Invoice Date</label>
+                    <input name="location3" type="text" value="02/02/12" style="width:100px"><label for='location'>Vendor</label><input name="location" type="text" value="AU1234"><label for='location'>Location</label>
+                  <input name="location" type="text" value="Ander...">
+                    <h5 style="color:#7ABF53">Description</h5>
+                  1. $295 Recycling Lot (<a href="#">Delete</a>)<br>
+                  <br>
+              <h5 style="color:#7ABF53">Additional Fee</h5>
+                  1. $200.00 Enviromental (<a href="#">Delete</a>) <br><br>
+                Total: $145.09<br><br><button style="background:#13602E; color:#fff">Save</button><button style="background:#13602E; color:#fff">Save & New</button>
+                </div><div class="nine columns omega">
+                  <h5  style="color:#7ABF53">Add Recycling</h5>
+                  <table border="0" cellspacing="10" cellpadding="10" width="100%">
+                <tr>
+                <td><label for='location18'>Date</label>
+                    <input name="location18" type="text" style="width:100px"></td>
+                  <td><label for='location2'>Release #</label>
+                  <input name="location4" type="text" style="width:100px;"></td>
+                  <td colspan="2"><br></td>
+                  
+                  <td><br><button>Add</button></td>
+                    </tr>
+                <tr>
+                  
+                      <td><label for='waste'>Material</label>
+                        <select name="waste6" size="1" id="waste" style="width:150px">
+                          <option>Recycling Lot</option>
+                          <option>Lamps - 8ft</option>
+                          <option>Lamps - 4ft</option>
+                          <option>Lamps - HID</option>   
+                          <option>Electronics</option>
+                          <option>Hazardous</option>                   </select></td>
+                      
+                      <td><label for='location7'>Quantity</label>
+                    <input name="location7" type="text" style="width:100px;"></td>
+                      <td><label for='type2'>Unit</label>
+                    <select name="type2" id="type2" style="width:100px">
+                          <option selected>Tons</option>
+                          <option>Lbs</option>
+                          <option>Bales</option>
+                          <option>Bulbs</option>
+                          <option>Boxes</option>
+                          <option>Units</option>
+                        </select></td><td><label for='location7'>Price Per Ton</label>
+                          <input name="location2" type="text" style="width:100px;"></td>
+                      <td><label for='location7'>Description</label>
+                    <input name="location7" type="text" style="width:100px;"></td>
+                    </tr>
+                </table>
+                  <hr>
+                <h5  style="color:#7ABF53">Add Fee</h5>
+                  <table border="0" cellpadding="10" cellspacing="10" width='60%'>
+                    <tr>
+                      <td><label for='waste2'>Fee Type</label>
+                        <select name="waste5" size="1" id="waste2" style="width:150px">
+                          <option>Freight Charge</option>
+                          <option>Fuel Charge</option>
+                          <option>Stop Charge</option>
+                          <option>Tax</option>
+                          <option>Other</option>
+                          <option>Repair</option>
+                        </select></td>
+                      <td><label for='location7'>Fee</label>
+                      <input name="location19" type="text" style="width:100px;"></td>
+                      <td><br><button>Add</button></td>
+                    </tr>
+                </table>
+                  <div style="padding:10px;background:#efefef">
+                <h5  style="color:#7ABF53">Admin Info</h5>
+               <span style="float:left;padding-right:10px">
+                    <label for="type">Sent?</label>
+                <select name="type" id="type">
+                      <option selected>No</option>
+                      <option>Yes</option>
+                </select>
+                </span> 
+                <label for="type">Date Sent</label>
+                    <input name="date" type="text" style="width:140px">
+                
+                <label for="message">Internal Notes</label>
+                <textarea name="message" style="width:95%"></textarea>
+                
+              </div>
+                </div>
+          </div>
+              <!--div id="tabs-3" style="border-top:2px solid #7ABF53;padding-left:0px;padding-right:0px">
+            <div class="four columns alpha" style="width:200px; padding-right:30px;">
+                  <h5  style="color:#7ABF53">Vendor</h5>
+                  <input name="location" type="text" value="AU1234">
+                  <h6>#1234 - ABC Hauler</h6>
+                  123 Street<br>
+                  Las Vegas, NV  76543 <br>
+                  <br>
+                  <h5  style="color:#7ABF53">Location </h5>
+                  <input name="location" type="text" value="Ander...">
+                  <h6>Anderson</h6>
+                  123 Street<br>
+                  Las Vegas, NV  76543 </div>
+            <div class="nine columns">
+                  <h5 style="color:#7ABF53">General Invoice Info</h5>
+                  <table width="90%" border="0" cellpadding="10" cellspacing="10">
+                <tr>
+                      <td>Invoice Date
+                    <input name="location15" type="text" value="02/02/12" style="width:100px"></td>
+                      <td>Freight Chargeback
+                    <input name="location17" type="text" value="" style="width:100px"></td>
+                      <td>Tax
+                    <input name="location17" type="text" value="" style="width:100px;"></td>
+                      <td>Other
+                    Fee
+                    <input name="location17" type="text" value="" style="width:100px;"></td>
+                    </tr>
+              </table>
+                  <h5 style="color:#7ABF53">Recycling Entries</h5>
+                  1. 02/12/12 / 100 Tons Cardboard / PO# 123 / BOL# 123 / Trailer #123 / S$123 / R$123 (<a href="#">Delete</a>)<br>
+                  2. 02/12/12 / 100 Tons Cardboard / PO# 123 / BOL# 123 / Trailer #123 / S$123 / R$123 (<a href="#">Delete</a>)<br>
+                  <br>
+                  <h5>Add...</h5>
+                  <table border="0" cellspacing="10" cellpadding="10" width="90%">
+                <tr>
+                      <td>Pickup Date
+                    <input name="location16" type="text" style="width:100px"></td>
+                      <td>Release/PO #
+                    <input name="location10" type="text" value="" style="width:100px"></td>
+                      <td>BOL #
+                    <input name="location12" type="text" value="" style="width:100px;"></td>
+                      <td>&nbsp;</td>
+                    </tr>
+                <tr>
+                      <td>Trailer Type
+                    <select name="waste4" size="1" id="waste4" style="width:150px">
+                          <option>Spotted</option>
+                          <option>Compactor</option>
+                        </select></td>
+                      <td>Trailer #
+                    <input name="location11" type="text" value="" style="width:100px;"></td>
+                      <td>Sales Price
+                    <input name="location13" type="text" value="" style="width:100px;"></td>
+                      <td>Rebate Price
+                    <input name="location14" type="text" value="" style="width:100px;"></td>
+                    </tr>
+                <tr>
+                      <td>Material Type
+                    <select name="waste" size="1" id="waste" style="width:150px">
+                          <option>Cardboard</option>
+                          <option>Glass</option>
+                          <option>Aluminum</option>
+                          <option>Metal</option>
+                          <option>Plastic</option>
+                          <option>Paper</option>
+                          <option>Wood</option>
+                          <option>Film</option>
+                          <option>Comingle</option>
+                          <option>Single Stream</option>
+                          <option>Lamps - 8ft</option>
+                          <option>Lamps - 4ft</option>
+                          <option>Lamps - HID</option>
+                        </select></td>
+                      <td>Quantity
+                    <input name="location7" type="text" style="width:100px;"></td>
+                      <td>Units
+                    <select name="type2" id="type2" style="width:100px">
+                          <option selected>Tons</option>
+                          <option>Bales</option>
+                          <option>Bulbs</option>
+                          <option>Boxes</option>
+                          <option>Units</option>
+                        </select></td>
+                      <td>Lamp Recycling Fee
+                        <input name="location9" type="text" value="" style="width:100px;"></td>
+                    </tr>
+              </table>
+                  <button>Add Entry</button>
+                </div>
+            <div class="three columns omega">
+                  <div style="background:#efefef;padding:10px">
+                <h5  style="color:#7ABF53">Admin Info</h5>
+                Total Rebate: $145.09<br>
+                <br>
+                <label for="type">Monthly Period</label>
+                <select name="type" id="type">
+                      <option selected>Yes</option>
+                      <option>No</option>
+                    </select>
+                <hr>
+                <label for="type">Sent?</label>
+                <select name="type" id="type">
+                      <option selected>Yes</option>
+                      <option>No</option>
+                    </select>
+                <span style="float:left">
+                    <label for="type">Date Sent</label>
+                    <input name="date" type="text" style="width:140px">
+                    </span> <br class="clear">
+                <label for="message">Internal Notes</label>
+                <textarea name="message" style="width:95%"></textarea>
+                <button style="background:#13602E; color:#fff">Submit</button>
+              </div>
+                </div>
+          </div>
+            </div-->
+      </div>
+        </div>
+  </div>
+      <footer> &nbsp;&copy; 2012 All rights reserved. The Astor Company. <a href="privacy.html">Privacy</a> & <a href="terms.html">Terms</a></footer>
+    </article>
+<!-- container --> 
+
+<!-- JS
+	================================================== --> 
+<script src="js/tabs.js"></script> 
+
+<!-- End Document
+================================================== -->
+</body>
+</html>

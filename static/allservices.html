@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]> <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]> <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
+    <head>
+
+    <!-- Basic Page Needs
+  ================================================== -->
+    <meta charset="utf-8">
+    <title>Home - Astor</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Mobile Specific Metas
+  ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- CSS
+  ================================================== -->
+    <link rel="stylesheet" href="stylesheets/demo_table.css">
+    <link rel="stylesheet" href="stylesheets/base.css">
+    <link rel="stylesheet" href="stylesheets/skeleton.css">
+    <link rel="stylesheet" href="stylesheets/layout.css">
+
+    <!-- Favicons
+	================================================== -->
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700' rel='stylesheet' type='text/css'>
+
+    <!-- Head Scripts
+	================================================== -->
+    <script src="js/modernizr-2.5.1.js"></script>
+    <script src="js/jquery-1.7.1.js"></script>
+    <script src="js/jquery-ui-1.8.17.custom.min.js"></script>
+    <script src="js/jquery.dataTables.js"></script>
+    <script src='js/jquery.color-RGBa-patch.js'></script>
+    <script src="js/custom.js"></script>
+    <script>
+	$(function() {
+		$('#servicelist').dataTable( {
+			"bPaginate": false,
+					"bFilter": false
+				} );
+	});
+	</script>
+    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load('visualization', '1', {packages: ['corechart']});
+    </script>
+    <script type="text/javascript">
+      function drawVisualization() {
+        // Some raw data (not necessarily accurate)
+        var countries =
+          ['Aluminum', 'Plastic',
+           'LDPE Film', 'Cardboard', 'Waste'];
+        var months = ['09/2011','10/2011', '11/2011', '12/2011', '01/2012', 'Current'];
+        var productionByCountry = [[200, 365, 135, 357, 239, 236],
+                                   [800, 938, 1120, 1167, 1110, 691],
+                                   [400, 522, 599, 587, 615, 629],
+                                   [1100, 998, 1268, 807, 968, 1026],
+                                   [400, 450, 288, 397, 215, 366]];
+      
+        // Create and populate the data table.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Month');
+        for (var i = 0; i < countries.length; ++i) {
+          data.addColumn('number', countries[i]);
+        }
+        data.addRows(months.length);
+        for (var i = 0; i < months.length; ++i) {
+          data.setCell(i, 0, months[i]);
+        }
+        for (var i = 0; i < countries.length; ++i) {
+          var country = productionByCountry[i];
+          for (var month = 0; month < months.length; ++month) {
+            data.setCell(month, i + 1, country[month]);
+          }
+        }
+        // Create and draw the visualization.
+        var ac = new google.visualization.AreaChart(document.getElementById('visualization'));
+        ac.draw(data, {
+          title : '',
+          isStacked: true,
+          width: 600,
+          height: 300,
+          vAxis: {title: "Tons"},
+          hAxis: {title: "Month"}
+        });
+      }
+      
+
+      google.setOnLoadCallback(drawVisualization);
+
+      function drawVisualization2() {
+        // Create and populate the data table.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Task');
+        data.addColumn('number', 'Hours per Day');
+        data.addRows(5);
+        data.setValue(0, 0, 'Opentop');
+        data.setValue(0, 1, 11);
+        data.setValue(1, 0, 'Rolloff');
+        data.setValue(1, 1, 2);
+        data.setValue(2, 0, 'Compactor');
+        data.setValue(2, 1, 2);
+        data.setValue(3, 0, 'Dumpster');
+        data.setValue(3, 1, 2);
+        data.setValue(4, 0, 'Other');
+        data.setValue(4, 1, 7);
+      
+        // Create and draw the visualization.
+        new google.visualization.PieChart(document.getElementById('servicechart')).
+            draw(data, {title:""});
+      }
+      
+
+      google.setOnLoadCallback(drawVisualization2);
+	  
+	  
+      function drawVisualization3() {
+        // Create and populate the data table.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Task');
+        data.addColumn('number', 'Hours per Day');
+        data.addRows(3);
+        data.setValue(0, 0, 'Permanent');
+        data.setValue(0, 1, 11);
+        data.setValue(1, 0, 'Temporary');
+        data.setValue(1, 1, 2);
+        data.setValue(2, 0, 'Other');
+        data.setValue(2, 1, 2);
+      
+        // Create and draw the visualization.
+        new google.visualization.PieChart(document.getElementById('timechart')).
+            draw(data, {title:""});
+      }
+      google.setOnLoadCallback(drawVisualization3);
+
+      
+	        function drawVisualization4() {
+        // Create and populate the data table.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Task');
+        data.addColumn('number', 'Hours per Day');
+        data.addRows(5);
+        data.setValue(0, 0, '1x/Week');
+        data.setValue(0, 1, 11);
+        data.setValue(1, 0, '2x/Week');
+        data.setValue(1, 1, 2);
+        data.setValue(2, 0, '3x/Week');
+        data.setValue(2, 1, 2);
+		data.setValue(2, 0, '4x/Week');
+        data.setValue(2, 1, 2);
+		data.setValue(2, 0, 'Daily/Week');
+        data.setValue(2, 1, 2);
+      
+        // Create and draw the visualization.
+        new google.visualization.PieChart(document.getElementById('frequencychart')).
+            draw(data, {title:""});
+      }
+      
+
+      google.setOnLoadCallback(drawVisualization4);
+    </script>
+    </head>
+    <body>
+
+<!-- Primary Page Layout
+	================================================== -->
+
+<article class="container">
+      <div class="row remove-bottom">
+    <header> <a href="index.html"><img src="images/logo.png" width="250" height="112" alt="Astor Home"></a>
+          <div style="float:right;margin-top:10px; text-align:right; font-size:90%;">Welcome Anthony &nbsp;&nbsp; <a href="profile.html">Account</a> &nbsp;&nbsp;&nbsp; <a href="help.html">Help</a> &nbsp;&nbsp;&nbsp; <a href="#">Logout</a><br>
+        Call 800-278-6726 or <a href="requestservice.html">Get Support</a></div>
+        </header>
+  </div>
+      <div class="tallnav-wrap">
+    <ul class="group" id="mainnavbar">
+          <li class="current_page_item"><a rel="#80C65A" href="index.html">Company</a></li>
+          <li><a rel="#1C4D25" href="distributioncenters.html">Distribution Centers</a></li>
+          <li><a rel="#1C4D25" href="stores.html">Stores</a></li>
+          
+          <li><a rel="#1C4D25" href="requestservice.html">Support Center</a></li>
+        </ul>
+    <ul class="group" id="subnavbar">
+          <li><a href="index.html">Dashboard</a></li>
+          <li><a href="allwaste.html">Waste</a></li>
+          <li><a href="allrecycling.html">Recycling</a></li>
+          <li><a href="allcostsavings.html">Cost/Savings</a></li>
+          <li class="current_subpage_item"><a href="allservices.html">Services</a></li>
+        </ul>
+    </ul>
+  </div>
+      <div class="content">
+    <div class="row">
+          <div class="sixteen columns"> <span style="float:right"><a href="reports_alldcwaste.html" class="button" target="_blank">Printer Friendly</a> <a href="reports_alldcwaste.csv" class="button">Export CSV</a></span>
+        <h1>Services Report</h1>
+        <span style="float:left;padding-right:10px"><label for="from">Start Date</label>
+<input name="from" type="text" id="from" value="09/01/2011" style="width:100px"/></span><span style="float:left;padding-right:10px">
+<label for="to">End Date</label>
+<input name="to" type="text" id="to" value="03/01/2012" style="width:100px"/></span>
+            <label for="for">Show for</label>
+            <select name="for"><option>All DCs and Store Regions</option>
+          <option>Only DCs</option>
+          <option>Only Store Regions</option></select><hr>
+      </div>
+        </div>
+    <div class="row">
+          <div class="five columns">
+        <h5>Type of Containers</h5>
+        <div id="servicechart" style="width: 380px; height: 200px;"></div>
+      </div>
+          <div class="five columns">
+        <h5>Duration of Service</h5>
+        <div id="timechart" style="width: 380px; height: 200px;"></div>
+      </div>
+          <div class="five columns">
+        <h5>Frequency of Service</h5>
+        <div id="frequencychart" style="width: 380px; height: 200px;"></div>
+      </div>
+        </div>
+    <div class="row">
+          <div class="sixteen columns">
+        <div> 
+              <!--To style tr, use class="odd even gradeA gradeB gradeC gradeU gradeX"-->
+              <table cellpadding="0" cellspacing="0" border="0" class="display" id="servicelist" width="100%">
+            <thead>
+                  <tr>
+                <th>Type</th>
+                <th>Name</th>
+                <th>Container Type</th>
+                <th>Container Size</th>
+                <th>Duration</th>
+                <th>Frequency</th>
+                <th>Cost</th>
+                <th>Last Updated</th>
+              </tr>
+                </thead>
+            <tbody>
+                  <tr class="odd gradeA">
+                <td>Region</td>
+                <td><a href="regionexample.html">East</a></td>
+                <td>Open Top</td>
+                <td>40 yd</td>
+                <td>Temp</td>
+                <td>1x/Week</td>
+                <td>$12</td>
+                <td>01/01/2012</td>
+              </tr>
+                  <tr class="even gradeA">
+                <td>Region</td>
+                <td><a href="regionexample.html">West</a></td>
+                <td>Compactor</td>
+                <td>30 yd</td>
+                <td>Perm</td>
+                <td>1x/week</td>
+                <td>$12</td>
+                <td>01/02/2012</td>
+              </tr>
+                  <tr class="odd gradeB">
+                <td>DC</td>
+                <td><a href="dcexample.html">Anderson</a></td>
+                <td>Roll Off</td>
+                <td>8 yd</td>
+                <td>Temp</td>
+                <td>2x/week</td>
+                <td>$12</td>
+                <td>01/03/2012</td>
+              </tr>
+                  <tr class="even gradeB">
+                <td>DC</td>
+                <td><a href="dcexample.html">Orlando</a></td>
+                <td class="odd gradeA">Open Top</td>
+                <td>40 yd</td>
+                <td>Perm</td>
+                <td>1x/week</td>
+                <td>$12</td>
+                <td>01/04/2012</td>
+              </tr>
+                  <tr class="odd gradeU">
+                <td>DC</td>
+                <td><a href="dcexample.html">Puerto Rico</a></td>
+                <td class="even gradeA">Compactor</td>
+                <td>8 yd </td>
+                <td>Temp</td>
+                <td>On request</td>
+                <td>$12</td>
+                <td>01/01/2012</td>
+              </tr>
+                  <tr class="even gradeU">
+                <td>Region</td>
+                <td><a href="regionexample.html">South</a></td>
+                <td class="odd gradeB">Roll Off</td>
+                <td>15 yd</td>
+                <td>Perm</td>
+                <td>3x/week</td>
+                <td>$12</td>
+                <td>01/01/2012</td>
+              </tr>
+                  <tr class="odd gradeX">
+                <td>Region</td>
+                <td><a href="regionexample.html">Midwest</a></td>
+                <td>Roll Off</td>
+                <td>40 yd</td>
+                <td>Temp</td>
+                <td>On request</td>
+                <td>$12</td>
+                <td>01/01/2012</td>
+              </tr>
+                  <tr class="even gradeX">
+                <td>Region</td>
+                <td><a href="regionexample.html">Southeast</a></td>
+                <td>Dumpster</td>
+                <td>2 yd</td>
+                <td>Perm</td>
+                <td>2x/month</td>
+                <td>$14</td>
+                <td>01/01/2012</td>
+              </tr>
+                </tbody>
+            <tfoot>
+                  <tr>
+                <th>Type</th>
+                <th>31 Names</th>
+                <th>40 Container Types</th>
+                <th>20 Container Sizes</th>
+                <th>2 Duration</th>
+                <th>Frequency</th>
+                <th>$100,00 Cost</th>
+                <th>&nbsp;</tr>
+                </tfoot>
+          </table>
+            </div>
+      </div>
+        </div>
+  </div>
+      <footer> &nbsp;&copy; 2012 All rights reserved. The Astor Company. <a href="privacy.html">Privacy</a> & <a href="terms.html">Terms</a></footer>
+    </article>
+<!-- container --> 
+
+<!-- JS
+	================================================== --> 
+<script src="js/tabs.js"></script> 
+
+<!-- End Document
+================================================== -->
+</body>
+</html>
