@@ -3,7 +3,7 @@
         <div class="content">
         <div class="row">
         	<div class="sixteen columns">
-          		<h1>N. Miss. Invoice History</h1>
+          		<h1>Invoice History</h1>
           	</div>
         </div>
         <div class="row">
