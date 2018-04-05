@@ -11,7 +11,7 @@
 				    <form id="fExport" action="<?php echo base_url();?>Stores/csvList" method="get"></form>
 				    <a class="button" href="javascript: void(0);" onclick="ExportToCSV();">Export CSV</a>
 			    </span>
-		    <h1>Penn Medicine List</h1>
+		    <h1>List</h1>
 	    </div>
     </div>
     <!--To style tr, use class="odd even gradeA gradeB gradeC gradeU gradeX"-->
