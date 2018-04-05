@@ -91,7 +91,7 @@
 			<a href="<?php echo base_url();?>Stores/Waste?<?php echo http_build_query(array_merge($_GET, array('diversion_report'=>1))); ?>" id="btnDiversionReport" class="button">Diversion Report</a>
 			<a href="<?php echo base_url();?>Stores/Waste?<?php echo http_build_query(array_merge($_GET, array('export'=>1))); ?>" class="button">Export CSV</a>
 		</span>
-		<h1>Penn Medicine Waste</h1>
+		<h1>Waste</h1>
 		<?php
 			}
 		?>
