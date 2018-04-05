@@ -153,7 +153,7 @@
     
 <div class="row">
 	<div class="ten columns">
-		<h1>North Mississippi Dashboard</h1>
+		<h1>Dashboard</h1>
 	   <!-- <?php //var_dump( $allStores) ?>  -->
 	</div>
     <div class="six columns" style="text-align: right;">
