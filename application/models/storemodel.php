@@ -337,7 +337,7 @@ class StoreModel extends BaseModel {
 		$countOfMonths = $this->db->query( "SELECT TIMESTAMPDIFF(MONTH, '" .$oldestDate."', '".$earliestDate."') as monthCnt" );
 		// $countOfMonths =  $this->db->query( "SELECT TIMESTAMPDIFF(DAY, '" .$oldestDate."', '".$earliestDate."') as monthCnt" );
 
-		$countOfMonths = $countOfMonths->row()->monthCnt;
+		$countOfMonths = empty($countOfMonths->row()->monthCnt) ? 1:$countOfMonths->row()->monthCnt;
 		// $countOfMonths = $countOfMonths->row()->monthCnt/30;
 		// var_dump($countOfMonths);
 		
